@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Arif Pehlivan</title>
+    <link>https://mrpehlivan.github.io/post/</link>
+    <description>Recent content in Posts on Arif Pehlivan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mrpehlivan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nedir bu Optional ?</title>
+      <link>https://mrpehlivan.github.io/2017/10/nedir-bu-optional/</link>
+      <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mrpehlivan.github.io/2017/10/nedir-bu-optional/</guid>
+      <description>&lt;p&gt;Her yazılımcının yazılım hayatı boyunca en çok karşılaştığı exceptionlardan biri olan &lt;strong&gt;NullPointerException&lt;/strong&gt; Java 8 ile artık önlenebilir hale gelmiştir.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Senkron vs Asenkron Programlama ve CompletableFuture</title>
+      <link>https://mrpehlivan.github.io/2017/05/senkron-vs-asenkron-programlama-ve-completablefuture/</link>
+      <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mrpehlivan.github.io/2017/05/senkron-vs-asenkron-programlama-ve-completablefuture/</guid>
+      <description>&lt;p&gt;Senkron programlama, yazılımda her bir işlemin sıra ile yapılmasıdır. Örneğin süpermarketlerdeki kasa kuyruğunda bir önceki müşteri, ürünlerinin ödemesini yapmadan sizin ürünlerinize sıra gelmemektedir.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vue.js</title>
+      <link>https://mrpehlivan.github.io/2017/01/vue.js/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mrpehlivan.github.io/2017/01/vue.js/</guid>
+      <description>&lt;p&gt;Merhabalar bu yazımda Vue.js den bahsedeceğim.
+Vue.js web arayüzleri oluşturmak için geliştirilen bir JavaScript kütüphanesidir. Evan You tarafından geliştirilmeye başlanmıştır. Benzerlerinin aksine öğrenimi kolay ve basittir. Ayrıca moduler yapı oluşturmak için alt yapıya sahiptir.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

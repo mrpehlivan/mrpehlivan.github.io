@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://mrpehlivan.github.io/2017/10/nedir-bu-optional/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mrpehlivan.github.io/2017/05/senkron-vs-asenkron-programlama-ve-completablefuture/</loc>
+    <lastmod>2017-05-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mrpehlivan.github.io/2017/01/vue.js/</loc>
+    <lastmod>2017-01-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mrpehlivan.github.io/archives/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrpehlivan.github.io/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrpehlivan.github.io/tags/completable-future/</loc>
+    <lastmod>2017-05-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrpehlivan.github.io/tags/java8/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrpehlivan.github.io/tags/javascript/</loc>
+    <lastmod>2017-01-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrpehlivan.github.io/tags/optional/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrpehlivan.github.io/post/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrpehlivan.github.io/tags/single-page/</loc>
+    <lastmod>2017-01-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrpehlivan.github.io/tags/</loc>
+    <lastmod>2017-05-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrpehlivan.github.io/tags/vue.js/</loc>
+    <lastmod>2017-01-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
