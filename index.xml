@@ -12,9 +12,9 @@
     <pubDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</pubDate>
     <author></author>
     <guid>http://mrpehlivan.github.io/posts/arif-pehlivan-com/</guid>
-    <description><![CDATA[<p>Bu yazımda şuan içinde bulunduğumuz arifpehlivan.com un nasıl yapıldığı konusunda bilgi vereceğim.</p>
-<p>Hugo ile websitesi yapım aşamalarını anlatmadan önce bazı ufak bilgiler paylaşalım.
-Yazılım sektöründe websitesi sahibi olmak bir yazılım geliştirici için her zaman iyi imaj bırakmaktadır.
+    <description><![CDATA[<p>Bu yazımda şuan içinde bulunduğumuz <a href="http://arifpehlivan.com/" target="_blank" rel="noopener noreffer">arifpehlivan.com</a> un nasıl yapıldığı konusunda bilgi vereceğim.</p>
+<p>Hugo ile websitesi yapım aşamalarını anlatmadan önce bazı ufak bilgiler paylaşalım.</p>
+<p>Yazılım sektöründe websitesi sahibi olmak bir yazılım geliştirici için her zaman iyi bir imaj bırakmaktadır.
 Bu bilgiyi yaptığım iş görüşmelerindeki insanların yorumlarından ve genel yorumlardan anlıyorum. Peki bir websitesi yapmak ne kadar zaman almaktadır.</p>
 <p>Aslında bir websitesi yapmak bir yazılımcı için çok da zor değildir diye umuyorum. Çünkü internette ufak bir araştırmayla static web sitesi oluşturan onlarca tool bulabilirsiniz. Bende static web sitesi oluşturan toollardan <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer">Hugo</a> yu kullanıyorum.</p>
 <h2 id="neden-hugo">Neden Hugo?</h2>
