@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>javascript - tag - Arif Pehlivan</title>
-        <link>http://mrpehlivan.github.io/tags/javascript/</link>
+        <link>http://www.arifpehlivan.com/tags/javascript/</link>
         <description>javascript - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Thu, 18 Jan 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Thu, 18 Jan 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/javascript/" rel="self" type="application/rss+xml" /><item>
     <title>React Js ile Facebook Login Entegrasyonu</title>
-    <link>http://mrpehlivan.github.io/posts/react-login/</link>
+    <link>http://www.arifpehlivan.com/posts/react-login/</link>
     <pubDate>Thu, 18 Jan 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/react-login/</guid>
+    <guid>http://www.arifpehlivan.com/posts/react-login/</guid>
     <description><![CDATA[<p><strong>React Js ile Facebook Login Entegrasyonu</strong></p>
 <p>Uygulamalarda kullanıcı sayısını arttırabilmek için sosyal medya
 bağlantılarının yapılması günümüzde büyük önem taşımaktadır. Bu yazıda
@@ -76,10 +76,10 @@ alt kısmında bulunmaktadır.</p>
 ]]></description>
 </item><item>
     <title>Vue.js</title>
-    <link>http://mrpehlivan.github.io/posts/vuejs/</link>
+    <link>http://www.arifpehlivan.com/posts/vuejs/</link>
     <pubDate>Thu, 12 Jan 2017 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/vuejs/</guid>
+    <guid>http://www.arifpehlivan.com/posts/vuejs/</guid>
     <description><![CDATA[<p>Merhabalar bu yazımda Vue.js den bahsedeceğim. Vue.js web arayüzleri
 oluşturmak için geliştirilen bir JavaScript kütüphanesidir. Evan You
 tarafından geliştirilmeye başlanmıştır. Benzerlerinin aksine öğrenimi

@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>vue.js - tag - Arif Pehlivan</title>
-        <link>http://mrpehlivan.github.io/tags/vue.js/</link>
+        <link>http://www.arifpehlivan.com/tags/vue.js/</link>
         <description>vue.js - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Thu, 12 Jan 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/vue.js/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Thu, 12 Jan 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/vue.js/" rel="self" type="application/rss+xml" /><item>
     <title>Vue.js</title>
-    <link>http://mrpehlivan.github.io/posts/vuejs/</link>
+    <link>http://www.arifpehlivan.com/posts/vuejs/</link>
     <pubDate>Thu, 12 Jan 2017 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/vuejs/</guid>
+    <guid>http://www.arifpehlivan.com/posts/vuejs/</guid>
     <description><![CDATA[<p>Merhabalar bu yazımda Vue.js den bahsedeceğim. Vue.js web arayüzleri
 oluşturmak için geliştirilen bir JavaScript kütüphanesidir. Evan You
 tarafından geliştirilmeye başlanmıştır. Benzerlerinin aksine öğrenimi

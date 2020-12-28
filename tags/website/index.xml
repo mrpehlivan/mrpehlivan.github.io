@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>website - tag - Arif Pehlivan</title>
-        <link>http://mrpehlivan.github.io/tags/website/</link>
+        <link>http://www.arifpehlivan.com/tags/website/</link>
         <description>website - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/website/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/website/" rel="self" type="application/rss+xml" /><item>
     <title>Hugo ile websitesi yapmak</title>
-    <link>http://mrpehlivan.github.io/posts/arif-pehlivan-com/</link>
+    <link>http://www.arifpehlivan.com/posts/arif-pehlivan-com/</link>
     <pubDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/arif-pehlivan-com/</guid>
+    <guid>http://www.arifpehlivan.com/posts/arif-pehlivan-com/</guid>
     <description><![CDATA[<p>Bu yazımda şuan içinde bulunduğumuz <a href="http://arifpehlivan.com/" target="_blank" rel="noopener noreffer">arifpehlivan.com</a> un nasıl yapıldığı konusunda bilgi vereceğim.</p>
 <p>Hugo ile websitesi yapım aşamalarını anlatmadan önce bazı ufak bilgiler paylaşalım.</p>
 <p>Yazılım sektöründe websitesi sahibi olmak bir yazılım geliştirici için her zaman iyi bir imaj bırakmaktadır.
@@ -24,7 +24,7 @@ Bu bilgiyi yaptığım iş görüşmelerindeki insanların yorumlarından ve gen
 <h3 id="temaya-karar-verilmesi">Temaya karar verilmesi</h3>
 <p>Bu aşamada Hugo nun sağlamış olduğu temel ücretsiz temalardan birini seçip kendi websitenizde tanımlayarak özelleştirebilirsiniz.</p>
 <p>Temalara <a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer">bu link</a> den erişebilirsiniz.</p>
-<h3 id="uygulamanın-local-bilgisayarınızda-çalıştırıması">Uygulamanın local bilgisayarınızda çalıştırıması</h3>
+<h3 id="uygulamanın-local-bilgisayarınızda-çalıştırılması">Uygulamanın local bilgisayarınızda çalıştırılması</h3>
 <p>Uygulamayı çalıştırmak için <a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener noreffer">Hugo Starter</a> sayfasında da anlatıldığı gibi projenin bulunduğu klasörde aşağıdaki komutu terminalinizde çalıştırmanız yeterlidir.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hugo server -D
 </code></pre></div><p>Hugo projeleri local bilgisayarınızda localhost:1313 adresinde çalışmaktadır. Bu adresi bilgisayarınızda bir tarayıcıya yazdığınız zaman websitenizi görüntüleyebilirsiniz.</p>

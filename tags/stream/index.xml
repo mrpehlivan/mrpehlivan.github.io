@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>stream - tag - Arif Pehlivan</title>
-        <link>http://mrpehlivan.github.io/tags/stream/</link>
+        <link>http://www.arifpehlivan.com/tags/stream/</link>
         <description>stream - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/stream/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/stream/" rel="self" type="application/rss+xml" /><item>
     <title>Nedir bu Java Stream?</title>
-    <link>http://mrpehlivan.github.io/posts/stream/</link>
+    <link>http://www.arifpehlivan.com/posts/stream/</link>
     <pubDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/stream/</guid>
+    <guid>http://www.arifpehlivan.com/posts/stream/</guid>
     <description><![CDATA[<p>Stream kelimesini ilk duyduğum zaman aklıma <strong>Java I/O</strong> paketinde
 bulunan <strong>InputStream</strong> ve <strong>OutputStream</strong> gelmişti. Fakat bunun böyle
 olmadığını api dökümanını inceleyince fark ettim. Bu yazıda streamler

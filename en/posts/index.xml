@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - Arif Pehlivan</title>
+        <link>http://www.arifpehlivan.com/en/posts/</link>
+        <description>All Posts | Arif Pehlivan</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/en/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Posts</title>
+    <link>http://www.arifpehlivan.com/en/posts/empty/</link>
+    <pubDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://www.arifpehlivan.com/en/posts/empty/</guid>
+    <description><![CDATA[<p>At the moment, I am writing my articles in Turkish language. I will provide some english articles for my foreign friends  🤞</p>
+]]></description>
+</item></channel>
+</rss>

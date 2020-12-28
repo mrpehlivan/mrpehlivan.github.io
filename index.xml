@@ -1,17 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Arif Pehlivan</title>
-        <link>http://mrpehlivan.github.io/</link>
+        <link>http://www.arifpehlivan.com/</link>
         <description>Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
             <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</lastBuildDate>
-            <atom:link href="http://mrpehlivan.github.io/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="http://www.arifpehlivan.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Hugo ile websitesi yapmak</title>
-    <link>http://mrpehlivan.github.io/posts/arif-pehlivan-com/</link>
+    <link>http://www.arifpehlivan.com/posts/arif-pehlivan-com/</link>
     <pubDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/arif-pehlivan-com/</guid>
+    <guid>http://www.arifpehlivan.com/posts/arif-pehlivan-com/</guid>
     <description><![CDATA[<p>Bu yazımda şuan içinde bulunduğumuz <a href="http://arifpehlivan.com/" target="_blank" rel="noopener noreffer">arifpehlivan.com</a> un nasıl yapıldığı konusunda bilgi vereceğim.</p>
 <p>Hugo ile websitesi yapım aşamalarını anlatmadan önce bazı ufak bilgiler paylaşalım.</p>
 <p>Yazılım sektöründe websitesi sahibi olmak bir yazılım geliştirici için her zaman iyi bir imaj bırakmaktadır.
@@ -26,7 +26,7 @@ Bu bilgiyi yaptığım iş görüşmelerindeki insanların yorumlarından ve gen
 <h3 id="temaya-karar-verilmesi">Temaya karar verilmesi</h3>
 <p>Bu aşamada Hugo nun sağlamış olduğu temel ücretsiz temalardan birini seçip kendi websitenizde tanımlayarak özelleştirebilirsiniz.</p>
 <p>Temalara <a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer">bu link</a> den erişebilirsiniz.</p>
-<h3 id="uygulamanın-local-bilgisayarınızda-çalıştırıması">Uygulamanın local bilgisayarınızda çalıştırıması</h3>
+<h3 id="uygulamanın-local-bilgisayarınızda-çalıştırılması">Uygulamanın local bilgisayarınızda çalıştırılması</h3>
 <p>Uygulamayı çalıştırmak için <a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener noreffer">Hugo Starter</a> sayfasında da anlatıldığı gibi projenin bulunduğu klasörde aşağıdaki komutu terminalinizde çalıştırmanız yeterlidir.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hugo server -D
 </code></pre></div><p>Hugo projeleri local bilgisayarınızda localhost:1313 adresinde çalışmaktadır. Bu adresi bilgisayarınızda bir tarayıcıya yazdığınız zaman websitenizi görüntüleyebilirsiniz.</p>
@@ -52,10 +52,10 @@ Bu bilgiyi yaptığım iş görüşmelerindeki insanların yorumlarından ve gen
 ]]></description>
 </item><item>
     <title>Springboot ile CRUD Projesi Oluşturma</title>
-    <link>http://mrpehlivan.github.io/posts/spring-boot-example/</link>
+    <link>http://www.arifpehlivan.com/posts/spring-boot-example/</link>
     <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/spring-boot-example/</guid>
+    <guid>http://www.arifpehlivan.com/posts/spring-boot-example/</guid>
     <description><![CDATA[<p>Springboot da proje oluşturmak spring boot initializer ile artık daha kolay bir hale geldi. Bu yazıda oluşturacağımız proje standart bir Create, Read, Update ve Delete işlemleri yapacağından projede Spring Data , PostgreSQL, Spring Mvc Web bağımlılıklarını kullanacağız.</p>
 <p>Örnek ekran görüntüsü :</p>
 <figure>
@@ -154,10 +154,10 @@ postman_collection adındaki dosyayı Postman ' e import ederek test edebilirsin
 ]]></description>
 </item><item>
     <title>Nedir bu Java Stream?</title>
-    <link>http://mrpehlivan.github.io/posts/stream/</link>
+    <link>http://www.arifpehlivan.com/posts/stream/</link>
     <pubDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/stream/</guid>
+    <guid>http://www.arifpehlivan.com/posts/stream/</guid>
     <description><![CDATA[<p>Stream kelimesini ilk duyduğum zaman aklıma <strong>Java I/O</strong> paketinde
 bulunan <strong>InputStream</strong> ve <strong>OutputStream</strong> gelmişti. Fakat bunun böyle
 olmadığını api dökümanını inceleyince fark ettim. Bu yazıda streamler
@@ -264,10 +264,10 @@ yanında performans açısından da hızlı olmasını sağlamıştır.</p>
 ]]></description>
 </item><item>
     <title>Tasarım Kalıpları</title>
-    <link>http://mrpehlivan.github.io/posts/tasarim-kaliplari/</link>
+    <link>http://www.arifpehlivan.com/posts/tasarim-kaliplari/</link>
     <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/tasarim-kaliplari/</guid>
+    <guid>http://www.arifpehlivan.com/posts/tasarim-kaliplari/</guid>
     <description><![CDATA[<p>Yazılım projeleri yazılımcılara verilen belirli argümanlar üzerinden
 oluşan projelerdir. Genellikle proje geliştirmelerinde büyük resim tam
 anlamıyla görüntülenemediğinden projeler zamanla değişmektedirler.Bu
@@ -352,10 +352,10 @@ olabildiğince kullanmayı tercih etmeliyiz.</p>
 ]]></description>
 </item><item>
     <title>React Js ile Facebook Login Entegrasyonu</title>
-    <link>http://mrpehlivan.github.io/posts/react-login/</link>
+    <link>http://www.arifpehlivan.com/posts/react-login/</link>
     <pubDate>Thu, 18 Jan 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/react-login/</guid>
+    <guid>http://www.arifpehlivan.com/posts/react-login/</guid>
     <description><![CDATA[<p><strong>React Js ile Facebook Login Entegrasyonu</strong></p>
 <p>Uygulamalarda kullanıcı sayısını arttırabilmek için sosyal medya
 bağlantılarının yapılması günümüzde büyük önem taşımaktadır. Bu yazıda
@@ -422,10 +422,10 @@ alt kısmında bulunmaktadır.</p>
 ]]></description>
 </item><item>
     <title>Nedir bu Optional?</title>
-    <link>http://mrpehlivan.github.io/posts/optional/</link>
+    <link>http://www.arifpehlivan.com/posts/optional/</link>
     <pubDate>Tue, 12 Dec 2017 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/optional/</guid>
+    <guid>http://www.arifpehlivan.com/posts/optional/</guid>
     <description><![CDATA[<p>Her yazılımcının yazılım hayatı boyunca en çok karşılaştığı
 exceptionlardan biri olan <strong>NullPointerException</strong> Java 8 ile artık
 önlenebilir hale gelmiştir.</p>
@@ -508,10 +508,10 @@ inceleyebilirsiniz.</p>
 ]]></description>
 </item><item>
     <title>Senkron vs Asenkron Programlama</title>
-    <link>http://mrpehlivan.github.io/posts/completable-future/</link>
+    <link>http://www.arifpehlivan.com/posts/completable-future/</link>
     <pubDate>Sat, 13 May 2017 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/completable-future/</guid>
+    <guid>http://www.arifpehlivan.com/posts/completable-future/</guid>
     <description><![CDATA[<p>Senkron programlama, yazılımda her bir işlemin sıra ile yapılmasıdır.
 Örneğin süpermarketlerdeki kasa kuyruğunda bir önceki müşteri,
 ürünlerinin ödemesini yapmadan sizin ürünlerinize sıra gelmemektedir.</p>
@@ -573,10 +573,10 @@ CompletableFuture arayüzünü Java 9 ile de geliştirmeye devam etmektedir.</p>
 ]]></description>
 </item><item>
     <title>Vue.js</title>
-    <link>http://mrpehlivan.github.io/posts/vuejs/</link>
+    <link>http://www.arifpehlivan.com/posts/vuejs/</link>
     <pubDate>Thu, 12 Jan 2017 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/vuejs/</guid>
+    <guid>http://www.arifpehlivan.com/posts/vuejs/</guid>
     <description><![CDATA[<p>Merhabalar bu yazımda Vue.js den bahsedeceğim. Vue.js web arayüzleri
 oluşturmak için geliştirilen bir JavaScript kütüphanesidir. Evan You
 tarafından geliştirilmeye başlanmıştır. Benzerlerinin aksine öğrenimi

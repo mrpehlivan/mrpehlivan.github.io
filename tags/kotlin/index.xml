@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>kotlin - tag - Arif Pehlivan</title>
-        <link>http://mrpehlivan.github.io/tags/kotlin/</link>
+        <link>http://www.arifpehlivan.com/tags/kotlin/</link>
         <description>kotlin - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/kotlin/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/kotlin/" rel="self" type="application/rss+xml" /><item>
     <title>Tasarım Kalıpları</title>
-    <link>http://mrpehlivan.github.io/posts/tasarim-kaliplari/</link>
+    <link>http://www.arifpehlivan.com/posts/tasarim-kaliplari/</link>
     <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://mrpehlivan.github.io/posts/tasarim-kaliplari/</guid>
+    <guid>http://www.arifpehlivan.com/posts/tasarim-kaliplari/</guid>
     <description><![CDATA[<p>Yazılım projeleri yazılımcılara verilen belirli argümanlar üzerinden
 oluşan projelerdir. Genellikle proje geliştirmelerinde büyük resim tam
 anlamıyla görüntülenemediğinden projeler zamanla değişmektedirler.Bu

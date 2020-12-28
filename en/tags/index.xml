@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - Arif Pehlivan</title>
+        <link>http://www.arifpehlivan.com/en/tags/</link>
+        <description>Tags - Tag - Arif Pehlivan</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><atom:link href="http://www.arifpehlivan.com/en/tags/" rel="self" type="application/rss+xml" /></channel>
+</rss>
