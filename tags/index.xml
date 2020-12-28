@@ -1,69 +1,77 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on Arif Pehlivan</title>
-    <link>https://mrpehlivan.github.io/tags/</link>
-    <description>Recent content in Tags on Arif Pehlivan</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 13 May 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mrpehlivan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Completable Future</title>
-      <link>https://mrpehlivan.github.io/tags/completable-future/</link>
-      <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mrpehlivan.github.io/tags/completable-future/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java8</title>
-      <link>https://mrpehlivan.github.io/tags/java8/</link>
-      <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mrpehlivan.github.io/tags/java8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>https://mrpehlivan.github.io/tags/javascript/</link>
-      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mrpehlivan.github.io/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Optional</title>
-      <link>https://mrpehlivan.github.io/tags/optional/</link>
-      <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mrpehlivan.github.io/tags/optional/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Single Page</title>
-      <link>https://mrpehlivan.github.io/tags/single-page/</link>
-      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mrpehlivan.github.io/tags/single-page/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vue.js</title>
-      <link>https://mrpehlivan.github.io/tags/vue.js/</link>
-      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mrpehlivan.github.io/tags/vue.js/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - tag - Arif Pehlivan</title>
+        <link>http://arifpehlivan.com/tags/</link>
+        <description>Tags - tag - Arif Pehlivan</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>java</title>
+    <link>http://arifpehlivan.com/tags/java/</link>
+    <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/tags/java/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>spring</title>
+    <link>http://arifpehlivan.com/tags/spring/</link>
+    <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/tags/spring/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>spring-boot</title>
+    <link>http://arifpehlivan.com/tags/spring-boot/</link>
+    <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/tags/spring-boot/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>spring-framework</title>
+    <link>http://arifpehlivan.com/tags/spring-framework/</link>
+    <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/tags/spring-framework/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>java8</title>
+    <link>http://arifpehlivan.com/tags/java8/</link>
+    <pubDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/tags/java8/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>stream</title>
+    <link>http://arifpehlivan.com/tags/stream/</link>
+    <pubDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/tags/stream/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>architecture</title>
+    <link>http://arifpehlivan.com/tags/architecture/</link>
+    <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/tags/architecture/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>kotlin</title>
+    <link>http://arifpehlivan.com/tags/kotlin/</link>
+    <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/tags/kotlin/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>software</title>
+    <link>http://arifpehlivan.com/tags/software/</link>
+    <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/tags/software/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>javascript</title>
+    <link>http://arifpehlivan.com/tags/javascript/</link>
+    <pubDate>Thu, 18 Jan 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/tags/javascript/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>

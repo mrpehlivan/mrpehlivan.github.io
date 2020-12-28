@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Tasarım Kalıpları - Arif Pehlivan</title><meta name="Description" content=""><meta property="og:title" content="Tasarım Kalıpları" />
+<meta property="og:description" content="Yazılım projeleri yazılımcılara verilen belirli argümanlar üzerinden oluşan projelerdir. Genellikle proje geliştirmelerinde büyük resim tam anlamıyla görüntülenemediğinden projeler zamanla değişmektedirler.Bu değişimler bazen projelerin yeniden yazılmasını gerektirmektedir. İşte bu kadar köklü değişimlerin önüne geçmek açısından projelerimizi belirli tasarım kalıplarına oturtarak ilerler isek değişimlerin maliyetlerini küçültebiliriz.
+Nasıl ortaya çıkmıştır? Kalıplar(Patterns) Amerikalı mimar Christopher Alexander tarafından 1977 yılında mimari konseptler adıyla ortaya çıkmıştır. 1987 yılında Kent Beck ve Ward Cunningham bu kalıpları kendi deneyimleri ile programlama üzerinde uygulamışlardır ve o yıl düzenlenen OOPSLA konferansında bu çalışmalarını sunmuşlardır." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://arifpehlivan.com/posts/tasarim-kaliplari/" />
+<meta property="article:published_time" content="2018-02-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-02-01T00:00:00+00:00" /><meta property="og:site_name" content="Arif Pehlivan" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tasarım Kalıpları"/>
+<meta name="twitter:description" content="Yazılım projeleri yazılımcılara verilen belirli argümanlar üzerinden oluşan projelerdir. Genellikle proje geliştirmelerinde büyük resim tam anlamıyla görüntülenemediğinden projeler zamanla değişmektedirler.Bu değişimler bazen projelerin yeniden yazılmasını gerektirmektedir. İşte bu kadar köklü değişimlerin önüne geçmek açısından projelerimizi belirli tasarım kalıplarına oturtarak ilerler isek değişimlerin maliyetlerini küçültebiliriz.
+Nasıl ortaya çıkmıştır? Kalıplar(Patterns) Amerikalı mimar Christopher Alexander tarafından 1977 yılında mimari konseptler adıyla ortaya çıkmıştır. 1987 yılında Kent Beck ve Ward Cunningham bu kalıpları kendi deneyimleri ile programlama üzerinde uygulamışlardır ve o yıl düzenlenen OOPSLA konferansında bu çalışmalarını sunmuşlardır."/>
+<meta name="application-name" content="Arif Pehlivan">
+<meta name="apple-mobile-web-app-title" content="Arif Pehlivan"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://arifpehlivan.com/posts/tasarim-kaliplari/" /><link rel="prev" href="http://arifpehlivan.com/posts/react-login/" /><link rel="next" href="http://arifpehlivan.com/posts/stream/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Tasarım Kalıpları",
+        "inLanguage": "tr",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/arifpehlivan.com\/posts\/tasarim-kaliplari\/"
+        },"genre": "posts","keywords": "software, architecture, java, kotlin","wordcount":  317 ,
+        "url": "http:\/\/arifpehlivan.com\/posts\/tasarim-kaliplari\/","datePublished": "2018-02-01T00:00:00+00:00","dateModified": "2018-02-01T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Arif Pehlivan"},"author": {
+                "@type": "Person",
+                "name": "Arif Pehlivan"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Arif Pehlivan">Arif Pehlivan</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> Hakkımda </a><a class="menu-item" href="/posts/"> Paylaşımlar </a><a class="menu-item" href="/tags/"> Etiketler </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Arif Pehlivan">Arif Pehlivan</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/about/" title="">Hakkımda</a><a class="menu-item" href="/posts/" title="">Paylaşımlar</a><a class="menu-item" href="/tags/" title="">Etiketler</a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title"></h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Tasarım Kalıpları</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Arif Pehlivan</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-02-01">2018-02-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#nasıl-ortaya-çıkmıştır">Nasıl ortaya çıkmıştır?</a></li>
+    <li><a href="#amacı-nedir">Amacı nedir?</a></li>
+    <li><a href="#kaç-adet-tasarım-kalıbı-vardır-ve-türleri-nelerdir">Kaç adet tasarım kalıbı vardır ve türleri nelerdir?</a></li>
+    <li><a href="#yaratımsal-kalıplar-creational-patterns">Yaratımsal Kalıplar (Creational Patterns)</a></li>
+    <li><a href="#yapısal-tasarımlar-structural-patterns">Yapısal Tasarımlar (Structural Patterns)</a></li>
+    <li><a href="#davranışsal-kalıplar-behavioral-patterns">Davranışsal Kalıplar (Behavioral Patterns)</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Yazılım projeleri yazılımcılara verilen belirli argümanlar üzerinden
+oluşan projelerdir. Genellikle proje geliştirmelerinde büyük resim tam
+anlamıyla görüntülenemediğinden projeler zamanla değişmektedirler.Bu
+değişimler bazen projelerin yeniden yazılmasını gerektirmektedir. İşte
+bu kadar köklü değişimlerin önüne geçmek açısından projelerimizi belirli
+tasarım kalıplarına oturtarak ilerler isek değişimlerin maliyetlerini
+küçültebiliriz.</p>
+<h2 id="nasıl-ortaya-çıkmıştır">Nasıl ortaya çıkmıştır?</h2>
+<p>Kalıplar(Patterns) Amerikalı mimar <a href="https://en.wikipedia.org/wiki/Christopher_Alexander" target="_blank" rel="noopener noreffer">Christopher
+Alexander</a>
+tarafından 1977 yılında mimari konseptler adıyla ortaya çıkmıştır. 1987
+yılında <a href="https://en.wikipedia.org/wiki/Kent_Beck" target="_blank" rel="noopener noreffer">Kent Beck</a> ve <a href="https://en.wikipedia.org/wiki/Ward_Cunningham" target="_blank" rel="noopener noreffer">Ward
+Cunningham</a> bu kalıpları
+kendi deneyimleri ile programlama üzerinde uygulamışlardır ve o yıl
+düzenlenen <a href="https://en.wikipedia.org/wiki/OOPSLA" target="_blank" rel="noopener noreffer">OOPSLA</a> konferansında
+bu çalışmalarını sunmuşlardır. 1994 yılında çıkan <a href="https://en.wikipedia.org/wiki/Design_Patterns" target="_blank" rel="noopener noreffer">Design Patterns:
+Elements of Reusable Object-Oriented Software (Gang of
+Four)</a> kitabı ile tasarım
+kalıpları bilgisayar bilimlerinde önemli bir popülerlik kazanmıştır.</p>
+<h2 id="amacı-nedir">Amacı nedir?</h2>
+<p>Tasarım kalıpları yazılım projelerindeki genel problemleri en iyi yolla
+çözmeyi planlamaktadır. Deneyimli yazılımcıların object-oriented
+konusundaki best practice’ lerinden yararlanılarak farklı türlerde
+kalıplar tasarlanmıştır. Tasarlanan bu kalıplar projelerdeki esnekliği,
+okunabilirliği ve yazılabilirliği kolaylaştırmaktadırlar.</p>
+<h2 id="kaç-adet-tasarım-kalıbı-vardır-ve-türleri-nelerdir">Kaç adet tasarım kalıbı vardır ve türleri nelerdir?</h2>
+<p>Gang of Four kitabında da belirtildiği üzere 23 adet tasarım kalıbı
+bulunmaktadır. Bu tasarım kalıpları çözümlerine göre 3 adet kategoriye
+ayrılmışlardır. Bunlar creational (yaratımsal) , structural (yapısal) ve
+behavioral (davranışsal) kalıplardır.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://miro.medium.com/max/2560/1*8_tTgdpABrzM9HupGEfuAQ.png"
+        data-srcset="https://miro.medium.com/max/2560/1*8_tTgdpABrzM9HupGEfuAQ.png, https://miro.medium.com/max/2560/1*8_tTgdpABrzM9HupGEfuAQ.png 1.5x, https://miro.medium.com/max/2560/1*8_tTgdpABrzM9HupGEfuAQ.png 2x"
+        data-sizes="auto"
+        alt="https://miro.medium.com/max/2560/1*8_tTgdpABrzM9HupGEfuAQ.png"
+        title="Image for
+post" /></p>
+<h2 id="yaratımsal-kalıplar-creational-patterns">Yaratımsal Kalıplar (Creational Patterns)</h2>
+<p>Yaratımsal tasarım kalıpları oluşturulacak olan nesnelerin new operatörü
+kullanmak yerine farklı yollar ile oluşturmayı sağlar. Bu kategorideki
+tasarım kalıpları aşağıda listelenmiştir.</p>
+<ul>
+<li>Abstract Factory,</li>
+<li>Builder,</li>
+<li>Factory Method,</li>
+<li>Prototype,</li>
+<li>Singleton</li>
+</ul>
+<p>gibi kalıplar yaratışsal kalıplar sınıfına girmektedir.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://miro.medium.com/max/2560/1*MwhtLwDKmjf1EnHamtwA1w.png"
+        data-srcset="https://miro.medium.com/max/2560/1*MwhtLwDKmjf1EnHamtwA1w.png, https://miro.medium.com/max/2560/1*MwhtLwDKmjf1EnHamtwA1w.png 1.5x, https://miro.medium.com/max/2560/1*MwhtLwDKmjf1EnHamtwA1w.png 2x"
+        data-sizes="auto"
+        alt="https://miro.medium.com/max/2560/1*MwhtLwDKmjf1EnHamtwA1w.png"
+        title="Image for
+post" /></p>
+<h2 id="yapısal-tasarımlar-structural-patterns">Yapısal Tasarımlar (Structural Patterns)</h2>
+<p>Yapısal tasarım kalıpları sınıflar ile nesneler arasındaki kalıtım ve
+arayüz bağlantılarının kurulmasını sağlar. Bu kategorideki tasarım
+kalıpları aşağıda listelenmiştir.</p>
+<ul>
+<li>Adapter,</li>
+<li>Bridge,</li>
+<li>Composite,</li>
+<li>Decorator,</li>
+<li>Facade,</li>
+<li>Flyweight,</li>
+<li>Proxy</li>
+</ul>
+<p>gibi kalıplar yapısal kalıplar sınıfına girmektedir.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://miro.medium.com/max/2560/1*XFNicWirQpMdNamqq-F0Gw.png"
+        data-srcset="https://miro.medium.com/max/2560/1*XFNicWirQpMdNamqq-F0Gw.png, https://miro.medium.com/max/2560/1*XFNicWirQpMdNamqq-F0Gw.png 1.5x, https://miro.medium.com/max/2560/1*XFNicWirQpMdNamqq-F0Gw.png 2x"
+        data-sizes="auto"
+        alt="https://miro.medium.com/max/2560/1*XFNicWirQpMdNamqq-F0Gw.png"
+        title="Image for
+post" /></p>
+<h2 id="davranışsal-kalıplar-behavioral-patterns">Davranışsal Kalıplar (Behavioral Patterns)</h2>
+<p>Davranışsal tasarım kalıpları, nesneler arasındaki ortak iletişim
+kalıplarının tanımlanmasını ve gerçekleşmesini sağlar.Bu kategorideki
+tasarım kalıpları aşağıda listelenmiştir.</p>
+<ul>
+<li>Chain of responsibility,</li>
+<li>Command,</li>
+<li>Interpreter,</li>
+<li>Iterator,</li>
+<li>Mediator,</li>
+<li>Memento,</li>
+<li>Null Object,</li>
+<li>Observer,</li>
+<li>State,</li>
+<li>Strategy,</li>
+<li>Template method</li>
+</ul>
+<p>gibi kalıplar davranışsal tasarım kalıpları sınıfına girmektedir.</p>
+<p>Sonuç olarak projelerimizde esnekliği , okunulabilirliği ve
+yazabilirliği kolaylaştırmak için tasarım kalıplarını projelerimizde
+olabildiğince kullanmayı tercih etmeliyiz.</p>
+<p>Kolay Gelsin.. 🤞</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title=" Twitter" data-sharer="twitter" data-url="http://arifpehlivan.com/posts/tasarim-kaliplari/" data-title="Tasarım Kalıpları" data-via="@arifpehlivn" data-hashtags="software,architecture,java,kotlin"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title=" Facebook" data-sharer="facebook" data-url="http://arifpehlivan.com/posts/tasarim-kaliplari/" data-hashtag="software"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title=" Linkedin" data-sharer="linkedin" data-url="http://arifpehlivan.com/posts/tasarim-kaliplari/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title=" WhatsApp" data-sharer="whatsapp" data-url="http://arifpehlivan.com/posts/tasarim-kaliplari/" data-title="Tasarım Kalıpları" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title=" Xing" data-sharer="xing" data-url="http://arifpehlivan.com/posts/tasarim-kaliplari/" data-title="Tasarım Kalıpları"><i class="fab fa-xing fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/software/">software</a>,&nbsp;<a href="/tags/architecture/">architecture</a>,&nbsp;<a href="/tags/java/">java</a>,&nbsp;<a href="/tags/kotlin/">kotlin</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/react-login/" class="prev" rel="prev" title="React Js ile Facebook Login Entegrasyonu"><i class="fas fa-angle-left fa-fw"></i>React Js ile Facebook Login Entegrasyonu</a>
+            <a href="/posts/stream/" class="next" rel="next" title="Nedir bu Java Stream?">Nedir bu Java Stream?<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

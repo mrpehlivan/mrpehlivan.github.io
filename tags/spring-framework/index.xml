@@ -1,0 +1,109 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>spring-framework - tag - Arif Pehlivan</title>
+        <link>http://arifpehlivan.com/tags/spring-framework/</link>
+        <description>spring-framework - tag - Arif Pehlivan</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/tags/spring-framework/" rel="self" type="application/rss+xml" /><item>
+    <title>Springboot ile CRUD Projesi Oluşturma</title>
+    <link>http://arifpehlivan.com/posts/spring-boot-example/</link>
+    <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/posts/spring-boot-example/</guid>
+    <description><![CDATA[<p>Springboot da proje oluşturmak spring boot initializer ile artık daha kolay bir hale geldi. Bu yazıda oluşturacağımız proje standart bir Create, Read, Update ve Delete işlemleri yapacağından projede Spring Data , PostgreSQL, Spring Mvc Web bağımlılıklarını kullanacağız.</p>
+<p>Örnek ekran görüntüsü :</p>
+<figure>
+     
+</figure>
+
+<p>Oluşturduğumuz projemizi indirmiş olduğumuz path den kullandığınız her hangi bir ide(integrated development environment) ile açabilirsiniz. Ben Intellij ide ile geliştirmeleri yapacağım.</p>
+<figure>
+     
+</figure>
+
+<p>Intellij ana ekranIntellij ide de açılan ekranda Import Project&rsquo;e tıklıyoruz.</p>
+<figure>
+     
+</figure>
+
+<p>Choose GradlePaket yönetim için Gradle&rsquo;ı seçiyoruz ve Next&rsquo;e tıklıyoruz.</p>
+<p><figure>
+     
+</figure>
+
+Projenin konfigürasyon ayarlarını yapıyoruz ve Finish&rsquo;e tıklıyoruz.</p>
+<figure>
+     
+</figure>
+
+<p>Aşağıdaki resimde projenin yapısını görebilirsiniz.</p>
+<figure>
+     
+</figure>
+
+<p>Oluşturduğumuz projemizde yazının başında belirttiğimiz gibi Create , Read , Update ve Delete işlemlerini yapacağımızdan projemizin ihtiyacı olan bazı konfigürasyonları yapmamız gerekmektedir. Bunlardan en önceliği Database bağlantısıdır.
+Database bağlantısı için projenin src-&gt;main-&gt;resources uzantısı altında bulunan application.properties dosyasını aşağıdaki örnekteki gibi ayarlıyoruz.</p>
+<script type="application/javascript" src="https://gist.github.com/mrpehlivan/0c64633c8596d0a2771d7a235da1bd41.js"></script>
+
+<p>İsterseniz application.properties dosyasının adını application.yml olarak değiştirip yml formatta da ayarları yapabilirsiniz.</p>
+<script type="application/javascript" src="https://gist.github.com/mrpehlivan/0db4a3cdfa91ba1b927bed97d1688ca0.js"></script>
+
+<p>Ben default gelen ayarlara devam edeceğim için application.properties dosyasını kullanacağım.</p>
+<p>Properties dosyasına yapmış olduğumuz tanımlamaları projemizde 
+DatabaseConfiguration.java adında bir konfigürasyon sınıfı içerisinde projemize uygulayacağız. Bunun için src -&gt; main -&gt; java -&gt; com -&gt; arif -&gt;crud uzantısının altına configuration diye bir klasör oluşturup aşağıdaki DatabaseConfiguration.java sınıfını oraya ekliyoruz.</p>
+<script type="application/javascript" src="https://gist.github.com/mrpehlivan/86ed6bcdb3f6025f9b1d570e83bc5da4.js"></script>
+
+<p>Database ayarlarını yaptıktan sonra artık localimiz de PostgreSQL&rsquo;e bağlanmamızda bir engel kalmamıştır. Eğer localiniz de indirilmiş bir PostgreSQL yok ise ve local bilgisayarınız da docker yüklü ise aşağıdaki docker-compose dosyasını çalıştırabilir ve hızlıca devam edebilirsiniz.</p>
+<script type="application/javascript" src="https://gist.github.com/mrpehlivan/47293acb8b1cfd1af558bf61b71f9db3.js"></script>
+
+<p>Docker compose dosyasını herhangi bir yere indirip aşağıdaki komutları çalıştırmanız yeterli olacaktır. Ben Downloads&rsquo;a indirip ordan çalıştırdım.</p>
+<figure>
+     
+</figure>
+
+<p>Yukarıdaki tüm ayarlamaları yaptıktan sonra projemizde bulunan CrudApplication.java sınıfında bulunan main methodunu çalıştırıyoruz.
+Projemiz çalışır hale geldikten sonra proje yapısını oluşturuyoruz. Aşağıdaki resimde örnek yapıyı görebilirsiniz.</p>
+<figure>
+     
+</figure>
+
+<p>Project StructureProje yapısında ;</p>
+<ul>
+<li>
+<p><strong>controllers</strong> = Uygulamanın en dış katmanlarının bulunduğu klasör.</p>
+</li>
+<li>
+<p><strong>dtos</strong> = Uygulamaya gelen istek yapılarının bulunduğu klasör.</p>
+</li>
+<li>
+<p><strong>models</strong> = Entity yani database sınıflarının bulunduğu klasör.</p>
+</li>
+<li>
+<p><strong>repositories</strong> = Repository katmanındaki sınıfların bulunduğu klasör.</p>
+</li>
+<li>
+<p><strong>services</strong> = Service katmanındaki sınıfların bulunduğu klasör.</p>
+</li>
+</ul>
+<p>Yukarıdaki yapıda controllers klasörünün altında DeveloperController.java sınıfı içerisinde tüm developerların <strong>listelenmesi (Read)</strong>, <strong>eklenmesi (Create)</strong>, <strong>silinmesi (Delete)</strong> ve <strong>güncellenmesi (Update)</strong> için gerekli olan methodları görebilirsiniz.</p>
+<p>Spring framework de mvc yapısını oluşturmak için aşağıdaki anotasyonlar kullanılır.</p>
+<ul>
+<li>@Controller</li>
+<li>@Service</li>
+<li>@Repository</li>
+</ul>
+<p>En dış katman olan Controller sınıfları Service katmanındaki sınıflar ile etkileşime geçerler.
+Etkileşime geçmelerini sağlayan ise Dependency Injection dır. Spring framework de bunu @Autowired anotasyonu ile yapabilirsiniz.</p>
+<p>Service katmanında ise Controller sınıfı için gerekli olan methodlar bulunur. Aşağıdaki resimde methodları inceleyebilirsiniz.</p>
+<figure>
+     
+</figure>
+
+<p>Service katmanıda database işlemlerine direk müdahale eden Repository katmanına Dependency Injection yaparak erişim sağlar.</p>
+<p>Katmanlar arasındaki etkileşim doğru yapılmaz ise hata durumları oluşur.</p>
+<p>Oluşturmuş olduğumuz projemize dışardan nasıl erişilebileceğini Swagger ile döküman haline getirebilir yada Postman collection larını paylaşabiliriz. Bu projede <strong>src -&gt; main -&gt; resources -&gt; static</strong> klasörünün altında Developer.
+postman_collection adındaki dosyayı Postman ' e import ederek test edebilirsiniz.</p>
+<p>Sonuç olarak, bu yazıda sıfırdan Springboot projesi nasıl oluşturulur , hangi ayarlar yapılmalıdır ve katmanlar nasıl olmalıdırın cevaplarını vermiş oluyoruz. Projenin tamamına <a href="https://github.com/mrpehlivan/medium-crud" target="_blank" rel="noopener noreffer">burdan</a> erişebilirsiniz.</p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
+</item></channel>
+</rss>

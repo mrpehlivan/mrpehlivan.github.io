@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Senkron vs Asenkron Programlama - Arif Pehlivan</title><meta name="Description" content=""><meta property="og:title" content="Senkron vs Asenkron Programlama" />
+<meta property="og:description" content="Senkron programlama, yazılımda her bir işlemin sıra ile yapılmasıdır. Örneğin süpermarketlerdeki kasa kuyruğunda bir önceki müşteri, ürünlerinin ödemesini yapmadan sizin ürünlerinize sıra gelmemektedir.
+Beklerken yaşanan zaman kaybı Asenkron programlamada ortadan kalkar. Asenkron programlama; işlemlerin birbirini beklemeden , bağımsız olarak gerçekleşmesidir. Süpermarket örneğinden devam edecek olursak, Asenkron programlama; her müşterinin sıra beklemeden istediği kasadan ödeme yapabilmesini sağlamaktadır.
+Java programlama dili Java 8 ile birlikte Asenkron programlamaya da ilgisini arttırmıştır. CompletableFuture arayüzü Java’nın Asenkron programlama için kullanılan bir sınıfıdır." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://arifpehlivan.com/posts/completable-future/" />
+<meta property="article:published_time" content="2017-05-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-05-13T00:00:00+00:00" /><meta property="og:site_name" content="Arif Pehlivan" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Senkron vs Asenkron Programlama"/>
+<meta name="twitter:description" content="Senkron programlama, yazılımda her bir işlemin sıra ile yapılmasıdır. Örneğin süpermarketlerdeki kasa kuyruğunda bir önceki müşteri, ürünlerinin ödemesini yapmadan sizin ürünlerinize sıra gelmemektedir.
+Beklerken yaşanan zaman kaybı Asenkron programlamada ortadan kalkar. Asenkron programlama; işlemlerin birbirini beklemeden , bağımsız olarak gerçekleşmesidir. Süpermarket örneğinden devam edecek olursak, Asenkron programlama; her müşterinin sıra beklemeden istediği kasadan ödeme yapabilmesini sağlamaktadır.
+Java programlama dili Java 8 ile birlikte Asenkron programlamaya da ilgisini arttırmıştır. CompletableFuture arayüzü Java’nın Asenkron programlama için kullanılan bir sınıfıdır."/>
+<meta name="application-name" content="Arif Pehlivan">
+<meta name="apple-mobile-web-app-title" content="Arif Pehlivan"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://arifpehlivan.com/posts/completable-future/" /><link rel="prev" href="http://arifpehlivan.com/posts/vuejs/" /><link rel="next" href="http://arifpehlivan.com/posts/optional/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Senkron vs Asenkron Programlama",
+        "inLanguage": "tr",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/arifpehlivan.com\/posts\/completable-future\/"
+        },"genre": "posts","keywords": "java, completable-future","wordcount":  310 ,
+        "url": "http:\/\/arifpehlivan.com\/posts\/completable-future\/","datePublished": "2017-05-13T00:00:00+00:00","dateModified": "2017-05-13T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Arif Pehlivan"},"author": {
+                "@type": "Person",
+                "name": "Arif Pehlivan"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Arif Pehlivan">Arif Pehlivan</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> Hakkımda </a><a class="menu-item" href="/posts/"> Paylaşımlar </a><a class="menu-item" href="/tags/"> Etiketler </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Arif Pehlivan">Arif Pehlivan</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/about/" title="">Hakkımda</a><a class="menu-item" href="/posts/" title="">Paylaşımlar</a><a class="menu-item" href="/tags/" title="">Etiketler</a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title"></h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Senkron vs Asenkron Programlama</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Arif Pehlivan</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-05-13">2017-05-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#senkron-çalışan-örnek">Senkron çalışan örnek</a></li>
+        <li><a href="#asenkron-çalışan-örnek">Asenkron çalışan örnek</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Senkron programlama, yazılımda her bir işlemin sıra ile yapılmasıdır.
+Örneğin süpermarketlerdeki kasa kuyruğunda bir önceki müşteri,
+ürünlerinin ödemesini yapmadan sizin ürünlerinize sıra gelmemektedir.</p>
+<p>Beklerken yaşanan zaman kaybı Asenkron programlamada ortadan kalkar.
+Asenkron programlama; işlemlerin birbirini beklemeden , bağımsız olarak
+gerçekleşmesidir. Süpermarket örneğinden devam edecek olursak, Asenkron
+programlama; her müşterinin sıra beklemeden istediği kasadan ödeme
+yapabilmesini sağlamaktadır.</p>
+<p>Java programlama dili Java 8 ile birlikte Asenkron programlamaya da
+ilgisini arttırmıştır. CompletableFuture arayüzü Java’nın Asenkron
+programlama için kullanılan bir sınıfıdır. CompletableFuture
+java.util.concurrent paketi içinde bulunmaktadır. Java 8 öncesi Guava
+Framework’un de ListenableFuture olarak kullanılmaktadır.</p>
+<p>CompletableFuture sınıfı temelde Future ve CompletionStage arayüz
+sınıflarından türemektedir. CompletionStage arayüzü callback
+methodların, Future sınıfı ise Asenkron işlemlerin hesaplanmasını
+kapsamaktadır. CompletableFuture sınıfı toplamda 59 adet metot
+içermektedir. Tüm metotları detaylı olarak buradan inceleyebilirsiniz.
+CompletableFuture arayüzü ile geliştirdiğimiz programda, sık kullanılan
+işlemlerin süresini azaltabiliriz.</p>
+<p>Peki ya Senkron çalışan bir metot, Asenkron olarak nasıl kullanılır?</p>
+<h3 id="senkron-çalışan-örnek">Senkron çalışan örnek</h3>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="kd">interface</span> <span class="nc">UserService</span> <span class="o">{</span> 
+    <span class="n">User</span> <span class="nf">findUserById</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">);</span> 
+    <span class="o">}</span>
+    <span class="kd">class</span> <span class="nc">UserServiceImpl</span> <span class="kd">implements</span> <span class="n">UserService</span> <span class="o">{</span>
+     
+    <span class="nd">@Override</span> 
+    <span class="n">User</span> <span class="nf">findUserById</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">)</span> <span class="o">{</span> 
+     <span class="k">return</span> <span class="n">findUser</span><span class="o">(</span><span class="n">userId</span><span class="o">);</span> 
+     <span class="o">}</span> 
+     <span class="kd">private</span> <span class="n">User</span> <span class="nf">findUser</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="err">…</span> <span class="o">}</span> 
+    <span class="o">}</span>
+</code></pre></div><h3 id="asenkron-çalışan-örnek">Asenkron çalışan örnek</h3>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="kd">interface</span> <span class="nc">UserService</span> <span class="o">{</span> 
+    <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="nf">findUserById</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">);</span> 
+    <span class="o">}</span>
+    <span class="kd">class</span> <span class="nc">UserServiceImpl</span> <span class="kd">implements</span> <span class="n">UserService</span> <span class="o">{</span> 
+    <span class="nd">@Override</span> 
+    <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="nf">findUserById</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">)</span> <span class="o">{</span> 
+     <span class="k">return</span> <span class="n">CompletableFuture</span><span class="o">.</span><span class="na">supplyAsync</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">findUser</span><span class="o">(</span><span class="n">userId</span><span class="o">));</span> 
+     <span class="o">}</span> 
+    <span class="kd">private</span> <span class="n">User</span> <span class="nf">findUser</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="err">…</span> <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div><p>CompletableFuture’da dikkat edilmesi gereken en önemli nokta; Asenkron
+işlemleri Senkron’a dönüştürmemektedir. Örneğin; CompletableFuture
+arayüzünün sahip olduğu .join() metodu, ilgili işlem tamamlanana kadar
+diğer tüm işlemleri bekletmektedir. Bu yüzden art arda çağrılan
+işlemlerde join kullanmamaya dikkat edilmesi gerekmektedir. Bunun yerine
+.get(long timeout, TimeUnit unit) metodu kullanılabilir. Bu metot
+sayesinde çok uzun süren işlemlerin, diğer işlemleri bekletmemesi için o
+işleme bir time out değeri verilir ve işlemlerin birbirini
+engellemesinin önüne geçilir.</p>
+<p>Sonuç olarak Asenkron programlamayı Senkron programlamayla
+karşılaştırırsak; Asenkron programlama, işlemlerimizi daha hızlı
+yapmamızı sağlamaktadır.Java programlama dili Java 8 ile çıkarmış olduğu
+CompletableFuture arayüzünü Java 9 ile de geliştirmeye devam etmektedir.</p>
+<p>Kolay Gelsin.. 🤞</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title=" Twitter" data-sharer="twitter" data-url="http://arifpehlivan.com/posts/completable-future/" data-title="Senkron vs Asenkron Programlama" data-via="@arifpehlivn" data-hashtags="java,completable-future"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title=" Facebook" data-sharer="facebook" data-url="http://arifpehlivan.com/posts/completable-future/" data-hashtag="java"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title=" Linkedin" data-sharer="linkedin" data-url="http://arifpehlivan.com/posts/completable-future/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title=" WhatsApp" data-sharer="whatsapp" data-url="http://arifpehlivan.com/posts/completable-future/" data-title="Senkron vs Asenkron Programlama" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title=" Xing" data-sharer="xing" data-url="http://arifpehlivan.com/posts/completable-future/" data-title="Senkron vs Asenkron Programlama"><i class="fab fa-xing fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">java</a>,&nbsp;<a href="/tags/completable-future/">completable-future</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/vuejs/" class="prev" rel="prev" title="Vue.js"><i class="fas fa-angle-left fa-fw"></i>Vue.js</a>
+            <a href="/posts/optional/" class="next" rel="next" title="Nedir bu Optional?">Nedir bu Optional?<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,25 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Completable Future on Arif Pehlivan</title>
-    <link>https://mrpehlivan.github.io/tags/completable-future/</link>
-    <description>Recent content in Completable Future on Arif Pehlivan</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 13 May 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mrpehlivan.github.io/tags/completable-future/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Senkron vs Asenkron Programlama ve CompletableFuture</title>
-      <link>https://mrpehlivan.github.io/2017/05/senkron-vs-asenkron-programlama-ve-completablefuture/</link>
-      <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mrpehlivan.github.io/2017/05/senkron-vs-asenkron-programlama-ve-completablefuture/</guid>
-      <description>&lt;p&gt;Senkron programlama, yazılımda her bir işlemin sıra ile yapılmasıdır. Örneğin süpermarketlerdeki kasa kuyruğunda bir önceki müşteri, ürünlerinin ödemesini yapmadan sizin ürünlerinize sıra gelmemektedir.
-&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>completable-future - tag - Arif Pehlivan</title>
+        <link>http://arifpehlivan.com/tags/completable-future/</link>
+        <description>completable-future - tag - Arif Pehlivan</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Sat, 13 May 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/tags/completable-future/" rel="self" type="application/rss+xml" /><item>
+    <title>Senkron vs Asenkron Programlama</title>
+    <link>http://arifpehlivan.com/posts/completable-future/</link>
+    <pubDate>Sat, 13 May 2017 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/posts/completable-future/</guid>
+    <description><![CDATA[Senkron programlama, yazılımda her bir işlemin sıra ile yapılmasıdır. Örneğin süpermarketlerdeki kasa kuyruğunda bir önceki müşteri, ürünlerinin ödemesini yapmadan sizin ürünlerinize sıra gelmemektedir.
+Beklerken yaşanan zaman kaybı Asenkron programlamada ortadan kalkar. Asenkron programlama; işlemlerin birbirini beklemeden , bağımsız olarak gerçekleşmesidir. Süpermarket örneğinden devam edecek olursak, Asenkron programlama; her müşterinin sıra beklemeden istediği kasadan ödeme yapabilmesini sağlamaktadır.
+Java programlama dili Java 8 ile birlikte Asenkron programlamaya da ilgisini arttırmıştır. CompletableFuture arayüzü Java’nın Asenkron programlama için kullanılan bir sınıfıdır.]]></description>
+</item></channel>
 </rss>

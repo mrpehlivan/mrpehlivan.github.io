@@ -1,26 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Optional on Arif Pehlivan</title>
-    <link>https://mrpehlivan.github.io/tags/optional/</link>
-    <description>Recent content in Optional on Arif Pehlivan</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 31 Oct 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mrpehlivan.github.io/tags/optional/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Nedir bu Optional ?</title>
-      <link>https://mrpehlivan.github.io/2017/10/nedir-bu-optional/</link>
-      <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mrpehlivan.github.io/2017/10/nedir-bu-optional/</guid>
-      <description>&lt;p&gt;Her yazılımcının yazılım hayatı boyunca en çok karşılaştığı exceptionlardan biri olan &lt;strong&gt;NullPointerException&lt;/strong&gt; Java 8 ile artık önlenebilir hale gelmiştir.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>optional - tag - Arif Pehlivan</title>
+        <link>http://arifpehlivan.com/tags/optional/</link>
+        <description>optional - tag - Arif Pehlivan</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Tue, 12 Dec 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/tags/optional/" rel="self" type="application/rss+xml" /><item>
+    <title>Nedir bu Optional?</title>
+    <link>http://arifpehlivan.com/posts/optional/</link>
+    <pubDate>Tue, 12 Dec 2017 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/posts/optional/</guid>
+    <description><![CDATA[<p>Her yazılımcının yazılım hayatı boyunca en çok karşılaştığı
+exceptionlardan biri olan <strong>NullPointerException</strong> Java 8 ile artık
+önlenebilir hale gelmiştir.</p>
+<p>Bu yazıda Java 8’in yeni özelliklerden biri olan java.util.Optional
+sınıfını inceleyeceğiz. Optional sınıfı içerisinde toplamda 15 adet
+method bulundurmaktadır.Bu methodlar ile NullPointerException ın nasıl
+önleneceğini örnekler ile anlatmaya çalışacağım.</p>
+<p><em><strong>of</strong></em> : Bu method Optional türde olmayan herhangi bir nesneyi
+Optional türe çevirmek için kullanılır. Tabiki bu nesneye bir değer
+atanmış olması gerekmektedir. Eğer NullPointerException almak istiyor
+isek of methodunun içerisine null değerini vermemiz yeterlidir. Örnek
+olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">chuck</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;Chuck Norris&#34;</span><span class="o">);</span>
+</code></pre></div><p><em><strong>ofNullable</strong></em> : Bu method Optional türde olmayan herhangi bir nesneyi
+Optional türe çevirmek için kullanılır. Adındanda anlaşıldığı üzre
+atanan değer null olabilir.of methodundan ayrı olarak null değeri
+verdiğimiz zaman NullPointerException değilde <strong>NoSuchElementException</strong>
+ile karşılaşırız.</p>
+<p><em><strong>get</strong></em> : Bu method Optional sınıfı içerisinde oluşturulmuş olan T
+tipindeki nesneye erişmek için kullanırız. Örnek olarak yukarıda
+oluşturduğumuz chuck nesnesini yazdırmak istediğimiz zaman aşağıdaki
+şekilde yazdırabiliriz.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">chuck</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+</code></pre></div><p><em><strong>empty</strong></em> : Bu method bize boş bir Optional nesnesi üretmemizi sağlar.
+Kullanımı</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">chuck</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">empty</span><span class="o">();</span>
+</code></pre></div><p>şeklindedir. Tabiki Optional türde bir objenin T tipine erişebilmek için
+get() methodu kullanılır. Empty yani boş oluşturulan bir Optional
+nesnesini get etmek istersek NoSuchElementException ile karşılaşırız.
+Sebebi nesneye henüz bir değer atanmamış olmasıdır.</p>
+<p><em><strong>ifPresent</strong></em> : Bu method Optional türde olan bir nesne için eğer
+tanımlı ise içerisinde işlem yapılmasına izin verir. Örnek olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Chuck Norris&#34;</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Arif Pehlivan&#34;</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Mario Jardel&#34;</span><span class="o">);</span>
+    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">optList</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+    <span class="n">optList</span><span class="o">.</span><span class="na">ifPresent</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+</code></pre></div><p><em><strong>isPresent</strong></em> : Bu method Optional türde olan bir nesnenin tanımlı
+olup olmadığını kontrol etmemizi sağlar. Eğer tanımlı ise true değil ise
+false değeri döner. Örnek olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">chuck</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;Chuck Norris&#34;</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">chuck</span><span class="o">.</span><span class="na">isPresent</span><span class="o">()</span> <span class="o">?</span> <span class="s">&#34;Chuck&#34;</span> <span class="o">:</span> <span class="s">&#34;Norris&#34;</span><span class="o">);</span>
+</code></pre></div><p><em><strong>map</strong></em> : Bu method Optional türde tanımlı olan bir nesne üzerinde
+işlemler yapmamıza olanak sağlar. Örnek olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">test</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;Arif Pehlivan&#34;</span><span class="o">);</span>
+    <span class="n">test</span><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">String</span><span class="o">::</span><span class="n">length</span><span class="o">);</span>
+</code></pre></div><p>yada</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Chuck Norris&#34;</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Arif Pehlivan&#34;</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Mario Jardel&#34;</span><span class="o">);</span>
+    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">optList</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+    <span class="n">optList</span><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">List</span><span class="o">::</span><span class="n">size</span><span class="o">).</span><span class="na">get</span><span class="o">();</span>
+</code></pre></div><p><em><strong>filter</strong></em> : Bu method Optional türde tanımlı olan bir nesne üzerinde
+işlemler yapmamıza olanak sağlar. Örnek olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">chuck</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;Chuck Norris&#34;</span><span class="o">);</span>
+    <span class="n">chuck</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span> <span class="s">&#34;Chuck Norris&#34;</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">i</span><span class="o">)).</span><span class="na">ifPresent</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+</code></pre></div><p><em><strong>orElse</strong></em> : Bu method Optional türde oluşturulan nesne tanımlı olup
+olmasına bakmaksızın verilen değerini döner. Örnek olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">chuck</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;Chuck Norris&#34;</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">chuck</span><span class="o">.</span><span class="na">orElse</span><span class="o">(</span><span class="n">testOrElse</span><span class="o">()));</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">testOrElse</span><span class="o">(){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Dur yapma&#34;</span><span class="o">);</span>
+    <span class="o">}</span>
+</code></pre></div><p>Bu örnekde sistem çıktısına önce Dur yapma değerini ardından Chuck
+Norris değerini dönecektir.</p>
+<p><em><strong>orElseGet</strong></em> : Yukarıdaki orElse methodundan farklı olarak orElse
+içerisindeki değer Optional’ın empty olup olmasına bakmaksızın direk
+çalışır. orElseGet ise Optional empty ise çalışır.</p>
+<p><em><strong>orElseThrow</strong></em> : Bu method Optional türde oluşturulan bir nesne için
+gerekli durumda exception fırlatır. Örnek olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">str</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">empty</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">orElseThrow</span><span class="o">(</span><span class="n">IllegalArgumentException</span><span class="o">::</span><span class="k">new</span><span class="o">));</span>
+</code></pre></div><p>Yukarıda Optional sınıfının sağlamış olduğu kolaylıkları anlatmaya
+çalıştım. Daha detaylı bilgi almak isterseniz <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" target="_blank" rel="noopener noreffer">bu
+linkden</a>
+inceleyebilirsiniz.</p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
+</item></channel>
 </rss>

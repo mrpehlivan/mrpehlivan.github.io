@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Nedir bu Java Stream? - Arif Pehlivan</title><meta name="Description" content=""><meta property="og:title" content="Nedir bu Java Stream?" />
+<meta property="og:description" content="Stream kelimesini ilk duyduğum zaman aklıma Java I/O paketinde bulunan InputStream ve OutputStream gelmişti. Fakat bunun böyle olmadığını api dökümanını inceleyince fark ettim. Bu yazıda streamler nasıl çalışır , türleri nelerdir ve nasıl kullanılır sorularını cevaplamaya çalışacağım.
+Stream ler fonksiyonel programlama da kullanılan Monad tasarım kalıplarına çok benzemektedir. Türkçe kelime anlamı akıştır. Bir dizi öge üzerinde hesaplamalar yapmak ve farklı türde operasyonlar yapmamızı sağlarlar.
+Nasıl çalışır?
+Bir stream aslında iki türlü işlem yapar." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://arifpehlivan.com/posts/stream/" />
+<meta property="article:published_time" content="2018-02-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-02-18T00:00:00+00:00" /><meta property="og:site_name" content="Arif Pehlivan" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Nedir bu Java Stream?"/>
+<meta name="twitter:description" content="Stream kelimesini ilk duyduğum zaman aklıma Java I/O paketinde bulunan InputStream ve OutputStream gelmişti. Fakat bunun böyle olmadığını api dökümanını inceleyince fark ettim. Bu yazıda streamler nasıl çalışır , türleri nelerdir ve nasıl kullanılır sorularını cevaplamaya çalışacağım.
+Stream ler fonksiyonel programlama da kullanılan Monad tasarım kalıplarına çok benzemektedir. Türkçe kelime anlamı akıştır. Bir dizi öge üzerinde hesaplamalar yapmak ve farklı türde operasyonlar yapmamızı sağlarlar.
+Nasıl çalışır?
+Bir stream aslında iki türlü işlem yapar."/>
+<meta name="application-name" content="Arif Pehlivan">
+<meta name="apple-mobile-web-app-title" content="Arif Pehlivan"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://arifpehlivan.com/posts/stream/" /><link rel="prev" href="http://arifpehlivan.com/posts/tasarim-kaliplari/" /><link rel="next" href="http://arifpehlivan.com/posts/spring-boot-example/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Nedir bu Java Stream?",
+        "inLanguage": "tr",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/arifpehlivan.com\/posts\/stream\/"
+        },"genre": "posts","keywords": "java, stream, java8","wordcount":  516 ,
+        "url": "http:\/\/arifpehlivan.com\/posts\/stream\/","datePublished": "2018-02-18T00:00:00+00:00","dateModified": "2018-02-18T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Arif Pehlivan"},"author": {
+                "@type": "Person",
+                "name": "Arif Pehlivan"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Arif Pehlivan">Arif Pehlivan</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> Hakkımda </a><a class="menu-item" href="/posts/"> Paylaşımlar </a><a class="menu-item" href="/tags/"> Etiketler </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Arif Pehlivan">Arif Pehlivan</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/about/" title="">Hakkımda</a><a class="menu-item" href="/posts/" title="">Paylaşımlar</a><a class="menu-item" href="/tags/" title="">Etiketler</a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title"></h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Nedir bu Java Stream?</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Arif Pehlivan</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-02-18">2018-02-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>Stream kelimesini ilk duyduğum zaman aklıma <strong>Java I/O</strong> paketinde
+bulunan <strong>InputStream</strong> ve <strong>OutputStream</strong> gelmişti. Fakat bunun böyle
+olmadığını api dökümanını inceleyince fark ettim. Bu yazıda streamler
+nasıl çalışır , türleri nelerdir ve nasıl kullanılır sorularını
+cevaplamaya çalışacağım.</p>
+<p>Stream ler fonksiyonel programlama da kullanılan <em><strong>Monad</strong></em> tasarım
+kalıplarına çok benzemektedir. Türkçe kelime anlamı akıştır. Bir dizi
+öge üzerinde hesaplamalar yapmak ve farklı türde operasyonlar yapmamızı
+sağlarlar.</p>
+<p><strong>Nasıl çalışır?</strong></p>
+<p>Bir stream aslında iki türlü işlem yapar. Bunlar ara işlemler ve
+sonlandırıcı işlemlerdir. Ara işlemler işlemin sonucunda Stream dönerken
+sonlandırıcı işlemler void yada stream olmayan türde değer döner.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="err">“</span><span class="n">ali</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">veli</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">ahmet</span><span class="err">”</span><span class="o">,</span><span class="err">”</span><span class="n">mehmet</span><span class="err">”</span><span class="o">);</span>
+<span class="n">list</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+<span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="n">s</span><span class="o">.</span><span class="na">startsWith</span><span class="o">(</span><span class="err">“</span><span class="n">a</span><span class="err">”</span><span class="o">))</span>
+<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">String</span><span class="o">::</span><span class="n">toUpperCase</span><span class="o">)</span>
+<span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+<span class="nl">
+</span><span class="nl">Output:</span><span class="n">ALIAHMET</span>
+</code></pre></div><p>Örnek olarak yukarıdaki koda baktığımız zaman bir liste içerisinde
+bulunan ali, veli, ahmet ve mehmet değerlerini <strong>ara işlem</strong> olan
+<strong>filter</strong> ve <strong>map</strong> methodu ile işleme alıp <strong>sonlandırıcı işlem</strong>olan
+<strong>forEach</strong> methoduyla konsola çıktılarını basmaktadır. Stream’in tüm
+ara ve sonlandırıcı işlemlerine
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html" target="_blank" rel="noopener noreffer">buradan</a>
+erişebilirsiniz.</p>
+<p><strong>Türleri nelerdir?</strong></p>
+<p>Streamler ikiye ayrılır. Bunlar <strong>stream()</strong> ve <strong>parallelStream()</strong>
+dir. <strong>stream()</strong> methodu bir listede bulunan değerlerin işleme
+alınmasında sıralı olarak hareket eder. Fakat <strong>parallelStream(</strong>)
+methodu ise liste de bulunan değerleri birbirinden bağımsız olarak
+işleme alır. Örnek olarak yukarıda tanımlamış olduğumuz örnek listemizi
+<strong>stream()</strong> ve <strong>parallelStream()</strong> methodlarını ayrı ayrı kullanarak
+çalıştırırsak <strong>stream()</strong> methodu her zaman bize aşağıdaki sonucu
+dönecektir.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="nl">Output:</span><span class="n">ALIAHMET</span>
+</code></pre></div><p>Fakat <strong>parallelStream(</strong>) methodu ise ilk değer olarak ALI değerini
+önce dönerken bazende AHMET değerini önce dönecektir. parallelStream() ‘
+e yazının ilerleyen kısımlarında daha detaylı değineceğiz.</p>
+<p>Yukarıdaki örnek de bir stream oluşturmak için List içerisindeki
+değerleri .stream() ile işleme almıştık. Aslında buna ihtiyaç duymadan
+<strong>Stream.of()</strong> methodu ilede aynı işlemi gerçekleştirebiliriz. Örnek
+olarak :</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"> <span class="n">Stream</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="err">“</span><span class="n">ali</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">veli</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">ahmet</span><span class="err">”</span><span class="o">,</span><span class="err">”</span><span class="n">mehmet</span><span class="err">””</span><span class="o">)</span>
+ <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="n">s</span><span class="o">.</span><span class="na">startsWith</span><span class="o">(</span><span class="err">“</span><span class="n">a</span><span class="err">”</span><span class="o">))</span>
+ <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">String</span><span class="o">::</span><span class="n">toUpperCase</span><span class="o">)</span>
+ <span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+ 
+ <span class="n">Output</span><span class="o">:</span><span class="n">ALIAHMET</span>
+</code></pre></div><p>Java 8 ile ayrıca primitive type lara özgü stream türleride
+bulunmaktadır. Örneğin int , double ve long primitive türleri için
+<strong>IntStream</strong> , <strong>DoubleStream</strong> ve <strong>LongStream</strong> türleri
+bulunmaktadır.</p>
+<p>IntStreamler for döngüsü yerinede kullanabiliriz. Aşağıdaki örnek de for
+döngüsü ile yapılan bir işlemin IntStream ile yapılmasını göreceğiz.</p>
+<p><strong>For döngüsü :</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span> <span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">10</span> <span class="o">;</span> <span class="n">i</span><span class="o">++){</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">i</span><span class="o">);}</span>
+<span class="nl">
+</span><span class="nl">Output:</span><span class="n">0123456789</span>
+</code></pre></div><p><strong>IntStream :</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span><span class="n">10</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">print</span><span class="o">);</span>
+<span class="nl">
+</span><span class="nl">Output:</span><span class="n">0123456789</span>
+</code></pre></div><p>Primitive stream ler aritmetik işlemler olan <em><strong>sum</strong></em> , <em><strong>average</strong></em> ,
+<em><strong>max</strong></em> , <em><strong>min</strong></em> işlemlerinin kolaylıkla yapılmasını sağlarlar.
+Örnek olarak :</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span><span class="n">10</span><span class="o">).</span><span class="na">max</span><span class="o">().</span><span class="na">getAsInt</span><span class="o">());</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span><span class="n">10</span><span class="o">).</span><span class="na">min</span><span class="o">().</span><span class="na">getAsInt</span><span class="o">());</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span><span class="n">10</span><span class="o">).</span><span class="na">sum</span><span class="o">());</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span><span class="n">10</span><span class="o">).</span><span class="na">average</span><span class="o">().</span><span class="na">getAsDouble</span><span class="o">());</span>
+<span class="nl">
+</span><span class="nl">Output:</span> <span class="n">9</span> <span class="c1">//max0 //min45 //sum4.5 //average
+</span></code></pre></div><p>Ayrıca primitive streamler obje dönüşümlerinde de kullanılabilir. Örnek
+olarak :</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span><span class="n">3</span><span class="o">).</span><span class="na">mapToObj</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span> <span class="err">“</span><span class="n">ali</span><span class="err">”</span><span class="o">+</span><span class="n">i</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+<span class="nl">
+</span><span class="nl">Output:</span> <span class="n">ali0ali1ali2</span>
+</code></pre></div><p>Stream’in ikinci türü olan <strong>parallelStream</strong> ise işleme alınan
+değerleri sıralı olarak değilde birbirlerinden bağımsız olarak işleme
+alırlar. Bunu yaparken <em><strong>ForkJoinPool</strong></em> arayüzünün sağlamış olduğu
+<em><strong>commonPool</strong></em> methodunu kullanır. Thread pool da default tanımlı olan
+thread adedi kadar olan işlemleri paralel olarak çalıştırabilir.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="err">“</span><span class="n">ali</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">veli</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">ahmet</span><span class="err">”</span><span class="o">)</span>
+<span class="o">.</span><span class="na">parallelStream</span><span class="o">()</span>
+<span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="err">“</span><span class="n">Filter</span><span class="o">:</span> <span class="o">%</span><span class="n">s</span> <span class="o">[%</span><span class="n">s</span><span class="o">]</span><span class="err">\</span><span class="n">n</span><span class="err">”</span><span class="o">,</span> <span class="n">s</span><span class="o">,</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span> <span class="o">})</span>
+<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="err">“</span><span class="n">Map</span><span class="o">:</span> <span class="o">%</span><span class="n">s</span> <span class="o">[%</span><span class="n">s</span><span class="o">]</span><span class="err">\</span><span class="n">n</span><span class="err">”</span><span class="o">,</span> <span class="n">s</span><span class="o">,</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span> <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="na">toUpperCase</span><span class="o">();</span> <span class="o">})</span>
+<span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="err">“</span><span class="n">ForEach</span><span class="o">:</span> <span class="o">%</span><span class="n">s</span> <span class="o">[%</span><span class="n">s</span><span class="o">]</span><span class="err">\</span><span class="n">n</span><span class="err">”</span><span class="o">,</span> <span class="n">s</span><span class="o">,</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getName</span><span class="o">()));</span>
+<span class="nl">
+</span><span class="nl">Output:</span> 
+<span class="nl">Filter:</span> <span class="n">ali</span> <span class="o">[</span><span class="n">ForkJoinPool</span><span class="o">.</span><span class="na">commonPool</span><span class="o">-</span><span class="n">worker</span><span class="o">-</span><span class="n">1</span><span class="o">]</span>
+<span class="nl">Map:</span> <span class="n">ali</span> <span class="o">[</span><span class="n">ForkJoinPool</span><span class="o">.</span><span class="na">commonPool</span><span class="o">-</span><span class="n">worker</span><span class="o">-</span><span class="n">1</span><span class="o">]</span>
+<span class="nl">ForEach:</span> <span class="n">ALI</span> <span class="o">[</span><span class="n">ForkJoinPool</span><span class="o">.</span><span class="na">commonPool</span><span class="o">-</span><span class="n">worker</span><span class="o">-</span><span class="n">1</span><span class="o">]</span>
+<span class="nl">Filter:</span> <span class="n">veli</span> <span class="o">[</span><span class="n">main</span><span class="o">]</span>
+<span class="nl">Map:</span> <span class="n">veli</span> <span class="o">[</span><span class="n">main</span><span class="o">]</span><span class="n">Filter</span><span class="o">:</span> <span class="n">ahmet</span> <span class="o">[</span><span class="n">ForkJoinPool</span><span class="o">.</span><span class="na">commonPool</span><span class="o">-</span><span class="n">worker</span><span class="o">-</span><span class="n">2</span><span class="o">]</span>
+<span class="nl">Map:</span> <span class="n">ahmet</span> <span class="o">[</span><span class="n">ForkJoinPool</span><span class="o">.</span><span class="na">commonPool</span><span class="o">-</span><span class="n">worker</span><span class="o">-</span><span class="n">2</span><span class="o">]</span>
+<span class="nl">ForEach:</span> <span class="n">AHMET</span> <span class="o">[</span><span class="n">ForkJoinPool</span><span class="o">.</span><span class="na">commonPool</span><span class="o">-</span><span class="n">worker</span><span class="o">-</span><span class="n">2</span><span class="o">]</span>
+<span class="nl">ForEach:</span> <span class="n">VELI</span> <span class="o">[</span><span class="n">main</span><span class="o">]</span>
+</code></pre></div><p>Yukarıdaki örnek de <strong>parallelStream</strong> in nasıl çalıştığını daha iyi
+görebilirsiniz.</p>
+<p>Özetle Java programlama dili, Java 8 versiyonunda yayınlamış olduğu
+stream ler ile yazılan kodların daha kolay okunup , güzel görünmesinin
+yanında performans açısından da hızlı olmasını sağlamıştır.</p>
+<p>Kolay Gelsin.. 🤞</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title=" Twitter" data-sharer="twitter" data-url="http://arifpehlivan.com/posts/stream/" data-title="Nedir bu Java Stream?" data-via="@arifpehlivn" data-hashtags="java,stream,java8"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title=" Facebook" data-sharer="facebook" data-url="http://arifpehlivan.com/posts/stream/" data-hashtag="java"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title=" Linkedin" data-sharer="linkedin" data-url="http://arifpehlivan.com/posts/stream/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title=" WhatsApp" data-sharer="whatsapp" data-url="http://arifpehlivan.com/posts/stream/" data-title="Nedir bu Java Stream?" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title=" Xing" data-sharer="xing" data-url="http://arifpehlivan.com/posts/stream/" data-title="Nedir bu Java Stream?"><i class="fab fa-xing fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">java</a>,&nbsp;<a href="/tags/stream/">stream</a>,&nbsp;<a href="/tags/java8/">java8</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/tasarim-kaliplari/" class="prev" rel="prev" title="Tasarım Kalıpları"><i class="fas fa-angle-left fa-fw"></i>Tasarım Kalıpları</a>
+            <a href="/posts/spring-boot-example/" class="next" rel="next" title="Springboot ile CRUD Projesi Oluşturma">Springboot ile CRUD Projesi Oluşturma<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

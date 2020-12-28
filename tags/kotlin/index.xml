@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>kotlin - tag - Arif Pehlivan</title>
+        <link>http://arifpehlivan.com/tags/kotlin/</link>
+        <description>kotlin - tag - Arif Pehlivan</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/tags/kotlin/" rel="self" type="application/rss+xml" /><item>
+    <title>Tasarım Kalıpları</title>
+    <link>http://arifpehlivan.com/posts/tasarim-kaliplari/</link>
+    <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/posts/tasarim-kaliplari/</guid>
+    <description><![CDATA[Yazılım projeleri yazılımcılara verilen belirli argümanlar üzerinden oluşan projelerdir. Genellikle proje geliştirmelerinde büyük resim tam anlamıyla görüntülenemediğinden projeler zamanla değişmektedirler.Bu değişimler bazen projelerin yeniden yazılmasını gerektirmektedir. İşte bu kadar köklü değişimlerin önüne geçmek açısından projelerimizi belirli tasarım kalıplarına oturtarak ilerler isek değişimlerin maliyetlerini küçültebiliriz.
+Nasıl ortaya çıkmıştır? Kalıplar(Patterns) Amerikalı mimar Christopher Alexander tarafından 1977 yılında mimari konseptler adıyla ortaya çıkmıştır. 1987 yılında Kent Beck ve Ward Cunningham bu kalıpları kendi deneyimleri ile programlama üzerinde uygulamışlardır ve o yıl düzenlenen OOPSLA konferansında bu çalışmalarını sunmuşlardır.]]></description>
+</item></channel>
+</rss>

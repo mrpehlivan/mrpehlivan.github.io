@@ -1,0 +1,322 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>java - tag - Arif Pehlivan</title>
+        <link>http://arifpehlivan.com/tags/java/</link>
+        <description>java - tag - Arif Pehlivan</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/tags/java/" rel="self" type="application/rss+xml" /><item>
+    <title>Springboot ile CRUD Projesi Oluşturma</title>
+    <link>http://arifpehlivan.com/posts/spring-boot-example/</link>
+    <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/posts/spring-boot-example/</guid>
+    <description><![CDATA[<p>Springboot da proje oluşturmak spring boot initializer ile artık daha kolay bir hale geldi. Bu yazıda oluşturacağımız proje standart bir Create, Read, Update ve Delete işlemleri yapacağından projede Spring Data , PostgreSQL, Spring Mvc Web bağımlılıklarını kullanacağız.</p>
+<p>Örnek ekran görüntüsü :</p>
+<figure>
+     
+</figure>
+
+<p>Oluşturduğumuz projemizi indirmiş olduğumuz path den kullandığınız her hangi bir ide(integrated development environment) ile açabilirsiniz. Ben Intellij ide ile geliştirmeleri yapacağım.</p>
+<figure>
+     
+</figure>
+
+<p>Intellij ana ekranIntellij ide de açılan ekranda Import Project&rsquo;e tıklıyoruz.</p>
+<figure>
+     
+</figure>
+
+<p>Choose GradlePaket yönetim için Gradle&rsquo;ı seçiyoruz ve Next&rsquo;e tıklıyoruz.</p>
+<p><figure>
+     
+</figure>
+
+Projenin konfigürasyon ayarlarını yapıyoruz ve Finish&rsquo;e tıklıyoruz.</p>
+<figure>
+     
+</figure>
+
+<p>Aşağıdaki resimde projenin yapısını görebilirsiniz.</p>
+<figure>
+     
+</figure>
+
+<p>Oluşturduğumuz projemizde yazının başında belirttiğimiz gibi Create , Read , Update ve Delete işlemlerini yapacağımızdan projemizin ihtiyacı olan bazı konfigürasyonları yapmamız gerekmektedir. Bunlardan en önceliği Database bağlantısıdır.
+Database bağlantısı için projenin src-&gt;main-&gt;resources uzantısı altında bulunan application.properties dosyasını aşağıdaki örnekteki gibi ayarlıyoruz.</p>
+<script type="application/javascript" src="https://gist.github.com/mrpehlivan/0c64633c8596d0a2771d7a235da1bd41.js"></script>
+
+<p>İsterseniz application.properties dosyasının adını application.yml olarak değiştirip yml formatta da ayarları yapabilirsiniz.</p>
+<script type="application/javascript" src="https://gist.github.com/mrpehlivan/0db4a3cdfa91ba1b927bed97d1688ca0.js"></script>
+
+<p>Ben default gelen ayarlara devam edeceğim için application.properties dosyasını kullanacağım.</p>
+<p>Properties dosyasına yapmış olduğumuz tanımlamaları projemizde 
+DatabaseConfiguration.java adında bir konfigürasyon sınıfı içerisinde projemize uygulayacağız. Bunun için src -&gt; main -&gt; java -&gt; com -&gt; arif -&gt;crud uzantısının altına configuration diye bir klasör oluşturup aşağıdaki DatabaseConfiguration.java sınıfını oraya ekliyoruz.</p>
+<script type="application/javascript" src="https://gist.github.com/mrpehlivan/86ed6bcdb3f6025f9b1d570e83bc5da4.js"></script>
+
+<p>Database ayarlarını yaptıktan sonra artık localimiz de PostgreSQL&rsquo;e bağlanmamızda bir engel kalmamıştır. Eğer localiniz de indirilmiş bir PostgreSQL yok ise ve local bilgisayarınız da docker yüklü ise aşağıdaki docker-compose dosyasını çalıştırabilir ve hızlıca devam edebilirsiniz.</p>
+<script type="application/javascript" src="https://gist.github.com/mrpehlivan/47293acb8b1cfd1af558bf61b71f9db3.js"></script>
+
+<p>Docker compose dosyasını herhangi bir yere indirip aşağıdaki komutları çalıştırmanız yeterli olacaktır. Ben Downloads&rsquo;a indirip ordan çalıştırdım.</p>
+<figure>
+     
+</figure>
+
+<p>Yukarıdaki tüm ayarlamaları yaptıktan sonra projemizde bulunan CrudApplication.java sınıfında bulunan main methodunu çalıştırıyoruz.
+Projemiz çalışır hale geldikten sonra proje yapısını oluşturuyoruz. Aşağıdaki resimde örnek yapıyı görebilirsiniz.</p>
+<figure>
+     
+</figure>
+
+<p>Project StructureProje yapısında ;</p>
+<ul>
+<li>
+<p><strong>controllers</strong> = Uygulamanın en dış katmanlarının bulunduğu klasör.</p>
+</li>
+<li>
+<p><strong>dtos</strong> = Uygulamaya gelen istek yapılarının bulunduğu klasör.</p>
+</li>
+<li>
+<p><strong>models</strong> = Entity yani database sınıflarının bulunduğu klasör.</p>
+</li>
+<li>
+<p><strong>repositories</strong> = Repository katmanındaki sınıfların bulunduğu klasör.</p>
+</li>
+<li>
+<p><strong>services</strong> = Service katmanındaki sınıfların bulunduğu klasör.</p>
+</li>
+</ul>
+<p>Yukarıdaki yapıda controllers klasörünün altında DeveloperController.java sınıfı içerisinde tüm developerların <strong>listelenmesi (Read)</strong>, <strong>eklenmesi (Create)</strong>, <strong>silinmesi (Delete)</strong> ve <strong>güncellenmesi (Update)</strong> için gerekli olan methodları görebilirsiniz.</p>
+<p>Spring framework de mvc yapısını oluşturmak için aşağıdaki anotasyonlar kullanılır.</p>
+<ul>
+<li>@Controller</li>
+<li>@Service</li>
+<li>@Repository</li>
+</ul>
+<p>En dış katman olan Controller sınıfları Service katmanındaki sınıflar ile etkileşime geçerler.
+Etkileşime geçmelerini sağlayan ise Dependency Injection dır. Spring framework de bunu @Autowired anotasyonu ile yapabilirsiniz.</p>
+<p>Service katmanında ise Controller sınıfı için gerekli olan methodlar bulunur. Aşağıdaki resimde methodları inceleyebilirsiniz.</p>
+<figure>
+     
+</figure>
+
+<p>Service katmanıda database işlemlerine direk müdahale eden Repository katmanına Dependency Injection yaparak erişim sağlar.</p>
+<p>Katmanlar arasındaki etkileşim doğru yapılmaz ise hata durumları oluşur.</p>
+<p>Oluşturmuş olduğumuz projemize dışardan nasıl erişilebileceğini Swagger ile döküman haline getirebilir yada Postman collection larını paylaşabiliriz. Bu projede <strong>src -&gt; main -&gt; resources -&gt; static</strong> klasörünün altında Developer.
+postman_collection adındaki dosyayı Postman ' e import ederek test edebilirsiniz.</p>
+<p>Sonuç olarak, bu yazıda sıfırdan Springboot projesi nasıl oluşturulur , hangi ayarlar yapılmalıdır ve katmanlar nasıl olmalıdırın cevaplarını vermiş oluyoruz. Projenin tamamına <a href="https://github.com/mrpehlivan/medium-crud" target="_blank" rel="noopener noreffer">burdan</a> erişebilirsiniz.</p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
+</item><item>
+    <title>Nedir bu Java Stream?</title>
+    <link>http://arifpehlivan.com/posts/stream/</link>
+    <pubDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/posts/stream/</guid>
+    <description><![CDATA[<p>Stream kelimesini ilk duyduğum zaman aklıma <strong>Java I/O</strong> paketinde
+bulunan <strong>InputStream</strong> ve <strong>OutputStream</strong> gelmişti. Fakat bunun böyle
+olmadığını api dökümanını inceleyince fark ettim. Bu yazıda streamler
+nasıl çalışır , türleri nelerdir ve nasıl kullanılır sorularını
+cevaplamaya çalışacağım.</p>
+<p>Stream ler fonksiyonel programlama da kullanılan <em><strong>Monad</strong></em> tasarım
+kalıplarına çok benzemektedir. Türkçe kelime anlamı akıştır. Bir dizi
+öge üzerinde hesaplamalar yapmak ve farklı türde operasyonlar yapmamızı
+sağlarlar.</p>
+<p><strong>Nasıl çalışır?</strong></p>
+<p>Bir stream aslında iki türlü işlem yapar. Bunlar ara işlemler ve
+sonlandırıcı işlemlerdir. Ara işlemler işlemin sonucunda Stream dönerken
+sonlandırıcı işlemler void yada stream olmayan türde değer döner.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="err">“</span><span class="n">ali</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">veli</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">ahmet</span><span class="err">”</span><span class="o">,</span><span class="err">”</span><span class="n">mehmet</span><span class="err">”</span><span class="o">);</span>
+<span class="n">list</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+<span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="n">s</span><span class="o">.</span><span class="na">startsWith</span><span class="o">(</span><span class="err">“</span><span class="n">a</span><span class="err">”</span><span class="o">))</span>
+<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">String</span><span class="o">::</span><span class="n">toUpperCase</span><span class="o">)</span>
+<span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+<span class="nl">
+</span><span class="nl">Output:</span><span class="n">ALIAHMET</span>
+</code></pre></div><p>Örnek olarak yukarıdaki koda baktığımız zaman bir liste içerisinde
+bulunan ali, veli, ahmet ve mehmet değerlerini <strong>ara işlem</strong> olan
+<strong>filter</strong> ve <strong>map</strong> methodu ile işleme alıp <strong>sonlandırıcı işlem</strong>olan
+<strong>forEach</strong> methoduyla konsola çıktılarını basmaktadır. Stream’in tüm
+ara ve sonlandırıcı işlemlerine
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html" target="_blank" rel="noopener noreffer">buradan</a>
+erişebilirsiniz.</p>
+<p><strong>Türleri nelerdir?</strong></p>
+<p>Streamler ikiye ayrılır. Bunlar <strong>stream()</strong> ve <strong>parallelStream()</strong>
+dir. <strong>stream()</strong> methodu bir listede bulunan değerlerin işleme
+alınmasında sıralı olarak hareket eder. Fakat <strong>parallelStream(</strong>)
+methodu ise liste de bulunan değerleri birbirinden bağımsız olarak
+işleme alır. Örnek olarak yukarıda tanımlamış olduğumuz örnek listemizi
+<strong>stream()</strong> ve <strong>parallelStream()</strong> methodlarını ayrı ayrı kullanarak
+çalıştırırsak <strong>stream()</strong> methodu her zaman bize aşağıdaki sonucu
+dönecektir.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="nl">Output:</span><span class="n">ALIAHMET</span>
+</code></pre></div><p>Fakat <strong>parallelStream(</strong>) methodu ise ilk değer olarak ALI değerini
+önce dönerken bazende AHMET değerini önce dönecektir. parallelStream() ‘
+e yazının ilerleyen kısımlarında daha detaylı değineceğiz.</p>
+<p>Yukarıdaki örnek de bir stream oluşturmak için List içerisindeki
+değerleri .stream() ile işleme almıştık. Aslında buna ihtiyaç duymadan
+<strong>Stream.of()</strong> methodu ilede aynı işlemi gerçekleştirebiliriz. Örnek
+olarak :</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"> <span class="n">Stream</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="err">“</span><span class="n">ali</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">veli</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">ahmet</span><span class="err">”</span><span class="o">,</span><span class="err">”</span><span class="n">mehmet</span><span class="err">””</span><span class="o">)</span>
+ <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="n">s</span><span class="o">.</span><span class="na">startsWith</span><span class="o">(</span><span class="err">“</span><span class="n">a</span><span class="err">”</span><span class="o">))</span>
+ <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">String</span><span class="o">::</span><span class="n">toUpperCase</span><span class="o">)</span>
+ <span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+ 
+ <span class="n">Output</span><span class="o">:</span><span class="n">ALIAHMET</span>
+</code></pre></div><p>Java 8 ile ayrıca primitive type lara özgü stream türleride
+bulunmaktadır. Örneğin int , double ve long primitive türleri için
+<strong>IntStream</strong> , <strong>DoubleStream</strong> ve <strong>LongStream</strong> türleri
+bulunmaktadır.</p>
+<p>IntStreamler for döngüsü yerinede kullanabiliriz. Aşağıdaki örnek de for
+döngüsü ile yapılan bir işlemin IntStream ile yapılmasını göreceğiz.</p>
+<p><strong>For döngüsü :</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span> <span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">10</span> <span class="o">;</span> <span class="n">i</span><span class="o">++){</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">i</span><span class="o">);}</span>
+<span class="nl">
+</span><span class="nl">Output:</span><span class="n">0123456789</span>
+</code></pre></div><p><strong>IntStream :</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span><span class="n">10</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">print</span><span class="o">);</span>
+<span class="nl">
+</span><span class="nl">Output:</span><span class="n">0123456789</span>
+</code></pre></div><p>Primitive stream ler aritmetik işlemler olan <em><strong>sum</strong></em> , <em><strong>average</strong></em> ,
+<em><strong>max</strong></em> , <em><strong>min</strong></em> işlemlerinin kolaylıkla yapılmasını sağlarlar.
+Örnek olarak :</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span><span class="n">10</span><span class="o">).</span><span class="na">max</span><span class="o">().</span><span class="na">getAsInt</span><span class="o">());</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span><span class="n">10</span><span class="o">).</span><span class="na">min</span><span class="o">().</span><span class="na">getAsInt</span><span class="o">());</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span><span class="n">10</span><span class="o">).</span><span class="na">sum</span><span class="o">());</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span><span class="n">10</span><span class="o">).</span><span class="na">average</span><span class="o">().</span><span class="na">getAsDouble</span><span class="o">());</span>
+<span class="nl">
+</span><span class="nl">Output:</span> <span class="n">9</span> <span class="c1">//max0 //min45 //sum4.5 //average
+</span></code></pre></div><p>Ayrıca primitive streamler obje dönüşümlerinde de kullanılabilir. Örnek
+olarak :</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span><span class="n">3</span><span class="o">).</span><span class="na">mapToObj</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span> <span class="err">“</span><span class="n">ali</span><span class="err">”</span><span class="o">+</span><span class="n">i</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+<span class="nl">
+</span><span class="nl">Output:</span> <span class="n">ali0ali1ali2</span>
+</code></pre></div><p>Stream’in ikinci türü olan <strong>parallelStream</strong> ise işleme alınan
+değerleri sıralı olarak değilde birbirlerinden bağımsız olarak işleme
+alırlar. Bunu yaparken <em><strong>ForkJoinPool</strong></em> arayüzünün sağlamış olduğu
+<em><strong>commonPool</strong></em> methodunu kullanır. Thread pool da default tanımlı olan
+thread adedi kadar olan işlemleri paralel olarak çalıştırabilir.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="err">“</span><span class="n">ali</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">veli</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">ahmet</span><span class="err">”</span><span class="o">)</span>
+<span class="o">.</span><span class="na">parallelStream</span><span class="o">()</span>
+<span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="err">“</span><span class="n">Filter</span><span class="o">:</span> <span class="o">%</span><span class="n">s</span> <span class="o">[%</span><span class="n">s</span><span class="o">]</span><span class="err">\</span><span class="n">n</span><span class="err">”</span><span class="o">,</span> <span class="n">s</span><span class="o">,</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span> <span class="o">})</span>
+<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="err">“</span><span class="n">Map</span><span class="o">:</span> <span class="o">%</span><span class="n">s</span> <span class="o">[%</span><span class="n">s</span><span class="o">]</span><span class="err">\</span><span class="n">n</span><span class="err">”</span><span class="o">,</span> <span class="n">s</span><span class="o">,</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span> <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="na">toUpperCase</span><span class="o">();</span> <span class="o">})</span>
+<span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="err">“</span><span class="n">ForEach</span><span class="o">:</span> <span class="o">%</span><span class="n">s</span> <span class="o">[%</span><span class="n">s</span><span class="o">]</span><span class="err">\</span><span class="n">n</span><span class="err">”</span><span class="o">,</span> <span class="n">s</span><span class="o">,</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getName</span><span class="o">()));</span>
+<span class="nl">
+</span><span class="nl">Output:</span> 
+<span class="nl">Filter:</span> <span class="n">ali</span> <span class="o">[</span><span class="n">ForkJoinPool</span><span class="o">.</span><span class="na">commonPool</span><span class="o">-</span><span class="n">worker</span><span class="o">-</span><span class="n">1</span><span class="o">]</span>
+<span class="nl">Map:</span> <span class="n">ali</span> <span class="o">[</span><span class="n">ForkJoinPool</span><span class="o">.</span><span class="na">commonPool</span><span class="o">-</span><span class="n">worker</span><span class="o">-</span><span class="n">1</span><span class="o">]</span>
+<span class="nl">ForEach:</span> <span class="n">ALI</span> <span class="o">[</span><span class="n">ForkJoinPool</span><span class="o">.</span><span class="na">commonPool</span><span class="o">-</span><span class="n">worker</span><span class="o">-</span><span class="n">1</span><span class="o">]</span>
+<span class="nl">Filter:</span> <span class="n">veli</span> <span class="o">[</span><span class="n">main</span><span class="o">]</span>
+<span class="nl">Map:</span> <span class="n">veli</span> <span class="o">[</span><span class="n">main</span><span class="o">]</span><span class="n">Filter</span><span class="o">:</span> <span class="n">ahmet</span> <span class="o">[</span><span class="n">ForkJoinPool</span><span class="o">.</span><span class="na">commonPool</span><span class="o">-</span><span class="n">worker</span><span class="o">-</span><span class="n">2</span><span class="o">]</span>
+<span class="nl">Map:</span> <span class="n">ahmet</span> <span class="o">[</span><span class="n">ForkJoinPool</span><span class="o">.</span><span class="na">commonPool</span><span class="o">-</span><span class="n">worker</span><span class="o">-</span><span class="n">2</span><span class="o">]</span>
+<span class="nl">ForEach:</span> <span class="n">AHMET</span> <span class="o">[</span><span class="n">ForkJoinPool</span><span class="o">.</span><span class="na">commonPool</span><span class="o">-</span><span class="n">worker</span><span class="o">-</span><span class="n">2</span><span class="o">]</span>
+<span class="nl">ForEach:</span> <span class="n">VELI</span> <span class="o">[</span><span class="n">main</span><span class="o">]</span>
+</code></pre></div><p>Yukarıdaki örnek de <strong>parallelStream</strong> in nasıl çalıştığını daha iyi
+görebilirsiniz.</p>
+<p>Özetle Java programlama dili, Java 8 versiyonunda yayınlamış olduğu
+stream ler ile yazılan kodların daha kolay okunup , güzel görünmesinin
+yanında performans açısından da hızlı olmasını sağlamıştır.</p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
+</item><item>
+    <title>Tasarım Kalıpları</title>
+    <link>http://arifpehlivan.com/posts/tasarim-kaliplari/</link>
+    <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/posts/tasarim-kaliplari/</guid>
+    <description><![CDATA[Yazılım projeleri yazılımcılara verilen belirli argümanlar üzerinden oluşan projelerdir. Genellikle proje geliştirmelerinde büyük resim tam anlamıyla görüntülenemediğinden projeler zamanla değişmektedirler.Bu değişimler bazen projelerin yeniden yazılmasını gerektirmektedir. İşte bu kadar köklü değişimlerin önüne geçmek açısından projelerimizi belirli tasarım kalıplarına oturtarak ilerler isek değişimlerin maliyetlerini küçültebiliriz.
+Nasıl ortaya çıkmıştır? Kalıplar(Patterns) Amerikalı mimar Christopher Alexander tarafından 1977 yılında mimari konseptler adıyla ortaya çıkmıştır. 1987 yılında Kent Beck ve Ward Cunningham bu kalıpları kendi deneyimleri ile programlama üzerinde uygulamışlardır ve o yıl düzenlenen OOPSLA konferansında bu çalışmalarını sunmuşlardır.]]></description>
+</item><item>
+    <title>Nedir bu Optional?</title>
+    <link>http://arifpehlivan.com/posts/optional/</link>
+    <pubDate>Tue, 12 Dec 2017 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/posts/optional/</guid>
+    <description><![CDATA[<p>Her yazılımcının yazılım hayatı boyunca en çok karşılaştığı
+exceptionlardan biri olan <strong>NullPointerException</strong> Java 8 ile artık
+önlenebilir hale gelmiştir.</p>
+<p>Bu yazıda Java 8’in yeni özelliklerden biri olan java.util.Optional
+sınıfını inceleyeceğiz. Optional sınıfı içerisinde toplamda 15 adet
+method bulundurmaktadır.Bu methodlar ile NullPointerException ın nasıl
+önleneceğini örnekler ile anlatmaya çalışacağım.</p>
+<p><em><strong>of</strong></em> : Bu method Optional türde olmayan herhangi bir nesneyi
+Optional türe çevirmek için kullanılır. Tabiki bu nesneye bir değer
+atanmış olması gerekmektedir. Eğer NullPointerException almak istiyor
+isek of methodunun içerisine null değerini vermemiz yeterlidir. Örnek
+olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">chuck</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;Chuck Norris&#34;</span><span class="o">);</span>
+</code></pre></div><p><em><strong>ofNullable</strong></em> : Bu method Optional türde olmayan herhangi bir nesneyi
+Optional türe çevirmek için kullanılır. Adındanda anlaşıldığı üzre
+atanan değer null olabilir.of methodundan ayrı olarak null değeri
+verdiğimiz zaman NullPointerException değilde <strong>NoSuchElementException</strong>
+ile karşılaşırız.</p>
+<p><em><strong>get</strong></em> : Bu method Optional sınıfı içerisinde oluşturulmuş olan T
+tipindeki nesneye erişmek için kullanırız. Örnek olarak yukarıda
+oluşturduğumuz chuck nesnesini yazdırmak istediğimiz zaman aşağıdaki
+şekilde yazdırabiliriz.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">chuck</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+</code></pre></div><p><em><strong>empty</strong></em> : Bu method bize boş bir Optional nesnesi üretmemizi sağlar.
+Kullanımı</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">chuck</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">empty</span><span class="o">();</span>
+</code></pre></div><p>şeklindedir. Tabiki Optional türde bir objenin T tipine erişebilmek için
+get() methodu kullanılır. Empty yani boş oluşturulan bir Optional
+nesnesini get etmek istersek NoSuchElementException ile karşılaşırız.
+Sebebi nesneye henüz bir değer atanmamış olmasıdır.</p>
+<p><em><strong>ifPresent</strong></em> : Bu method Optional türde olan bir nesne için eğer
+tanımlı ise içerisinde işlem yapılmasına izin verir. Örnek olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Chuck Norris&#34;</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Arif Pehlivan&#34;</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Mario Jardel&#34;</span><span class="o">);</span>
+    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">optList</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+    <span class="n">optList</span><span class="o">.</span><span class="na">ifPresent</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+</code></pre></div><p><em><strong>isPresent</strong></em> : Bu method Optional türde olan bir nesnenin tanımlı
+olup olmadığını kontrol etmemizi sağlar. Eğer tanımlı ise true değil ise
+false değeri döner. Örnek olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">chuck</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;Chuck Norris&#34;</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">chuck</span><span class="o">.</span><span class="na">isPresent</span><span class="o">()</span> <span class="o">?</span> <span class="s">&#34;Chuck&#34;</span> <span class="o">:</span> <span class="s">&#34;Norris&#34;</span><span class="o">);</span>
+</code></pre></div><p><em><strong>map</strong></em> : Bu method Optional türde tanımlı olan bir nesne üzerinde
+işlemler yapmamıza olanak sağlar. Örnek olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">test</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;Arif Pehlivan&#34;</span><span class="o">);</span>
+    <span class="n">test</span><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">String</span><span class="o">::</span><span class="n">length</span><span class="o">);</span>
+</code></pre></div><p>yada</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Chuck Norris&#34;</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Arif Pehlivan&#34;</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Mario Jardel&#34;</span><span class="o">);</span>
+    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">optList</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+    <span class="n">optList</span><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">List</span><span class="o">::</span><span class="n">size</span><span class="o">).</span><span class="na">get</span><span class="o">();</span>
+</code></pre></div><p><em><strong>filter</strong></em> : Bu method Optional türde tanımlı olan bir nesne üzerinde
+işlemler yapmamıza olanak sağlar. Örnek olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">chuck</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;Chuck Norris&#34;</span><span class="o">);</span>
+    <span class="n">chuck</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span> <span class="s">&#34;Chuck Norris&#34;</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">i</span><span class="o">)).</span><span class="na">ifPresent</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+</code></pre></div><p><em><strong>orElse</strong></em> : Bu method Optional türde oluşturulan nesne tanımlı olup
+olmasına bakmaksızın verilen değerini döner. Örnek olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">chuck</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;Chuck Norris&#34;</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">chuck</span><span class="o">.</span><span class="na">orElse</span><span class="o">(</span><span class="n">testOrElse</span><span class="o">()));</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">testOrElse</span><span class="o">(){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Dur yapma&#34;</span><span class="o">);</span>
+    <span class="o">}</span>
+</code></pre></div><p>Bu örnekde sistem çıktısına önce Dur yapma değerini ardından Chuck
+Norris değerini dönecektir.</p>
+<p><em><strong>orElseGet</strong></em> : Yukarıdaki orElse methodundan farklı olarak orElse
+içerisindeki değer Optional’ın empty olup olmasına bakmaksızın direk
+çalışır. orElseGet ise Optional empty ise çalışır.</p>
+<p><em><strong>orElseThrow</strong></em> : Bu method Optional türde oluşturulan bir nesne için
+gerekli durumda exception fırlatır. Örnek olarak ;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">str</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">empty</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">orElseThrow</span><span class="o">(</span><span class="n">IllegalArgumentException</span><span class="o">::</span><span class="k">new</span><span class="o">));</span>
+</code></pre></div><p>Yukarıda Optional sınıfının sağlamış olduğu kolaylıkları anlatmaya
+çalıştım. Daha detaylı bilgi almak isterseniz <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" target="_blank" rel="noopener noreffer">bu
+linkden</a>
+inceleyebilirsiniz.</p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
+</item><item>
+    <title>Senkron vs Asenkron Programlama</title>
+    <link>http://arifpehlivan.com/posts/completable-future/</link>
+    <pubDate>Sat, 13 May 2017 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/posts/completable-future/</guid>
+    <description><![CDATA[Senkron programlama, yazılımda her bir işlemin sıra ile yapılmasıdır. Örneğin süpermarketlerdeki kasa kuyruğunda bir önceki müşteri, ürünlerinin ödemesini yapmadan sizin ürünlerinize sıra gelmemektedir.
+Beklerken yaşanan zaman kaybı Asenkron programlamada ortadan kalkar. Asenkron programlama; işlemlerin birbirini beklemeden , bağımsız olarak gerçekleşmesidir. Süpermarket örneğinden devam edecek olursak, Asenkron programlama; her müşterinin sıra beklemeden istediği kasadan ödeme yapabilmesini sağlamaktadır.
+Java programlama dili Java 8 ile birlikte Asenkron programlamaya da ilgisini arttırmıştır. CompletableFuture arayüzü Java’nın Asenkron programlama için kullanılan bir sınıfıdır.]]></description>
+</item></channel>
+</rss>

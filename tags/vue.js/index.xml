@@ -1,26 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Vue.js on Arif Pehlivan</title>
-    <link>https://mrpehlivan.github.io/tags/vue.js/</link>
-    <description>Recent content in Vue.js on Arif Pehlivan</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 12 Jan 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mrpehlivan.github.io/tags/vue.js/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Vue.js</title>
-      <link>https://mrpehlivan.github.io/2017/01/vue.js/</link>
-      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mrpehlivan.github.io/2017/01/vue.js/</guid>
-      <description>&lt;p&gt;Merhabalar bu yazımda Vue.js den bahsedeceğim.
-Vue.js web arayüzleri oluşturmak için geliştirilen bir JavaScript kütüphanesidir. Evan You tarafından geliştirilmeye başlanmıştır. Benzerlerinin aksine öğrenimi kolay ve basittir. Ayrıca moduler yapı oluşturmak için alt yapıya sahiptir.
-&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>vue.js - tag - Arif Pehlivan</title>
+        <link>http://arifpehlivan.com/tags/vue.js/</link>
+        <description>vue.js - tag - Arif Pehlivan</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Thu, 12 Jan 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/tags/vue.js/" rel="self" type="application/rss+xml" /><item>
+    <title>Vue.js</title>
+    <link>http://arifpehlivan.com/posts/vuejs/</link>
+    <pubDate>Thu, 12 Jan 2017 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://arifpehlivan.com/posts/vuejs/</guid>
+    <description><![CDATA[Merhabalar bu yazımda Vue.js den bahsedeceğim. Vue.js web arayüzleri oluşturmak için geliştirilen bir JavaScript kütüphanesidir. Evan You tarafından geliştirilmeye başlanmıştır. Benzerlerinin aksine öğrenimi kolay ve basittir. Ayrıca moduler yapı oluşturmak için alt yapıya sahiptir.
+Neden Vue.js i kullanalım? JavaScript’in kolayca yazılabilmesine olanak sağlamaktadır. Vue.js ile başlamak son derece kolaydır. Dokümantasyonları sayesinde öğrenimi kolay ve kaynak kodu oldukça fazladır. Dış kütüphanelere ihtiyacınız yoktur. JQuery olmadan da kullanabilirsiniz. Pek çok eklenti olmasına rağmen herhangi bir eklenti kurmanıza gerek kalmamaktadır.]]></description>
+</item></channel>
 </rss>
