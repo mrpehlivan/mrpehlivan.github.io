@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>optional - tag - Arif Pehlivan</title>
-        <link>http://arifpehlivan.com/tags/optional/</link>
+        <link>http://mrpehlivan.github.io/tags/optional/</link>
         <description>optional - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Tue, 12 Dec 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/tags/optional/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Tue, 12 Dec 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/optional/" rel="self" type="application/rss+xml" /><item>
     <title>Nedir bu Optional?</title>
-    <link>http://arifpehlivan.com/posts/optional/</link>
+    <link>http://mrpehlivan.github.io/posts/optional/</link>
     <pubDate>Tue, 12 Dec 2017 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/optional/</guid>
+    <guid>http://mrpehlivan.github.io/posts/optional/</guid>
     <description><![CDATA[<p>Her yazılımcının yazılım hayatı boyunca en çok karşılaştığı
 exceptionlardan biri olan <strong>NullPointerException</strong> Java 8 ile artık
 önlenebilir hale gelmiştir.</p>

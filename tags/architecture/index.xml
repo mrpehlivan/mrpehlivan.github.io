@@ -1,16 +1,96 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>architecture - tag - Arif Pehlivan</title>
-        <link>http://arifpehlivan.com/tags/architecture/</link>
+        <link>http://mrpehlivan.github.io/tags/architecture/</link>
         <description>architecture - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/tags/architecture/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/architecture/" rel="self" type="application/rss+xml" /><item>
     <title>Tasarım Kalıpları</title>
-    <link>http://arifpehlivan.com/posts/tasarim-kaliplari/</link>
+    <link>http://mrpehlivan.github.io/posts/tasarim-kaliplari/</link>
     <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/tasarim-kaliplari/</guid>
-    <description><![CDATA[Yazılım projeleri yazılımcılara verilen belirli argümanlar üzerinden oluşan projelerdir. Genellikle proje geliştirmelerinde büyük resim tam anlamıyla görüntülenemediğinden projeler zamanla değişmektedirler.Bu değişimler bazen projelerin yeniden yazılmasını gerektirmektedir. İşte bu kadar köklü değişimlerin önüne geçmek açısından projelerimizi belirli tasarım kalıplarına oturtarak ilerler isek değişimlerin maliyetlerini küçültebiliriz.
-Nasıl ortaya çıkmıştır? Kalıplar(Patterns) Amerikalı mimar Christopher Alexander tarafından 1977 yılında mimari konseptler adıyla ortaya çıkmıştır. 1987 yılında Kent Beck ve Ward Cunningham bu kalıpları kendi deneyimleri ile programlama üzerinde uygulamışlardır ve o yıl düzenlenen OOPSLA konferansında bu çalışmalarını sunmuşlardır.]]></description>
+    <guid>http://mrpehlivan.github.io/posts/tasarim-kaliplari/</guid>
+    <description><![CDATA[<p>Yazılım projeleri yazılımcılara verilen belirli argümanlar üzerinden
+oluşan projelerdir. Genellikle proje geliştirmelerinde büyük resim tam
+anlamıyla görüntülenemediğinden projeler zamanla değişmektedirler.Bu
+değişimler bazen projelerin yeniden yazılmasını gerektirmektedir. İşte
+bu kadar köklü değişimlerin önüne geçmek açısından projelerimizi belirli
+tasarım kalıplarına oturtarak ilerler isek değişimlerin maliyetlerini
+küçültebiliriz.</p>
+<h2 id="nasıl-ortaya-çıkmıştır">Nasıl ortaya çıkmıştır?</h2>
+<p>Kalıplar(Patterns) Amerikalı mimar <a href="https://en.wikipedia.org/wiki/Christopher_Alexander" target="_blank" rel="noopener noreffer">Christopher
+Alexander</a>
+tarafından 1977 yılında mimari konseptler adıyla ortaya çıkmıştır. 1987
+yılında <a href="https://en.wikipedia.org/wiki/Kent_Beck" target="_blank" rel="noopener noreffer">Kent Beck</a> ve <a href="https://en.wikipedia.org/wiki/Ward_Cunningham" target="_blank" rel="noopener noreffer">Ward
+Cunningham</a> bu kalıpları
+kendi deneyimleri ile programlama üzerinde uygulamışlardır ve o yıl
+düzenlenen <a href="https://en.wikipedia.org/wiki/OOPSLA" target="_blank" rel="noopener noreffer">OOPSLA</a> konferansında
+bu çalışmalarını sunmuşlardır. 1994 yılında çıkan <a href="https://en.wikipedia.org/wiki/Design_Patterns" target="_blank" rel="noopener noreffer">Design Patterns:
+Elements of Reusable Object-Oriented Software (Gang of
+Four)</a> kitabı ile tasarım
+kalıpları bilgisayar bilimlerinde önemli bir popülerlik kazanmıştır.</p>
+<h2 id="amacı-nedir">Amacı nedir?</h2>
+<p>Tasarım kalıpları yazılım projelerindeki genel problemleri en iyi yolla
+çözmeyi planlamaktadır. Deneyimli yazılımcıların object-oriented
+konusundaki best practice’ lerinden yararlanılarak farklı türlerde
+kalıplar tasarlanmıştır. Tasarlanan bu kalıplar projelerdeki esnekliği,
+okunabilirliği ve yazılabilirliği kolaylaştırmaktadırlar.</p>
+<h2 id="kaç-adet-tasarım-kalıbı-vardır-ve-türleri-nelerdir">Kaç adet tasarım kalıbı vardır ve türleri nelerdir?</h2>
+<p>Gang of Four kitabında da belirtildiği üzere 23 adet tasarım kalıbı
+bulunmaktadır. Bu tasarım kalıpları çözümlerine göre 3 adet kategoriye
+ayrılmışlardır. Bunlar creational (yaratımsal) , structural (yapısal) ve
+behavioral (davranışsal) kalıplardır.</p>
+<p></p>
+<h2 id="yaratımsal-kalıplar-creational-patterns">Yaratımsal Kalıplar (Creational Patterns)</h2>
+<p>Yaratımsal tasarım kalıpları oluşturulacak olan nesnelerin new operatörü
+kullanmak yerine farklı yollar ile oluşturmayı sağlar. Bu kategorideki
+tasarım kalıpları aşağıda listelenmiştir.</p>
+<ul>
+<li>Abstract Factory,</li>
+<li>Builder,</li>
+<li>Factory Method,</li>
+<li>Prototype,</li>
+<li>Singleton</li>
+</ul>
+<p>gibi kalıplar yaratışsal kalıplar sınıfına girmektedir.</p>
+<p></p>
+<h2 id="yapısal-tasarımlar-structural-patterns">Yapısal Tasarımlar (Structural Patterns)</h2>
+<p>Yapısal tasarım kalıpları sınıflar ile nesneler arasındaki kalıtım ve
+arayüz bağlantılarının kurulmasını sağlar. Bu kategorideki tasarım
+kalıpları aşağıda listelenmiştir.</p>
+<ul>
+<li>Adapter,</li>
+<li>Bridge,</li>
+<li>Composite,</li>
+<li>Decorator,</li>
+<li>Facade,</li>
+<li>Flyweight,</li>
+<li>Proxy</li>
+</ul>
+<p>gibi kalıplar yapısal kalıplar sınıfına girmektedir.</p>
+<p></p>
+<h2 id="davranışsal-kalıplar-behavioral-patterns">Davranışsal Kalıplar (Behavioral Patterns)</h2>
+<p>Davranışsal tasarım kalıpları, nesneler arasındaki ortak iletişim
+kalıplarının tanımlanmasını ve gerçekleşmesini sağlar.Bu kategorideki
+tasarım kalıpları aşağıda listelenmiştir.</p>
+<ul>
+<li>Chain of responsibility,</li>
+<li>Command,</li>
+<li>Interpreter,</li>
+<li>Iterator,</li>
+<li>Mediator,</li>
+<li>Memento,</li>
+<li>Null Object,</li>
+<li>Observer,</li>
+<li>State,</li>
+<li>Strategy,</li>
+<li>Template method</li>
+</ul>
+<p>gibi kalıplar davranışsal tasarım kalıpları sınıfına girmektedir.</p>
+<p>Sonuç olarak projelerimizde esnekliği , okunulabilirliği ve
+yazabilirliği kolaylaştırmak için tasarım kalıplarını projelerimizde
+olabildiğince kullanmayı tercih etmeliyiz.</p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
 </item></channel>
 </rss>

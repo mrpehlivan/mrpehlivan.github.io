@@ -1,16 +1,48 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>vue.js - tag - Arif Pehlivan</title>
-        <link>http://arifpehlivan.com/tags/vue.js/</link>
+        <link>http://mrpehlivan.github.io/tags/vue.js/</link>
         <description>vue.js - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Thu, 12 Jan 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/tags/vue.js/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Thu, 12 Jan 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/vue.js/" rel="self" type="application/rss+xml" /><item>
     <title>Vue.js</title>
-    <link>http://arifpehlivan.com/posts/vuejs/</link>
+    <link>http://mrpehlivan.github.io/posts/vuejs/</link>
     <pubDate>Thu, 12 Jan 2017 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/vuejs/</guid>
-    <description><![CDATA[Merhabalar bu yazımda Vue.js den bahsedeceğim. Vue.js web arayüzleri oluşturmak için geliştirilen bir JavaScript kütüphanesidir. Evan You tarafından geliştirilmeye başlanmıştır. Benzerlerinin aksine öğrenimi kolay ve basittir. Ayrıca moduler yapı oluşturmak için alt yapıya sahiptir.
-Neden Vue.js i kullanalım? JavaScript’in kolayca yazılabilmesine olanak sağlamaktadır. Vue.js ile başlamak son derece kolaydır. Dokümantasyonları sayesinde öğrenimi kolay ve kaynak kodu oldukça fazladır. Dış kütüphanelere ihtiyacınız yoktur. JQuery olmadan da kullanabilirsiniz. Pek çok eklenti olmasına rağmen herhangi bir eklenti kurmanıza gerek kalmamaktadır.]]></description>
+    <guid>http://mrpehlivan.github.io/posts/vuejs/</guid>
+    <description><![CDATA[<p>Merhabalar bu yazımda Vue.js den bahsedeceğim. Vue.js web arayüzleri
+oluşturmak için geliştirilen bir JavaScript kütüphanesidir. Evan You
+tarafından geliştirilmeye başlanmıştır. Benzerlerinin aksine öğrenimi
+kolay ve basittir. Ayrıca moduler yapı oluşturmak için alt yapıya
+sahiptir.</p>
+<h4 id="neden-vue-js-i-kullanalım">Neden Vue.js i kullanalım?</h4>
+<p>JavaScript’in kolayca yazılabilmesine olanak sağlamaktadır. Vue.js ile
+başlamak son derece kolaydır. Dokümantasyonları sayesinde öğrenimi kolay
+ve kaynak kodu oldukça fazladır. Dış kütüphanelere ihtiyacınız yoktur.
+JQuery olmadan da kullanabilirsiniz. Pek çok eklenti olmasına rağmen
+herhangi bir eklenti kurmanıza gerek kalmamaktadır. Ayrıca Github veya
+web üzerinde örnek projeler ve yazılar oldukça fazladır.</p>
+<h4 id="vue-js-vs-diğer-frameworkler">Vue.js vs Diğer Frameworkler</h4>
+<p>Angular : – Vue.js API ve Tasarım açısından Angular’a göre daha
+kolaydır. Hızlı bir şekilde öğrenip, kolayca uygulama geliştirmeye
+başlayabiliyorsunuz. – Vue.js Angular’a göre daha esnek bir yapıdadır.
+Angular gibi her şeyi onun istediği gibi yapmanızı isteyen, içerisinde
+belki kullanmayacağınız onlarca özellik olan bir yapı değil. Vue’da
+interface katmanı bulunuyor. Böylelikle kullanmadığınız özellikler
+yüzünden projeniz büyümüyor.</p>
+<p>React : – React’a nazaran vue.js ile çalışmak daha basit ve kolaydır. –
+Bir çok benzerlikleri bulunmaktadır.</p>
+<p>Daha detaylı karşılaştırmaları görmek için bu link’etıklayabilirsiniz.</p>
+<p>Sonuç olarak öğrenimi kolay ve basit olan bir framework ile hızlıca
+projeler geliştirebilir ve güzel sonuçlar alabilirsiniz. Örnek modüler
+bir proje yapısı isterseniz Github adresimden forklayabilirsiniz. Yada
+<a href="https://github.com/mrpehlivan/vue-2.0-boilerplate" target="_blank" rel="noopener noreffer">buradan</a> direk
+erişebilirsiniz.</p>
+<p>Yardımcı olabilecek linkler :<br>
+Vue.js : <a href="https://vuejs.org/" target="_blank" rel="noopener noreffer">https://vuejs.org/</a><br>
+Awesome Vue :
+<a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener noreffer">https://github.com/vuejs/awesome-vue</a></p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
 </item></channel>
 </rss>

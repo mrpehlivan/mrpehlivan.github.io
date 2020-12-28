@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title> - Arif Pehlivan</title>
-        <link>http://arifpehlivan.com/posts/</link>
+        <link>http://mrpehlivan.github.io/posts/</link>
         <description> | Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Springboot ile CRUD Projesi Oluşturma</title>
-    <link>http://arifpehlivan.com/posts/spring-boot-example/</link>
+    <link>http://mrpehlivan.github.io/posts/spring-boot-example/</link>
     <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/spring-boot-example/</guid>
+    <guid>http://mrpehlivan.github.io/posts/spring-boot-example/</guid>
     <description><![CDATA[<p>Springboot da proje oluşturmak spring boot initializer ile artık daha kolay bir hale geldi. Bu yazıda oluşturacağımız proje standart bir Create, Read, Update ve Delete işlemleri yapacağından projede Spring Data , PostgreSQL, Spring Mvc Web bağımlılıklarını kullanacağız.</p>
 <p>Örnek ekran görüntüsü :</p>
 <figure>
@@ -21,12 +21,12 @@
      
 </figure>
 
-<p>Intellij ana ekranIntellij ide de açılan ekranda Import Project&rsquo;e tıklıyoruz.</p>
+<p>Intellij ide de açılan ekranda Import Project&rsquo;e tıklıyoruz.</p>
 <figure>
      
 </figure>
 
-<p>Choose GradlePaket yönetim için Gradle&rsquo;ı seçiyoruz ve Next&rsquo;e tıklıyoruz.</p>
+<p>Paket yönetim için Gradle&rsquo;ı seçiyoruz ve Next&rsquo;e tıklıyoruz.</p>
 <p><figure>
      
 </figure>
@@ -108,10 +108,10 @@ postman_collection adındaki dosyayı Postman ' e import ederek test edebilirsin
 ]]></description>
 </item><item>
     <title>Nedir bu Java Stream?</title>
-    <link>http://arifpehlivan.com/posts/stream/</link>
+    <link>http://mrpehlivan.github.io/posts/stream/</link>
     <pubDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/stream/</guid>
+    <guid>http://mrpehlivan.github.io/posts/stream/</guid>
     <description><![CDATA[<p>Stream kelimesini ilk duyduğum zaman aklıma <strong>Java I/O</strong> paketinde
 bulunan <strong>InputStream</strong> ve <strong>OutputStream</strong> gelmişti. Fakat bunun böyle
 olmadığını api dökümanını inceleyince fark ettim. Bu yazıda streamler
@@ -218,31 +218,168 @@ yanında performans açısından da hızlı olmasını sağlamıştır.</p>
 ]]></description>
 </item><item>
     <title>Tasarım Kalıpları</title>
-    <link>http://arifpehlivan.com/posts/tasarim-kaliplari/</link>
+    <link>http://mrpehlivan.github.io/posts/tasarim-kaliplari/</link>
     <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/tasarim-kaliplari/</guid>
-    <description><![CDATA[Yazılım projeleri yazılımcılara verilen belirli argümanlar üzerinden oluşan projelerdir. Genellikle proje geliştirmelerinde büyük resim tam anlamıyla görüntülenemediğinden projeler zamanla değişmektedirler.Bu değişimler bazen projelerin yeniden yazılmasını gerektirmektedir. İşte bu kadar köklü değişimlerin önüne geçmek açısından projelerimizi belirli tasarım kalıplarına oturtarak ilerler isek değişimlerin maliyetlerini küçültebiliriz.
-Nasıl ortaya çıkmıştır? Kalıplar(Patterns) Amerikalı mimar Christopher Alexander tarafından 1977 yılında mimari konseptler adıyla ortaya çıkmıştır. 1987 yılında Kent Beck ve Ward Cunningham bu kalıpları kendi deneyimleri ile programlama üzerinde uygulamışlardır ve o yıl düzenlenen OOPSLA konferansında bu çalışmalarını sunmuşlardır.]]></description>
+    <guid>http://mrpehlivan.github.io/posts/tasarim-kaliplari/</guid>
+    <description><![CDATA[<p>Yazılım projeleri yazılımcılara verilen belirli argümanlar üzerinden
+oluşan projelerdir. Genellikle proje geliştirmelerinde büyük resim tam
+anlamıyla görüntülenemediğinden projeler zamanla değişmektedirler.Bu
+değişimler bazen projelerin yeniden yazılmasını gerektirmektedir. İşte
+bu kadar köklü değişimlerin önüne geçmek açısından projelerimizi belirli
+tasarım kalıplarına oturtarak ilerler isek değişimlerin maliyetlerini
+küçültebiliriz.</p>
+<h2 id="nasıl-ortaya-çıkmıştır">Nasıl ortaya çıkmıştır?</h2>
+<p>Kalıplar(Patterns) Amerikalı mimar <a href="https://en.wikipedia.org/wiki/Christopher_Alexander" target="_blank" rel="noopener noreffer">Christopher
+Alexander</a>
+tarafından 1977 yılında mimari konseptler adıyla ortaya çıkmıştır. 1987
+yılında <a href="https://en.wikipedia.org/wiki/Kent_Beck" target="_blank" rel="noopener noreffer">Kent Beck</a> ve <a href="https://en.wikipedia.org/wiki/Ward_Cunningham" target="_blank" rel="noopener noreffer">Ward
+Cunningham</a> bu kalıpları
+kendi deneyimleri ile programlama üzerinde uygulamışlardır ve o yıl
+düzenlenen <a href="https://en.wikipedia.org/wiki/OOPSLA" target="_blank" rel="noopener noreffer">OOPSLA</a> konferansında
+bu çalışmalarını sunmuşlardır. 1994 yılında çıkan <a href="https://en.wikipedia.org/wiki/Design_Patterns" target="_blank" rel="noopener noreffer">Design Patterns:
+Elements of Reusable Object-Oriented Software (Gang of
+Four)</a> kitabı ile tasarım
+kalıpları bilgisayar bilimlerinde önemli bir popülerlik kazanmıştır.</p>
+<h2 id="amacı-nedir">Amacı nedir?</h2>
+<p>Tasarım kalıpları yazılım projelerindeki genel problemleri en iyi yolla
+çözmeyi planlamaktadır. Deneyimli yazılımcıların object-oriented
+konusundaki best practice’ lerinden yararlanılarak farklı türlerde
+kalıplar tasarlanmıştır. Tasarlanan bu kalıplar projelerdeki esnekliği,
+okunabilirliği ve yazılabilirliği kolaylaştırmaktadırlar.</p>
+<h2 id="kaç-adet-tasarım-kalıbı-vardır-ve-türleri-nelerdir">Kaç adet tasarım kalıbı vardır ve türleri nelerdir?</h2>
+<p>Gang of Four kitabında da belirtildiği üzere 23 adet tasarım kalıbı
+bulunmaktadır. Bu tasarım kalıpları çözümlerine göre 3 adet kategoriye
+ayrılmışlardır. Bunlar creational (yaratımsal) , structural (yapısal) ve
+behavioral (davranışsal) kalıplardır.</p>
+<p></p>
+<h2 id="yaratımsal-kalıplar-creational-patterns">Yaratımsal Kalıplar (Creational Patterns)</h2>
+<p>Yaratımsal tasarım kalıpları oluşturulacak olan nesnelerin new operatörü
+kullanmak yerine farklı yollar ile oluşturmayı sağlar. Bu kategorideki
+tasarım kalıpları aşağıda listelenmiştir.</p>
+<ul>
+<li>Abstract Factory,</li>
+<li>Builder,</li>
+<li>Factory Method,</li>
+<li>Prototype,</li>
+<li>Singleton</li>
+</ul>
+<p>gibi kalıplar yaratışsal kalıplar sınıfına girmektedir.</p>
+<p></p>
+<h2 id="yapısal-tasarımlar-structural-patterns">Yapısal Tasarımlar (Structural Patterns)</h2>
+<p>Yapısal tasarım kalıpları sınıflar ile nesneler arasındaki kalıtım ve
+arayüz bağlantılarının kurulmasını sağlar. Bu kategorideki tasarım
+kalıpları aşağıda listelenmiştir.</p>
+<ul>
+<li>Adapter,</li>
+<li>Bridge,</li>
+<li>Composite,</li>
+<li>Decorator,</li>
+<li>Facade,</li>
+<li>Flyweight,</li>
+<li>Proxy</li>
+</ul>
+<p>gibi kalıplar yapısal kalıplar sınıfına girmektedir.</p>
+<p></p>
+<h2 id="davranışsal-kalıplar-behavioral-patterns">Davranışsal Kalıplar (Behavioral Patterns)</h2>
+<p>Davranışsal tasarım kalıpları, nesneler arasındaki ortak iletişim
+kalıplarının tanımlanmasını ve gerçekleşmesini sağlar.Bu kategorideki
+tasarım kalıpları aşağıda listelenmiştir.</p>
+<ul>
+<li>Chain of responsibility,</li>
+<li>Command,</li>
+<li>Interpreter,</li>
+<li>Iterator,</li>
+<li>Mediator,</li>
+<li>Memento,</li>
+<li>Null Object,</li>
+<li>Observer,</li>
+<li>State,</li>
+<li>Strategy,</li>
+<li>Template method</li>
+</ul>
+<p>gibi kalıplar davranışsal tasarım kalıpları sınıfına girmektedir.</p>
+<p>Sonuç olarak projelerimizde esnekliği , okunulabilirliği ve
+yazabilirliği kolaylaştırmak için tasarım kalıplarını projelerimizde
+olabildiğince kullanmayı tercih etmeliyiz.</p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
 </item><item>
     <title>React Js ile Facebook Login Entegrasyonu</title>
-    <link>http://arifpehlivan.com/posts/react-login/</link>
+    <link>http://mrpehlivan.github.io/posts/react-login/</link>
     <pubDate>Thu, 18 Jan 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/react-login/</guid>
-    <description><![CDATA[React Js ile Facebook Login Entegrasyonu
-Uygulamalarda kullanıcı sayısını arttırabilmek için sosyal medya bağlantılarının yapılması günümüzde büyük önem taşımaktadır. Bu yazıda React.js uygulamamızaFacebook’u nasıl entegre edebileceğimizi göreceğiz.
-Entegrasyon yapılırken Facebook’un sağlamış olduğu javascript sdk dan yararlanılmıştır.
-Facebook Software Development Kit (SDK) ‘in yüklenmesi
-Uygulamamızda componentDidMount içerisinde sdk nın sağladığı Facebook.init methodu ile facebook sdk projeye yüklenir.
-FB.init methodu içerisinde 4 adet parametre sayesinde sdk ayarları yapılmaktadır. Bunlar ;
-appId : Entegre edilen uygulama için Facebook tarafından verilen id.]]></description>
+    <guid>http://mrpehlivan.github.io/posts/react-login/</guid>
+    <description><![CDATA[<p><strong>React Js ile Facebook Login Entegrasyonu</strong></p>
+<p>Uygulamalarda kullanıcı sayısını arttırabilmek için sosyal medya
+bağlantılarının yapılması günümüzde büyük önem taşımaktadır. Bu yazıda
+<a href="https://reactjs.org/" target="_blank" rel="noopener noreffer">React.js</a>
+uygulamamıza<a href="https://www.facebook.com/" target="_blank" rel="noopener noreffer">Facebook</a>’u nasıl entegre
+edebileceğimizi göreceğiz.</p>
+<p>Entegrasyon yapılırken Facebook’un sağlamış olduğu <a href="https://developers.facebook.com/docs/javascript" target="_blank" rel="noopener noreffer">javascript
+sdk</a> dan
+yararlanılmıştır.</p>
+<p><strong>Facebook Software Development Kit (SDK) ‘in yüklenmesi</strong></p>
+<p>Uygulamamızda componentDidMount içerisinde sdk nın sağladığı
+Facebook.init methodu ile facebook sdk projeye yüklenir.<br>
+FB.init methodu içerisinde 4 adet parametre sayesinde sdk ayarları
+yapılmaktadır. Bunlar ;</p>
+<p><strong>appId</strong> : Entegre edilen uygulama için Facebook tarafından verilen id.
+Aşağıda nasıl oluşturulacağı ile ilgili bilgilendirilme yapılmıştır.<br>
+<strong>version</strong> : Entegre olunan sdk versiyonu.<br>
+<strong>cookie</strong> : Cookilere izin verilip/verilmeyeceğini belirler.<br>
+<strong>xfbml</strong> : Yüklenildiği sayfa üzerinde sosyal pluginlere izin
+verilip/verilmeyeceğini belirler.</p>
+<p><strong>Nasıl application id oluşturulur ?</strong></p>
+<p>Facebook ile entegrasyon yapabilmek için öncelikle bu
+<a href="https://developers.facebook.com/apps/" target="_blank" rel="noopener noreffer">linkden</a> entegre edilecek
+uygulama için bir uygulama id si alınmalıdır.<br>
+<strong>Add a New App</strong> butonuna (sağ üst tarafda) tıklayıp bilgileri
+girdikten sonra facebook bizi otomatik olarak hangi entegrasyonları
+yapabileceğimizi gösteren bir sayfaya yönlendirir.</p>
+<p>Açılan bu sayfada sol üst tarafda bulunan <strong>Dashboard</strong> sekmesine
+tıkladığınız zaman uygulamamıza ait <strong>version</strong> ,<strong>application</strong> id ve
+<strong>application secret</strong>değerlerine ulaşabiliriz.</p>
+<p>Biz burada facebook login entegrasyonu yaptığımız için Facebook Login
+quick startına tıklayıp ordan entegrasyonu gerçekleştireceğiz.</p>
+<p><strong>Facebook SDK üzerinden login methodunun çağırılması</strong></p>
+<p><em>componentDidMount</em> methodu içerisinde sdkı yükledikten sonra Facebook’a
+login isteğinde bulunabiliriz.Bunun için window objesine yüklemiş
+olduğumuz FB objesi üzerinden login methodunu çağıracağız.</p>
+<p>FB.login methodunu ilk parametre olarak callbackMethod ikinci parametre
+olarak da login olacak olan kullanıcının hangi bilgileri isteniliyorsa
+onlar <strong>scope</strong> objesi içerisinde tanımlanır.<br>
+Aşağıdaki kod örneğinde kullanıcının email adresi istenmiştir.</p>
+<p><a href="https://developers.facebook.com/docs/facebook-login/permissions" target="_blank" rel="noopener noreffer">Bu
+linkden</a>
+scope üzerinde hangi dataların çekilebileceğini görebilirsiniz.</p>
+<p>Bu işlemlerin sonucunda aşağıdaki kod örneklerinden yararlanarak artık
+uygulamanızı facebook login ile entegre etmiş olacaksınız.</p>
+<p><strong>Kod Örnekleri</strong></p>
+<p><em><strong>FB.login methodunun çağırılması :</strong></em></p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">statusChangeCallback</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>   
+    <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="err">‘</span><span class="nx">connected</span><span class="err">’</span><span class="p">)</span> <span class="p">{</span>     
+        <span class="kr">const</span> <span class="nx">socialData</span> <span class="o">=</span> <span class="p">{</span> 
+            <span class="nx">accessToken</span><span class="o">:</span> <span class="nx">response</span><span class="p">.</span><span class="nx">authResponse</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">,</span>
+            <span class="nx">expiresIn</span><span class="o">:</span> <span class="nx">response</span><span class="p">.</span><span class="nx">authResponse</span><span class="p">.</span><span class="nx">expiresIn</span><span class="p">,</span>
+            <span class="nx">signedRequest</span><span class="o">:</span> <span class="nx">response</span><span class="p">.</span><span class="nx">authResponse</span><span class="p">.</span><span class="nx">signedRequest</span><span class="p">,</span>
+            <span class="nx">userID</span><span class="o">:</span> <span class="nx">response</span><span class="p">.</span><span class="nx">authResponse</span><span class="p">.</span><span class="nx">userID</span>     
+    <span class="p">};</span>  
+         <span class="c1">//Başarılı login   } else if (response.status === ‘not_authorized’) {   // Kullanıcı login oldu, fakat uygulamanıza erişim izni yok   } else {   // Login olunamadı   } } window.FB.login(this.statusChangeCallback, { scope: ‘email,public_profile’ });
+</span></code></pre></div><p><em><strong>SDK nın yüklenmesi</strong></em></p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js">
+ <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>   <span class="c1">// Load the SDK asynchronously   (function(d, s, id) {   var js, fjs = d.getElementsByTagName(s)[0];   if (d.getElementById(id)) return;   js = d.createElement(s); js.id = id;   js.src = “https://connect.facebook.net/en_US/sdk.js&#34;;   fjs.parentNode.insertBefore(js, fjs);   }(document, ‘script’, ‘facebook-jssdk’));window.fbAsyncInit = function () {  window.FB.init({  appId: facebook.appId,  cookie: true,  xfbml: true,  version: ‘v2.8’ });};}
+</span></code></pre></div><p>Facebook developers sitesi üzerinde bulunan örnek
+<a href="https://developers.facebook.com/docs/facebook-login/web" target="_blank" rel="noopener noreffer">kod</a> sayfanın
+alt kısmında bulunmaktadır.</p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
 </item><item>
     <title>Nedir bu Optional?</title>
-    <link>http://arifpehlivan.com/posts/optional/</link>
+    <link>http://mrpehlivan.github.io/posts/optional/</link>
     <pubDate>Tue, 12 Dec 2017 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/optional/</guid>
+    <guid>http://mrpehlivan.github.io/posts/optional/</guid>
     <description><![CDATA[<p>Her yazılımcının yazılım hayatı boyunca en çok karşılaştığı
 exceptionlardan biri olan <strong>NullPointerException</strong> Java 8 ile artık
 önlenebilir hale gelmiştir.</p>
@@ -325,20 +462,108 @@ inceleyebilirsiniz.</p>
 ]]></description>
 </item><item>
     <title>Senkron vs Asenkron Programlama</title>
-    <link>http://arifpehlivan.com/posts/completable-future/</link>
+    <link>http://mrpehlivan.github.io/posts/completable-future/</link>
     <pubDate>Sat, 13 May 2017 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/completable-future/</guid>
-    <description><![CDATA[Senkron programlama, yazılımda her bir işlemin sıra ile yapılmasıdır. Örneğin süpermarketlerdeki kasa kuyruğunda bir önceki müşteri, ürünlerinin ödemesini yapmadan sizin ürünlerinize sıra gelmemektedir.
-Beklerken yaşanan zaman kaybı Asenkron programlamada ortadan kalkar. Asenkron programlama; işlemlerin birbirini beklemeden , bağımsız olarak gerçekleşmesidir. Süpermarket örneğinden devam edecek olursak, Asenkron programlama; her müşterinin sıra beklemeden istediği kasadan ödeme yapabilmesini sağlamaktadır.
-Java programlama dili Java 8 ile birlikte Asenkron programlamaya da ilgisini arttırmıştır. CompletableFuture arayüzü Java’nın Asenkron programlama için kullanılan bir sınıfıdır.]]></description>
+    <guid>http://mrpehlivan.github.io/posts/completable-future/</guid>
+    <description><![CDATA[<p>Senkron programlama, yazılımda her bir işlemin sıra ile yapılmasıdır.
+Örneğin süpermarketlerdeki kasa kuyruğunda bir önceki müşteri,
+ürünlerinin ödemesini yapmadan sizin ürünlerinize sıra gelmemektedir.</p>
+<p>Beklerken yaşanan zaman kaybı Asenkron programlamada ortadan kalkar.
+Asenkron programlama; işlemlerin birbirini beklemeden , bağımsız olarak
+gerçekleşmesidir. Süpermarket örneğinden devam edecek olursak, Asenkron
+programlama; her müşterinin sıra beklemeden istediği kasadan ödeme
+yapabilmesini sağlamaktadır.</p>
+<p>Java programlama dili Java 8 ile birlikte Asenkron programlamaya da
+ilgisini arttırmıştır. CompletableFuture arayüzü Java’nın Asenkron
+programlama için kullanılan bir sınıfıdır. CompletableFuture
+java.util.concurrent paketi içinde bulunmaktadır. Java 8 öncesi Guava
+Framework’un de ListenableFuture olarak kullanılmaktadır.</p>
+<p>CompletableFuture sınıfı temelde Future ve CompletionStage arayüz
+sınıflarından türemektedir. CompletionStage arayüzü callback
+methodların, Future sınıfı ise Asenkron işlemlerin hesaplanmasını
+kapsamaktadır. CompletableFuture sınıfı toplamda 59 adet metot
+içermektedir. Tüm metotları detaylı olarak buradan inceleyebilirsiniz.
+CompletableFuture arayüzü ile geliştirdiğimiz programda, sık kullanılan
+işlemlerin süresini azaltabiliriz.</p>
+<p>Peki ya Senkron çalışan bir metot, Asenkron olarak nasıl kullanılır?</p>
+<h3 id="senkron-çalışan-örnek">Senkron çalışan örnek</h3>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="kd">interface</span> <span class="nc">UserService</span> <span class="o">{</span> 
+    <span class="n">User</span> <span class="nf">findUserById</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">);</span> 
+    <span class="o">}</span>
+    <span class="kd">class</span> <span class="nc">UserServiceImpl</span> <span class="kd">implements</span> <span class="n">UserService</span> <span class="o">{</span>
+     
+    <span class="nd">@Override</span> 
+    <span class="n">User</span> <span class="nf">findUserById</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">)</span> <span class="o">{</span> 
+     <span class="k">return</span> <span class="n">findUser</span><span class="o">(</span><span class="n">userId</span><span class="o">);</span> 
+     <span class="o">}</span> 
+     <span class="kd">private</span> <span class="n">User</span> <span class="nf">findUser</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="err">…</span> <span class="o">}</span> 
+    <span class="o">}</span>
+</code></pre></div><h3 id="asenkron-çalışan-örnek">Asenkron çalışan örnek</h3>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="kd">interface</span> <span class="nc">UserService</span> <span class="o">{</span> 
+    <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="nf">findUserById</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">);</span> 
+    <span class="o">}</span>
+    <span class="kd">class</span> <span class="nc">UserServiceImpl</span> <span class="kd">implements</span> <span class="n">UserService</span> <span class="o">{</span> 
+    <span class="nd">@Override</span> 
+    <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="nf">findUserById</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">)</span> <span class="o">{</span> 
+     <span class="k">return</span> <span class="n">CompletableFuture</span><span class="o">.</span><span class="na">supplyAsync</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">findUser</span><span class="o">(</span><span class="n">userId</span><span class="o">));</span> 
+     <span class="o">}</span> 
+    <span class="kd">private</span> <span class="n">User</span> <span class="nf">findUser</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="err">…</span> <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div><p>CompletableFuture’da dikkat edilmesi gereken en önemli nokta; Asenkron
+işlemleri Senkron’a dönüştürmemektedir. Örneğin; CompletableFuture
+arayüzünün sahip olduğu .join() metodu, ilgili işlem tamamlanana kadar
+diğer tüm işlemleri bekletmektedir. Bu yüzden art arda çağrılan
+işlemlerde join kullanmamaya dikkat edilmesi gerekmektedir. Bunun yerine
+.get(long timeout, TimeUnit unit) metodu kullanılabilir. Bu metot
+sayesinde çok uzun süren işlemlerin, diğer işlemleri bekletmemesi için o
+işleme bir time out değeri verilir ve işlemlerin birbirini
+engellemesinin önüne geçilir.</p>
+<p>Sonuç olarak Asenkron programlamayı Senkron programlamayla
+karşılaştırırsak; Asenkron programlama, işlemlerimizi daha hızlı
+yapmamızı sağlamaktadır.Java programlama dili Java 8 ile çıkarmış olduğu
+CompletableFuture arayüzünü Java 9 ile de geliştirmeye devam etmektedir.</p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
 </item><item>
     <title>Vue.js</title>
-    <link>http://arifpehlivan.com/posts/vuejs/</link>
+    <link>http://mrpehlivan.github.io/posts/vuejs/</link>
     <pubDate>Thu, 12 Jan 2017 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/vuejs/</guid>
-    <description><![CDATA[Merhabalar bu yazımda Vue.js den bahsedeceğim. Vue.js web arayüzleri oluşturmak için geliştirilen bir JavaScript kütüphanesidir. Evan You tarafından geliştirilmeye başlanmıştır. Benzerlerinin aksine öğrenimi kolay ve basittir. Ayrıca moduler yapı oluşturmak için alt yapıya sahiptir.
-Neden Vue.js i kullanalım? JavaScript’in kolayca yazılabilmesine olanak sağlamaktadır. Vue.js ile başlamak son derece kolaydır. Dokümantasyonları sayesinde öğrenimi kolay ve kaynak kodu oldukça fazladır. Dış kütüphanelere ihtiyacınız yoktur. JQuery olmadan da kullanabilirsiniz. Pek çok eklenti olmasına rağmen herhangi bir eklenti kurmanıza gerek kalmamaktadır.]]></description>
+    <guid>http://mrpehlivan.github.io/posts/vuejs/</guid>
+    <description><![CDATA[<p>Merhabalar bu yazımda Vue.js den bahsedeceğim. Vue.js web arayüzleri
+oluşturmak için geliştirilen bir JavaScript kütüphanesidir. Evan You
+tarafından geliştirilmeye başlanmıştır. Benzerlerinin aksine öğrenimi
+kolay ve basittir. Ayrıca moduler yapı oluşturmak için alt yapıya
+sahiptir.</p>
+<h4 id="neden-vue-js-i-kullanalım">Neden Vue.js i kullanalım?</h4>
+<p>JavaScript’in kolayca yazılabilmesine olanak sağlamaktadır. Vue.js ile
+başlamak son derece kolaydır. Dokümantasyonları sayesinde öğrenimi kolay
+ve kaynak kodu oldukça fazladır. Dış kütüphanelere ihtiyacınız yoktur.
+JQuery olmadan da kullanabilirsiniz. Pek çok eklenti olmasına rağmen
+herhangi bir eklenti kurmanıza gerek kalmamaktadır. Ayrıca Github veya
+web üzerinde örnek projeler ve yazılar oldukça fazladır.</p>
+<h4 id="vue-js-vs-diğer-frameworkler">Vue.js vs Diğer Frameworkler</h4>
+<p>Angular : – Vue.js API ve Tasarım açısından Angular’a göre daha
+kolaydır. Hızlı bir şekilde öğrenip, kolayca uygulama geliştirmeye
+başlayabiliyorsunuz. – Vue.js Angular’a göre daha esnek bir yapıdadır.
+Angular gibi her şeyi onun istediği gibi yapmanızı isteyen, içerisinde
+belki kullanmayacağınız onlarca özellik olan bir yapı değil. Vue’da
+interface katmanı bulunuyor. Böylelikle kullanmadığınız özellikler
+yüzünden projeniz büyümüyor.</p>
+<p>React : – React’a nazaran vue.js ile çalışmak daha basit ve kolaydır. –
+Bir çok benzerlikleri bulunmaktadır.</p>
+<p>Daha detaylı karşılaştırmaları görmek için bu link’etıklayabilirsiniz.</p>
+<p>Sonuç olarak öğrenimi kolay ve basit olan bir framework ile hızlıca
+projeler geliştirebilir ve güzel sonuçlar alabilirsiniz. Örnek modüler
+bir proje yapısı isterseniz Github adresimden forklayabilirsiniz. Yada
+<a href="https://github.com/mrpehlivan/vue-2.0-boilerplate" target="_blank" rel="noopener noreffer">buradan</a> direk
+erişebilirsiniz.</p>
+<p>Yardımcı olabilecek linkler :<br>
+Vue.js : <a href="https://vuejs.org/" target="_blank" rel="noopener noreffer">https://vuejs.org/</a><br>
+Awesome Vue :
+<a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener noreffer">https://github.com/vuejs/awesome-vue</a></p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
 </item></channel>
 </rss>

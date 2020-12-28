@@ -1,78 +1,78 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - tag - Arif Pehlivan</title>
-        <link>http://arifpehlivan.com/tags/</link>
+        <link>http://mrpehlivan.github.io/tags/</link>
         <description>Tags - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/" rel="self" type="application/rss+xml" /><item>
     <title>java</title>
-    <link>http://arifpehlivan.com/tags/java/</link>
+    <link>http://mrpehlivan.github.io/tags/java/</link>
     <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/tags/java/</guid>
+    <guid>http://mrpehlivan.github.io/tags/java/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>spring</title>
-    <link>http://arifpehlivan.com/tags/spring/</link>
+    <link>http://mrpehlivan.github.io/tags/spring/</link>
     <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/tags/spring/</guid>
+    <guid>http://mrpehlivan.github.io/tags/spring/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>spring-boot</title>
-    <link>http://arifpehlivan.com/tags/spring-boot/</link>
+    <link>http://mrpehlivan.github.io/tags/spring-boot/</link>
     <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/tags/spring-boot/</guid>
+    <guid>http://mrpehlivan.github.io/tags/spring-boot/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>spring-framework</title>
-    <link>http://arifpehlivan.com/tags/spring-framework/</link>
+    <link>http://mrpehlivan.github.io/tags/spring-framework/</link>
     <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/tags/spring-framework/</guid>
+    <guid>http://mrpehlivan.github.io/tags/spring-framework/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>java8</title>
-    <link>http://arifpehlivan.com/tags/java8/</link>
+    <link>http://mrpehlivan.github.io/tags/java8/</link>
     <pubDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/tags/java8/</guid>
+    <guid>http://mrpehlivan.github.io/tags/java8/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>stream</title>
-    <link>http://arifpehlivan.com/tags/stream/</link>
+    <link>http://mrpehlivan.github.io/tags/stream/</link>
     <pubDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/tags/stream/</guid>
+    <guid>http://mrpehlivan.github.io/tags/stream/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>architecture</title>
-    <link>http://arifpehlivan.com/tags/architecture/</link>
+    <link>http://mrpehlivan.github.io/tags/architecture/</link>
     <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/tags/architecture/</guid>
+    <guid>http://mrpehlivan.github.io/tags/architecture/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>kotlin</title>
-    <link>http://arifpehlivan.com/tags/kotlin/</link>
+    <link>http://mrpehlivan.github.io/tags/kotlin/</link>
     <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/tags/kotlin/</guid>
+    <guid>http://mrpehlivan.github.io/tags/kotlin/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>software</title>
-    <link>http://arifpehlivan.com/tags/software/</link>
+    <link>http://mrpehlivan.github.io/tags/software/</link>
     <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/tags/software/</guid>
+    <guid>http://mrpehlivan.github.io/tags/software/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>javascript</title>
-    <link>http://arifpehlivan.com/tags/javascript/</link>
+    <link>http://mrpehlivan.github.io/tags/javascript/</link>
     <pubDate>Thu, 18 Jan 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/tags/javascript/</guid>
+    <guid>http://mrpehlivan.github.io/tags/javascript/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>java - tag - Arif Pehlivan</title>
-        <link>http://arifpehlivan.com/tags/java/</link>
+        <link>http://mrpehlivan.github.io/tags/java/</link>
         <description>java - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/tags/java/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/java/" rel="self" type="application/rss+xml" /><item>
     <title>Springboot ile CRUD Projesi Oluşturma</title>
-    <link>http://arifpehlivan.com/posts/spring-boot-example/</link>
+    <link>http://mrpehlivan.github.io/posts/spring-boot-example/</link>
     <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/spring-boot-example/</guid>
+    <guid>http://mrpehlivan.github.io/posts/spring-boot-example/</guid>
     <description><![CDATA[<p>Springboot da proje oluşturmak spring boot initializer ile artık daha kolay bir hale geldi. Bu yazıda oluşturacağımız proje standart bir Create, Read, Update ve Delete işlemleri yapacağından projede Spring Data , PostgreSQL, Spring Mvc Web bağımlılıklarını kullanacağız.</p>
 <p>Örnek ekran görüntüsü :</p>
 <figure>
@@ -21,12 +21,12 @@
      
 </figure>
 
-<p>Intellij ana ekranIntellij ide de açılan ekranda Import Project&rsquo;e tıklıyoruz.</p>
+<p>Intellij ide de açılan ekranda Import Project&rsquo;e tıklıyoruz.</p>
 <figure>
      
 </figure>
 
-<p>Choose GradlePaket yönetim için Gradle&rsquo;ı seçiyoruz ve Next&rsquo;e tıklıyoruz.</p>
+<p>Paket yönetim için Gradle&rsquo;ı seçiyoruz ve Next&rsquo;e tıklıyoruz.</p>
 <p><figure>
      
 </figure>
@@ -108,10 +108,10 @@ postman_collection adındaki dosyayı Postman ' e import ederek test edebilirsin
 ]]></description>
 </item><item>
     <title>Nedir bu Java Stream?</title>
-    <link>http://arifpehlivan.com/posts/stream/</link>
+    <link>http://mrpehlivan.github.io/posts/stream/</link>
     <pubDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/stream/</guid>
+    <guid>http://mrpehlivan.github.io/posts/stream/</guid>
     <description><![CDATA[<p>Stream kelimesini ilk duyduğum zaman aklıma <strong>Java I/O</strong> paketinde
 bulunan <strong>InputStream</strong> ve <strong>OutputStream</strong> gelmişti. Fakat bunun böyle
 olmadığını api dökümanını inceleyince fark ettim. Bu yazıda streamler
@@ -218,18 +218,98 @@ yanında performans açısından da hızlı olmasını sağlamıştır.</p>
 ]]></description>
 </item><item>
     <title>Tasarım Kalıpları</title>
-    <link>http://arifpehlivan.com/posts/tasarim-kaliplari/</link>
+    <link>http://mrpehlivan.github.io/posts/tasarim-kaliplari/</link>
     <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/tasarim-kaliplari/</guid>
-    <description><![CDATA[Yazılım projeleri yazılımcılara verilen belirli argümanlar üzerinden oluşan projelerdir. Genellikle proje geliştirmelerinde büyük resim tam anlamıyla görüntülenemediğinden projeler zamanla değişmektedirler.Bu değişimler bazen projelerin yeniden yazılmasını gerektirmektedir. İşte bu kadar köklü değişimlerin önüne geçmek açısından projelerimizi belirli tasarım kalıplarına oturtarak ilerler isek değişimlerin maliyetlerini küçültebiliriz.
-Nasıl ortaya çıkmıştır? Kalıplar(Patterns) Amerikalı mimar Christopher Alexander tarafından 1977 yılında mimari konseptler adıyla ortaya çıkmıştır. 1987 yılında Kent Beck ve Ward Cunningham bu kalıpları kendi deneyimleri ile programlama üzerinde uygulamışlardır ve o yıl düzenlenen OOPSLA konferansında bu çalışmalarını sunmuşlardır.]]></description>
+    <guid>http://mrpehlivan.github.io/posts/tasarim-kaliplari/</guid>
+    <description><![CDATA[<p>Yazılım projeleri yazılımcılara verilen belirli argümanlar üzerinden
+oluşan projelerdir. Genellikle proje geliştirmelerinde büyük resim tam
+anlamıyla görüntülenemediğinden projeler zamanla değişmektedirler.Bu
+değişimler bazen projelerin yeniden yazılmasını gerektirmektedir. İşte
+bu kadar köklü değişimlerin önüne geçmek açısından projelerimizi belirli
+tasarım kalıplarına oturtarak ilerler isek değişimlerin maliyetlerini
+küçültebiliriz.</p>
+<h2 id="nasıl-ortaya-çıkmıştır">Nasıl ortaya çıkmıştır?</h2>
+<p>Kalıplar(Patterns) Amerikalı mimar <a href="https://en.wikipedia.org/wiki/Christopher_Alexander" target="_blank" rel="noopener noreffer">Christopher
+Alexander</a>
+tarafından 1977 yılında mimari konseptler adıyla ortaya çıkmıştır. 1987
+yılında <a href="https://en.wikipedia.org/wiki/Kent_Beck" target="_blank" rel="noopener noreffer">Kent Beck</a> ve <a href="https://en.wikipedia.org/wiki/Ward_Cunningham" target="_blank" rel="noopener noreffer">Ward
+Cunningham</a> bu kalıpları
+kendi deneyimleri ile programlama üzerinde uygulamışlardır ve o yıl
+düzenlenen <a href="https://en.wikipedia.org/wiki/OOPSLA" target="_blank" rel="noopener noreffer">OOPSLA</a> konferansında
+bu çalışmalarını sunmuşlardır. 1994 yılında çıkan <a href="https://en.wikipedia.org/wiki/Design_Patterns" target="_blank" rel="noopener noreffer">Design Patterns:
+Elements of Reusable Object-Oriented Software (Gang of
+Four)</a> kitabı ile tasarım
+kalıpları bilgisayar bilimlerinde önemli bir popülerlik kazanmıştır.</p>
+<h2 id="amacı-nedir">Amacı nedir?</h2>
+<p>Tasarım kalıpları yazılım projelerindeki genel problemleri en iyi yolla
+çözmeyi planlamaktadır. Deneyimli yazılımcıların object-oriented
+konusundaki best practice’ lerinden yararlanılarak farklı türlerde
+kalıplar tasarlanmıştır. Tasarlanan bu kalıplar projelerdeki esnekliği,
+okunabilirliği ve yazılabilirliği kolaylaştırmaktadırlar.</p>
+<h2 id="kaç-adet-tasarım-kalıbı-vardır-ve-türleri-nelerdir">Kaç adet tasarım kalıbı vardır ve türleri nelerdir?</h2>
+<p>Gang of Four kitabında da belirtildiği üzere 23 adet tasarım kalıbı
+bulunmaktadır. Bu tasarım kalıpları çözümlerine göre 3 adet kategoriye
+ayrılmışlardır. Bunlar creational (yaratımsal) , structural (yapısal) ve
+behavioral (davranışsal) kalıplardır.</p>
+<p></p>
+<h2 id="yaratımsal-kalıplar-creational-patterns">Yaratımsal Kalıplar (Creational Patterns)</h2>
+<p>Yaratımsal tasarım kalıpları oluşturulacak olan nesnelerin new operatörü
+kullanmak yerine farklı yollar ile oluşturmayı sağlar. Bu kategorideki
+tasarım kalıpları aşağıda listelenmiştir.</p>
+<ul>
+<li>Abstract Factory,</li>
+<li>Builder,</li>
+<li>Factory Method,</li>
+<li>Prototype,</li>
+<li>Singleton</li>
+</ul>
+<p>gibi kalıplar yaratışsal kalıplar sınıfına girmektedir.</p>
+<p></p>
+<h2 id="yapısal-tasarımlar-structural-patterns">Yapısal Tasarımlar (Structural Patterns)</h2>
+<p>Yapısal tasarım kalıpları sınıflar ile nesneler arasındaki kalıtım ve
+arayüz bağlantılarının kurulmasını sağlar. Bu kategorideki tasarım
+kalıpları aşağıda listelenmiştir.</p>
+<ul>
+<li>Adapter,</li>
+<li>Bridge,</li>
+<li>Composite,</li>
+<li>Decorator,</li>
+<li>Facade,</li>
+<li>Flyweight,</li>
+<li>Proxy</li>
+</ul>
+<p>gibi kalıplar yapısal kalıplar sınıfına girmektedir.</p>
+<p></p>
+<h2 id="davranışsal-kalıplar-behavioral-patterns">Davranışsal Kalıplar (Behavioral Patterns)</h2>
+<p>Davranışsal tasarım kalıpları, nesneler arasındaki ortak iletişim
+kalıplarının tanımlanmasını ve gerçekleşmesini sağlar.Bu kategorideki
+tasarım kalıpları aşağıda listelenmiştir.</p>
+<ul>
+<li>Chain of responsibility,</li>
+<li>Command,</li>
+<li>Interpreter,</li>
+<li>Iterator,</li>
+<li>Mediator,</li>
+<li>Memento,</li>
+<li>Null Object,</li>
+<li>Observer,</li>
+<li>State,</li>
+<li>Strategy,</li>
+<li>Template method</li>
+</ul>
+<p>gibi kalıplar davranışsal tasarım kalıpları sınıfına girmektedir.</p>
+<p>Sonuç olarak projelerimizde esnekliği , okunulabilirliği ve
+yazabilirliği kolaylaştırmak için tasarım kalıplarını projelerimizde
+olabildiğince kullanmayı tercih etmeliyiz.</p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
 </item><item>
     <title>Nedir bu Optional?</title>
-    <link>http://arifpehlivan.com/posts/optional/</link>
+    <link>http://mrpehlivan.github.io/posts/optional/</link>
     <pubDate>Tue, 12 Dec 2017 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/optional/</guid>
+    <guid>http://mrpehlivan.github.io/posts/optional/</guid>
     <description><![CDATA[<p>Her yazılımcının yazılım hayatı boyunca en çok karşılaştığı
 exceptionlardan biri olan <strong>NullPointerException</strong> Java 8 ile artık
 önlenebilir hale gelmiştir.</p>
@@ -312,12 +392,68 @@ inceleyebilirsiniz.</p>
 ]]></description>
 </item><item>
     <title>Senkron vs Asenkron Programlama</title>
-    <link>http://arifpehlivan.com/posts/completable-future/</link>
+    <link>http://mrpehlivan.github.io/posts/completable-future/</link>
     <pubDate>Sat, 13 May 2017 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/completable-future/</guid>
-    <description><![CDATA[Senkron programlama, yazılımda her bir işlemin sıra ile yapılmasıdır. Örneğin süpermarketlerdeki kasa kuyruğunda bir önceki müşteri, ürünlerinin ödemesini yapmadan sizin ürünlerinize sıra gelmemektedir.
-Beklerken yaşanan zaman kaybı Asenkron programlamada ortadan kalkar. Asenkron programlama; işlemlerin birbirini beklemeden , bağımsız olarak gerçekleşmesidir. Süpermarket örneğinden devam edecek olursak, Asenkron programlama; her müşterinin sıra beklemeden istediği kasadan ödeme yapabilmesini sağlamaktadır.
-Java programlama dili Java 8 ile birlikte Asenkron programlamaya da ilgisini arttırmıştır. CompletableFuture arayüzü Java’nın Asenkron programlama için kullanılan bir sınıfıdır.]]></description>
+    <guid>http://mrpehlivan.github.io/posts/completable-future/</guid>
+    <description><![CDATA[<p>Senkron programlama, yazılımda her bir işlemin sıra ile yapılmasıdır.
+Örneğin süpermarketlerdeki kasa kuyruğunda bir önceki müşteri,
+ürünlerinin ödemesini yapmadan sizin ürünlerinize sıra gelmemektedir.</p>
+<p>Beklerken yaşanan zaman kaybı Asenkron programlamada ortadan kalkar.
+Asenkron programlama; işlemlerin birbirini beklemeden , bağımsız olarak
+gerçekleşmesidir. Süpermarket örneğinden devam edecek olursak, Asenkron
+programlama; her müşterinin sıra beklemeden istediği kasadan ödeme
+yapabilmesini sağlamaktadır.</p>
+<p>Java programlama dili Java 8 ile birlikte Asenkron programlamaya da
+ilgisini arttırmıştır. CompletableFuture arayüzü Java’nın Asenkron
+programlama için kullanılan bir sınıfıdır. CompletableFuture
+java.util.concurrent paketi içinde bulunmaktadır. Java 8 öncesi Guava
+Framework’un de ListenableFuture olarak kullanılmaktadır.</p>
+<p>CompletableFuture sınıfı temelde Future ve CompletionStage arayüz
+sınıflarından türemektedir. CompletionStage arayüzü callback
+methodların, Future sınıfı ise Asenkron işlemlerin hesaplanmasını
+kapsamaktadır. CompletableFuture sınıfı toplamda 59 adet metot
+içermektedir. Tüm metotları detaylı olarak buradan inceleyebilirsiniz.
+CompletableFuture arayüzü ile geliştirdiğimiz programda, sık kullanılan
+işlemlerin süresini azaltabiliriz.</p>
+<p>Peki ya Senkron çalışan bir metot, Asenkron olarak nasıl kullanılır?</p>
+<h3 id="senkron-çalışan-örnek">Senkron çalışan örnek</h3>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="kd">interface</span> <span class="nc">UserService</span> <span class="o">{</span> 
+    <span class="n">User</span> <span class="nf">findUserById</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">);</span> 
+    <span class="o">}</span>
+    <span class="kd">class</span> <span class="nc">UserServiceImpl</span> <span class="kd">implements</span> <span class="n">UserService</span> <span class="o">{</span>
+     
+    <span class="nd">@Override</span> 
+    <span class="n">User</span> <span class="nf">findUserById</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">)</span> <span class="o">{</span> 
+     <span class="k">return</span> <span class="n">findUser</span><span class="o">(</span><span class="n">userId</span><span class="o">);</span> 
+     <span class="o">}</span> 
+     <span class="kd">private</span> <span class="n">User</span> <span class="nf">findUser</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="err">…</span> <span class="o">}</span> 
+    <span class="o">}</span>
+</code></pre></div><h3 id="asenkron-çalışan-örnek">Asenkron çalışan örnek</h3>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="kd">interface</span> <span class="nc">UserService</span> <span class="o">{</span> 
+    <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="nf">findUserById</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">);</span> 
+    <span class="o">}</span>
+    <span class="kd">class</span> <span class="nc">UserServiceImpl</span> <span class="kd">implements</span> <span class="n">UserService</span> <span class="o">{</span> 
+    <span class="nd">@Override</span> 
+    <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="nf">findUserById</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">)</span> <span class="o">{</span> 
+     <span class="k">return</span> <span class="n">CompletableFuture</span><span class="o">.</span><span class="na">supplyAsync</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">findUser</span><span class="o">(</span><span class="n">userId</span><span class="o">));</span> 
+     <span class="o">}</span> 
+    <span class="kd">private</span> <span class="n">User</span> <span class="nf">findUser</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="err">…</span> <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div><p>CompletableFuture’da dikkat edilmesi gereken en önemli nokta; Asenkron
+işlemleri Senkron’a dönüştürmemektedir. Örneğin; CompletableFuture
+arayüzünün sahip olduğu .join() metodu, ilgili işlem tamamlanana kadar
+diğer tüm işlemleri bekletmektedir. Bu yüzden art arda çağrılan
+işlemlerde join kullanmamaya dikkat edilmesi gerekmektedir. Bunun yerine
+.get(long timeout, TimeUnit unit) metodu kullanılabilir. Bu metot
+sayesinde çok uzun süren işlemlerin, diğer işlemleri bekletmemesi için o
+işleme bir time out değeri verilir ve işlemlerin birbirini
+engellemesinin önüne geçilir.</p>
+<p>Sonuç olarak Asenkron programlamayı Senkron programlamayla
+karşılaştırırsak; Asenkron programlama, işlemlerimizi daha hızlı
+yapmamızı sağlamaktadır.Java programlama dili Java 8 ile çıkarmış olduğu
+CompletableFuture arayüzünü Java 9 ile de geliştirmeye devam etmektedir.</p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
 </item></channel>
 </rss>

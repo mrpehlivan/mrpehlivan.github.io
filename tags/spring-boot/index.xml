@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>spring-boot - tag - Arif Pehlivan</title>
-        <link>http://arifpehlivan.com/tags/spring-boot/</link>
+        <link>http://mrpehlivan.github.io/tags/spring-boot/</link>
         <description>spring-boot - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://arifpehlivan.com/tags/spring-boot/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/spring-boot/" rel="self" type="application/rss+xml" /><item>
     <title>Springboot ile CRUD Projesi Oluşturma</title>
-    <link>http://arifpehlivan.com/posts/spring-boot-example/</link>
+    <link>http://mrpehlivan.github.io/posts/spring-boot-example/</link>
     <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
-    <guid>http://arifpehlivan.com/posts/spring-boot-example/</guid>
+    <guid>http://mrpehlivan.github.io/posts/spring-boot-example/</guid>
     <description><![CDATA[<p>Springboot da proje oluşturmak spring boot initializer ile artık daha kolay bir hale geldi. Bu yazıda oluşturacağımız proje standart bir Create, Read, Update ve Delete işlemleri yapacağından projede Spring Data , PostgreSQL, Spring Mvc Web bağımlılıklarını kullanacağız.</p>
 <p>Örnek ekran görüntüsü :</p>
 <figure>
@@ -21,12 +21,12 @@
      
 </figure>
 
-<p>Intellij ana ekranIntellij ide de açılan ekranda Import Project&rsquo;e tıklıyoruz.</p>
+<p>Intellij ide de açılan ekranda Import Project&rsquo;e tıklıyoruz.</p>
 <figure>
      
 </figure>
 
-<p>Choose GradlePaket yönetim için Gradle&rsquo;ı seçiyoruz ve Next&rsquo;e tıklıyoruz.</p>
+<p>Paket yönetim için Gradle&rsquo;ı seçiyoruz ve Next&rsquo;e tıklıyoruz.</p>
 <p><figure>
      
 </figure>
