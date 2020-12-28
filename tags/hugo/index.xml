@@ -1,0 +1,52 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>hugo - tag - Arif Pehlivan</title>
+        <link>http://mrpehlivan.github.io/tags/hugo/</link>
+        <description>hugo - tag - Arif Pehlivan</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo ile websitesi yapmak</title>
+    <link>http://mrpehlivan.github.io/posts/arif-pehlivan-com/</link>
+    <pubDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://mrpehlivan.github.io/posts/arif-pehlivan-com/</guid>
+    <description><![CDATA[<p>Bu yazımda şuan içinde bulunduğumuz arifpehlivan.com un nasıl yapıldığı konusunda bilgi vereceğim.</p>
+<p>Hugo ile websitesi yapım aşamalarını anlatmadan önce bazı ufak bilgiler paylaşalım.
+Yazılım sektöründe websitesi sahibi olmak bir yazılım geliştirici için her zaman iyi imaj bırakmaktadır.
+Bu bilgiyi yaptığım iş görüşmelerindeki insanların yorumlarından ve genel yorumlardan anlıyorum. Peki bir websitesi yapmak ne kadar zaman almaktadır.</p>
+<p>Aslında bir websitesi yapmak bir yazılımcı için çok da zor değildir diye umuyorum. Çünkü internette ufak bir araştırmayla static web sitesi oluşturan onlarca tool bulabilirsiniz. Bende static web sitesi oluşturan toollardan <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer">Hugo</a> yu kullanıyorum.</p>
+<h2 id="neden-hugo">Neden Hugo?</h2>
+<p>Çünkü çok kolay 😄. Içeriklerinizi <a href="https://www.markdownguide.org/" target="_blank" rel="noopener noreffer">Markdown</a> formatta yazabilir ve kolay bir şekilde yayına alabilirsiniz.</p>
+<h2 id="aşamalar">Aşamalar</h2>
+<h3 id="hugo-nun-bilgisayarınıza-kurulması">Hugo nun bilgisayarınıza kurulması</h3>
+<p>Bu aşamada adından da anlaşılacağı gibi yapmamız gereken tek şey <a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener noreffer">bu link</a> deki basamakları takip etmemiz.</p>
+<p>Quick starter daki basamakları takip ettiğimiz zaman aslında çok basit bir şekilde web sitemiz hazır olmuş oluyor.</p>
+<h3 id="temaya-karar-verilmesi">Temaya karar verilmesi</h3>
+<p>Bu aşamada Hugo nun sağlamış olduğu temel ücretsiz temalardan birini seçip kendi websitenizde tanımlayarak özelleştirebilirsiniz.</p>
+<p>Temalara <a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer">bu link</a> den erişebilirsiniz.</p>
+<h3 id="uygulamanın-local-bilgisayarınızda-çalıştırıması">Uygulamanın local bilgisayarınızda çalıştırıması</h3>
+<p>Uygulamayı çalıştırmak için <a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener noreffer">Hugo Starter</a> sayfasında da anlatıldığı gibi projenin bulunduğu klasörde aşağıdaki komutu terminalinizde çalıştırmanız yeterlidir.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hugo server -D
+</code></pre></div><p>Hugo projeleri local bilgisayarınızda localhost:1313 adresinde çalışmaktadır. Bu adresi bilgisayarınızda bir tarayıcıya yazdığınız zaman websitenizi görüntüleyebilirsiniz.</p>
+<figure>
+     
+</figure>
+
+<h3 id="uygulamanın-localde-build-edilmesi">Uygulamanın localde build edilmesi</h3>
+<p>Websitenizi hazırladıkdan sonra en sona kalan basamak uygulamanızı deploy etmenizdir. Deploy etmek demek geliştirdiğiniz websitenizi yayına almanızdır. Hugo da websitenizi yayına almak için proje klasöründe aşağıdaki komutu çalıştırmanız yeterlidir.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hugo
+</code></pre></div><p>Bu komutu çalıştırdığınız zaman projeniz içerisinde public klasörü oluşmaktadır.</p>
+<figure>
+     
+</figure>
+
+<h3 id="geliştirilmiş-uygulamanın-yayına-alınması">Geliştirilmiş uygulamanın yayına alınması</h3>
+<p>Bu public klasörünü websitenizi yayınladığınız sunucu içerisine taşıdığınız zaman uygulamanız otomatik olarak yayına alınacaktır.</p>
+<h3 id="uygulamanın-githubio-da-yayınlanması">Uygulamanın github.io da yayınlanması</h3>
+<p>Hugo destekleyicileri sayesinde, geliştirdiğiniz websitenizi otomatik olarak github pages da bulunan sayfalarınıza yayınlama şansını tanımaktadır. Bunu gercekleştirebilmek için yapmanız gereken tek şey aşağıda bulunan websitesi linkinden aşamaları takip etmek.</p>
+<p>Github pages linkine <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank" rel="noopener noreffer">buradan</a> tıklayabilirsiniz.</p>
+<p>Sorunuz olduğu zaman bana twitter üzerinden erişebilirsiniz 😉</p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
+</item></channel>
+</rss>

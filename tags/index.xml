@@ -4,7 +4,28 @@
         <link>http://mrpehlivan.github.io/tags/</link>
         <description>Tags - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://mrpehlivan.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>hugo</title>
+    <link>http://mrpehlivan.github.io/tags/hugo/</link>
+    <pubDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://mrpehlivan.github.io/tags/hugo/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>mark-down</title>
+    <link>http://mrpehlivan.github.io/tags/mark-down/</link>
+    <pubDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://mrpehlivan.github.io/tags/mark-down/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>website</title>
+    <link>http://mrpehlivan.github.io/tags/website/</link>
+    <pubDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://mrpehlivan.github.io/tags/website/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>java</title>
     <link>http://mrpehlivan.github.io/tags/java/</link>
     <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
@@ -52,27 +73,6 @@
     <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
     <guid>http://mrpehlivan.github.io/tags/architecture/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>kotlin</title>
-    <link>http://mrpehlivan.github.io/tags/kotlin/</link>
-    <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>http://mrpehlivan.github.io/tags/kotlin/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>software</title>
-    <link>http://mrpehlivan.github.io/tags/software/</link>
-    <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>http://mrpehlivan.github.io/tags/software/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>javascript</title>
-    <link>http://mrpehlivan.github.io/tags/javascript/</link>
-    <pubDate>Thu, 18 Jan 2018 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>http://mrpehlivan.github.io/tags/javascript/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
