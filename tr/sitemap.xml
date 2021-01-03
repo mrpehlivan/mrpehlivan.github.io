@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://www.arifpehlivan.com/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://www.arifpehlivan.com/</loc><lastmod>2021-01-03T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://www.arifpehlivan.com/en/"
@@ -11,10 +11,11 @@
                     hreflang="tr"
                     href="http://www.arifpehlivan.com/"
                     /></url><url>
-            <loc>http://www.arifpehlivan.com/tags/hugo/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://www.arifpehlivan.com/posts/arif-pehlivan-com/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://www.arifpehlivan.com/tags/mark-down/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://www.arifpehlivan.com/posts/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://www.arifpehlivan.com/tags/donate/</loc><lastmod>2021-01-03T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.arifpehlivan.com/tags/hugo/</loc><lastmod>2021-01-03T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.arifpehlivan.com/tags/mark-down/</loc><lastmod>2021-01-03T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.arifpehlivan.com/tags/paypal/</loc><lastmod>2021-01-03T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.arifpehlivan.com/posts/</loc><lastmod>2021-01-03T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://www.arifpehlivan.com/en/posts/"
@@ -23,7 +24,7 @@
                     hreflang="tr"
                     href="http://www.arifpehlivan.com/posts/"
                     /></url><url>
-            <loc>http://www.arifpehlivan.com/tags/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://www.arifpehlivan.com/tags/</loc><lastmod>2021-01-03T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://www.arifpehlivan.com/en/tags/"
@@ -32,7 +33,9 @@
                     hreflang="tr"
                     href="http://www.arifpehlivan.com/tags/"
                     /></url><url>
-            <loc>http://www.arifpehlivan.com/tags/website/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.arifpehlivan.com/posts/adding-paypal-donate-button/</loc><lastmod>2021-01-03T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.arifpehlivan.com/tags/website/</loc><lastmod>2021-01-03T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.arifpehlivan.com/posts/arif-pehlivan-com/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://www.arifpehlivan.com/tags/java/</loc><lastmod>2018-04-21T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://www.arifpehlivan.com/tags/spring/</loc><lastmod>2018-04-21T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://www.arifpehlivan.com/tags/spring-boot/</loc><lastmod>2018-04-21T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

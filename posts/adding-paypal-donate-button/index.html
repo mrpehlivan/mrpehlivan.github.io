@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Web sitenize paypal bağış butonu eklemek - Arif Pehlivan</title><meta name="Description" content=""><meta property="og:title" content="Web sitenize paypal bağış butonu eklemek" />
+<meta property="og:description" content="Bu yazımda şu an içinde bulunduğumuz arifpehlivan.com un hakkımda sayfasında ki paypal bağış butonunu nasıl yapıldığı konusunda bilgi vereceğim.
+Bu yazının öncesinde Hugo ile websitesi yapmak adlı makaleyi sol alt taraftaki linkden tıklayarak inceleyebilirsiniz.
+Bir yazılımcı olarak herkes gibi açık kaynak kodlardan çok yararlanmaktayım. Bu açık kaynak kodlar sayesinde bugün 5 dk da websitemize paypal bağış butonu ekleyeceğiz.
+Aşamalar  Paypal hesap açılması Bağış link oluşturulması Bağış linki için resim/logo bulunması Linkin mark down formattaki dosyamıza eklenmesi  Paypal hesap açılması Paypal uluslar arası bir ödeme sistemidir." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.arifpehlivan.com/posts/adding-paypal-donate-button/" />
+<meta property="article:published_time" content="2021-01-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-03T00:00:00+00:00" /><meta property="og:site_name" content="Arif Pehlivan" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Web sitenize paypal bağış butonu eklemek"/>
+<meta name="twitter:description" content="Bu yazımda şu an içinde bulunduğumuz arifpehlivan.com un hakkımda sayfasında ki paypal bağış butonunu nasıl yapıldığı konusunda bilgi vereceğim.
+Bu yazının öncesinde Hugo ile websitesi yapmak adlı makaleyi sol alt taraftaki linkden tıklayarak inceleyebilirsiniz.
+Bir yazılımcı olarak herkes gibi açık kaynak kodlardan çok yararlanmaktayım. Bu açık kaynak kodlar sayesinde bugün 5 dk da websitemize paypal bağış butonu ekleyeceğiz.
+Aşamalar  Paypal hesap açılması Bağış link oluşturulması Bağış linki için resim/logo bulunması Linkin mark down formattaki dosyamıza eklenmesi  Paypal hesap açılması Paypal uluslar arası bir ödeme sistemidir."/>
+<meta name="application-name" content="Arif Pehlivan">
+<meta name="apple-mobile-web-app-title" content="Arif Pehlivan"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="images/avatar.jpeg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.arifpehlivan.com/posts/adding-paypal-donate-button/" /><link rel="prev" href="http://www.arifpehlivan.com/posts/arif-pehlivan-com/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Web sitenize paypal bağış butonu eklemek",
+        "inLanguage": "tr",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/www.arifpehlivan.com\/posts\/adding-paypal-donate-button\/"
+        },"genre": "posts","keywords": "website, mark-down, hugo, paypal, donate","wordcount":  276 ,
+        "url": "http:\/\/www.arifpehlivan.com\/posts\/adding-paypal-donate-button\/","datePublished": "2021-01-03T00:00:00+00:00","dateModified": "2021-01-03T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Arif Pehlivan"},"author": {
+                "@type": "Person",
+                "name": "Arif Pehlivan"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Arif Pehlivan">Arif Pehlivan</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> Hakkımda </a><a class="menu-item" href="/posts/"> Paylaşımlar </a><a class="menu-item" href="/tags/"> Etiketler </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="">Türkçe<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/adding-paypal-donate-button/" selected>Türkçe</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Arif Pehlivan">Arif Pehlivan</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/about/" title="">Hakkımda</a><a class="menu-item" href="/posts/" title="">Paylaşımlar</a><a class="menu-item" href="/tags/" title="">Etiketler</a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="">Türkçe<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/adding-paypal-donate-button/" selected>Türkçe</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title"></h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Web sitenize paypal bağış butonu eklemek</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Arif Pehlivan</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-03">2021-01-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#aşamalar">Aşamalar</a>
+      <ul>
+        <li><a href="#paypal-hesap-açılması">Paypal hesap açılması</a></li>
+        <li><a href="#bağış-linkinin-oluşturulması">Bağış linkinin oluşturulması</a></li>
+        <li><a href="#bağış-linkinin-için-resimlogo-bulunması">Bağış linkinin için resim/logo bulunması</a></li>
+        <li><a href="#linkin-mark-down-formattaki-dosyamıza-eklenmesi">Linkin mark down formattaki dosyamıza eklenmesi</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Bu yazımda şu an içinde bulunduğumuz <a href="http://arifpehlivan.com/" target="_blank" rel="noopener noreffer">arifpehlivan.com</a> un hakkımda sayfasında ki paypal bağış butonunu nasıl yapıldığı konusunda bilgi vereceğim.</p>
+<p>Bu yazının öncesinde Hugo ile websitesi yapmak adlı makaleyi sol alt taraftaki linkden tıklayarak inceleyebilirsiniz.</p>
+<p>Bir yazılımcı olarak herkes gibi açık kaynak kodlardan çok yararlanmaktayım. Bu açık kaynak kodlar sayesinde bugün 5 dk da websitemize paypal bağış butonu ekleyeceğiz.</p>
+<h2 id="aşamalar">Aşamalar</h2>
+<ol>
+<li>Paypal hesap açılması</li>
+<li>Bağış link oluşturulması</li>
+<li>Bağış linki için resim/logo bulunması</li>
+<li>Linkin mark down formattaki dosyamıza eklenmesi</li>
+</ol>
+<h3 id="paypal-hesap-açılması">Paypal hesap açılması</h3>
+<p><a href="https://www.paypal.com/" target="_blank" rel="noopener noreffer">Paypal</a> uluslar arası bir ödeme sistemidir. Bir çok ülkede aktif kullanılmaktadır. Güvenlik önlemleri, sağlamış olduğu kolaylıklar ile en çok tercih edilen ödeme sistemlerinden biridir.</p>
+<p>Paypal da hesap açmak çok kolaydır. Yapmanız gereken <a href="https://www.paypal.com/webapps/mpp/account-selection" target="_blank" rel="noopener noreffer">bu linkten</a> adımları takip etmek. Eğer yazıyı Türkiye&rsquo;den okuyorsanız malesef Türkiye de <a href="https://www.paypal.com/" target="_blank" rel="noopener noreffer">paypal</a> yasaklandı. Umarım en yakın zamanda tekrar aktif edilir. 😊</p>
+<h3 id="bağış-linkinin-oluşturulması">Bağış linkinin oluşturulması</h3>
+<p>Hesabımızı oluşturdukdan sonra sıradaki adım bağış linkinin oluşturulması. Bağış linki sayesinde websitenizde yazılarınızı okuyan ve size destek olmak isteyen insanlar sayesinde paypal hesabınızda para biriktirebilirsiniz.</p>
+<p><a href="https://www.paypal.com/donate/buttons" target="_blank" rel="noopener noreffer">Bu linki</a> takip ederek bağış linkini oluşturabilirsiniz. Sizlere linki oluştururken paypal bazı sorular soracaktır. Bu soruları default olarak seçili olanlar ile ilerletebilirsiniz.</p>
+<figure>
+    <img src="/images/paypal-donate-button-1.png" width="90%" height="90%"/> 
+</figure>
+
+<h3 id="bağış-linkinin-için-resimlogo-bulunması">Bağış linkinin için resim/logo bulunması</h3>
+<p>Evet linkimizi oluşturduk. Artık sırada güzel dikkat çeken bir resim bulmak ve websitemize eklemek. Paypal bize bu konuda da yardım ekmekte. <a href="https://www.paypal.com/us/webapps/mpp/logo-center" target="_blank" rel="noopener noreffer">Buradaki linke</a> tıklayarak paypalın ücretsiz logolarından birini indirebilirsiniz.</p>
+<h3 id="linkin-mark-down-formattaki-dosyamıza-eklenmesi">Linkin mark down formattaki dosyamıza eklenmesi</h3>
+<p>Son basamakta artık oluşturduğumuz link ve karar verdiğimiz resimi mark down formattaki websitemize eklemek kaldı. Aşağıdaki kod parçasını web sitenizde ilgili sayfaya eklerseniz sizde otomatik olarak bağış butonunuzu oluşturmuş olacaksınız 😊</p>
+<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md">[![paypal]
+(https://www.paypalobjects.com/digitalassets/c/website/marketing/emea/de/de/logo-center/M2_Logo_01.jpg)]
+(https://www.paypal.com/donate?hosted_button_id=S3K5VGB9GUB7Y)
+</code></pre></div><p>Buradaki linkdeki id benim bağış idim. Bağış idnizi değiştirmeyi unutmayın. 😊</p>
+<p>Yazımı beğendiyseniz <a href="https://www.paypal.com/donate?hosted_button_id=S3K5VGB9GUB7Y" target="_blank" rel="noopener noreffer">buradan bağış</a> yapabilirsiniz.</p>
+<p>Kolay Gelsin.. 🤞</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title=" Twitter" data-sharer="twitter" data-url="http://www.arifpehlivan.com/posts/adding-paypal-donate-button/" data-title="Web sitenize paypal bağış butonu eklemek" data-via="@arifpehlivn" data-hashtags="website,mark-down,hugo,paypal,donate"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title=" Facebook" data-sharer="facebook" data-url="http://www.arifpehlivan.com/posts/adding-paypal-donate-button/" data-hashtag="website"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title=" Linkedin" data-sharer="linkedin" data-url="http://www.arifpehlivan.com/posts/adding-paypal-donate-button/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title=" WhatsApp" data-sharer="whatsapp" data-url="http://www.arifpehlivan.com/posts/adding-paypal-donate-button/" data-title="Web sitenize paypal bağış butonu eklemek" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title=" Xing" data-sharer="xing" data-url="http://www.arifpehlivan.com/posts/adding-paypal-donate-button/" data-title="Web sitenize paypal bağış butonu eklemek"><i class="fab fa-xing fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/website/">website</a>,&nbsp;<a href="/tags/mark-down/">mark-down</a>,&nbsp;<a href="/tags/hugo/">hugo</a>,&nbsp;<a href="/tags/paypal/">paypal</a>,&nbsp;<a href="/tags/donate/">donate</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/arif-pehlivan-com/" class="prev" rel="prev" title="Hugo ile websitesi yapmak"><i class="fas fa-angle-left fa-fw"></i>Hugo ile websitesi yapmak</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Arif Pehlivan</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-49179316-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-49179316-1" async></script></body>
+</html>

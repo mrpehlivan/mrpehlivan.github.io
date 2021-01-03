@@ -4,24 +4,38 @@
         <link>http://www.arifpehlivan.com/tags/</link>
         <description>Tags - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>donate</title>
+    <link>http://www.arifpehlivan.com/tags/donate/</link>
+    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://www.arifpehlivan.com/tags/donate/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>hugo</title>
     <link>http://www.arifpehlivan.com/tags/hugo/</link>
-    <pubDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</pubDate>
     <author></author>
     <guid>http://www.arifpehlivan.com/tags/hugo/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>mark-down</title>
     <link>http://www.arifpehlivan.com/tags/mark-down/</link>
-    <pubDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</pubDate>
     <author></author>
     <guid>http://www.arifpehlivan.com/tags/mark-down/</guid>
     <description><![CDATA[]]></description>
 </item><item>
+    <title>paypal</title>
+    <link>http://www.arifpehlivan.com/tags/paypal/</link>
+    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://www.arifpehlivan.com/tags/paypal/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>website</title>
     <link>http://www.arifpehlivan.com/tags/website/</link>
-    <pubDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</pubDate>
     <author></author>
     <guid>http://www.arifpehlivan.com/tags/website/</guid>
     <description><![CDATA[]]></description>
@@ -59,20 +73,6 @@
     <pubDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
     <guid>http://www.arifpehlivan.com/tags/java8/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>stream</title>
-    <link>http://www.arifpehlivan.com/tags/stream/</link>
-    <pubDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>http://www.arifpehlivan.com/tags/stream/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>architecture</title>
-    <link>http://www.arifpehlivan.com/tags/architecture/</link>
-    <pubDate>Thu, 01 Feb 2018 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>http://www.arifpehlivan.com/tags/architecture/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

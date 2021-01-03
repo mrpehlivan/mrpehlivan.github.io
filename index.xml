@@ -4,15 +4,52 @@
         <link>http://www.arifpehlivan.com/</link>
         <description>Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</lastBuildDate>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="http://www.arifpehlivan.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Web sitenize paypal bağış butonu eklemek</title>
+    <link>http://www.arifpehlivan.com/posts/adding-paypal-donate-button/</link>
+    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://www.arifpehlivan.com/posts/adding-paypal-donate-button/</guid>
+    <description><![CDATA[<p>Bu yazımda şu an içinde bulunduğumuz <a href="http://arifpehlivan.com/" target="_blank" rel="noopener noreffer">arifpehlivan.com</a> un hakkımda sayfasında ki paypal bağış butonunu nasıl yapıldığı konusunda bilgi vereceğim.</p>
+<p>Bu yazının öncesinde Hugo ile websitesi yapmak adlı makaleyi sol alt taraftaki linkden tıklayarak inceleyebilirsiniz.</p>
+<p>Bir yazılımcı olarak herkes gibi açık kaynak kodlardan çok yararlanmaktayım. Bu açık kaynak kodlar sayesinde bugün 5 dk da websitemize paypal bağış butonu ekleyeceğiz.</p>
+<h2 id="aşamalar">Aşamalar</h2>
+<ol>
+<li>Paypal hesap açılması</li>
+<li>Bağış link oluşturulması</li>
+<li>Bağış linki için resim/logo bulunması</li>
+<li>Linkin mark down formattaki dosyamıza eklenmesi</li>
+</ol>
+<h3 id="paypal-hesap-açılması">Paypal hesap açılması</h3>
+<p><a href="https://www.paypal.com/" target="_blank" rel="noopener noreffer">Paypal</a> uluslar arası bir ödeme sistemidir. Bir çok ülkede aktif kullanılmaktadır. Güvenlik önlemleri, sağlamış olduğu kolaylıklar ile en çok tercih edilen ödeme sistemlerinden biridir.</p>
+<p>Paypal da hesap açmak çok kolaydır. Yapmanız gereken <a href="https://www.paypal.com/webapps/mpp/account-selection" target="_blank" rel="noopener noreffer">bu linkten</a> adımları takip etmek. Eğer yazıyı Türkiye&rsquo;den okuyorsanız malesef Türkiye de <a href="https://www.paypal.com/" target="_blank" rel="noopener noreffer">paypal</a> yasaklandı. Umarım en yakın zamanda tekrar aktif edilir. 😊</p>
+<h3 id="bağış-linkinin-oluşturulması">Bağış linkinin oluşturulması</h3>
+<p>Hesabımızı oluşturdukdan sonra sıradaki adım bağış linkinin oluşturulması. Bağış linki sayesinde websitenizde yazılarınızı okuyan ve size destek olmak isteyen insanlar sayesinde paypal hesabınızda para biriktirebilirsiniz.</p>
+<p><a href="https://www.paypal.com/donate/buttons" target="_blank" rel="noopener noreffer">Bu linki</a> takip ederek bağış linkini oluşturabilirsiniz. Sizlere linki oluştururken paypal bazı sorular soracaktır. Bu soruları default olarak seçili olanlar ile ilerletebilirsiniz.</p>
+<figure>
+     
+</figure>
+
+<h3 id="bağış-linkinin-için-resimlogo-bulunması">Bağış linkinin için resim/logo bulunması</h3>
+<p>Evet linkimizi oluşturduk. Artık sırada güzel dikkat çeken bir resim bulmak ve websitemize eklemek. Paypal bize bu konuda da yardım ekmekte. <a href="https://www.paypal.com/us/webapps/mpp/logo-center" target="_blank" rel="noopener noreffer">Buradaki linke</a> tıklayarak paypalın ücretsiz logolarından birini indirebilirsiniz.</p>
+<h3 id="linkin-mark-down-formattaki-dosyamıza-eklenmesi">Linkin mark down formattaki dosyamıza eklenmesi</h3>
+<p>Son basamakta artık oluşturduğumuz link ve karar verdiğimiz resimi mark down formattaki websitemize eklemek kaldı. Aşağıdaki kod parçasını web sitenizde ilgili sayfaya eklerseniz sizde otomatik olarak bağış butonunuzu oluşturmuş olacaksınız 😊</p>
+<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md">[![paypal]
+(https://www.paypalobjects.com/digitalassets/c/website/marketing/emea/de/de/logo-center/M2_Logo_01.jpg)]
+(https://www.paypal.com/donate?hosted_button_id=S3K5VGB9GUB7Y)
+</code></pre></div><p>Buradaki linkdeki id benim bağış idim. Bağış idnizi değiştirmeyi unutmayın. 😊</p>
+<p>Yazımı beğendiyseniz <a href="https://www.paypal.com/donate?hosted_button_id=S3K5VGB9GUB7Y" target="_blank" rel="noopener noreffer">buradan bağış</a> yapabilirsiniz.</p>
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
+</item><item>
     <title>Hugo ile websitesi yapmak</title>
     <link>http://www.arifpehlivan.com/posts/arif-pehlivan-com/</link>
     <pubDate>Mon, 28 Dec 2020 00:00:00 &#43;0000</pubDate>
     <author></author>
     <guid>http://www.arifpehlivan.com/posts/arif-pehlivan-com/</guid>
-    <description><![CDATA[<p>Bu yazımda şuan içinde bulunduğumuz <a href="http://arifpehlivan.com/" target="_blank" rel="noopener noreffer">arifpehlivan.com</a> un nasıl yapıldığı konusunda bilgi vereceğim.</p>
+    <description><![CDATA[<p>Bu yazımda şu an içinde bulunduğumuz <a href="http://arifpehlivan.com/" target="_blank" rel="noopener noreffer">arifpehlivan.com</a> un nasıl yapıldığı konusunda bilgi vereceğim.</p>
 <p>Hugo ile websitesi yapım aşamalarını anlatmadan önce bazı ufak bilgiler paylaşalım.</p>
 <p>Yazılım sektöründe websitesi sahibi olmak bir yazılım geliştirici için her zaman iyi bir imaj bırakmaktadır.
 Bu bilgiyi yaptığım iş görüşmelerindeki insanların yorumlarından ve genel yorumlardan anlıyorum. Peki bir websitesi yapmak ne kadar zaman almaktadır.</p>
