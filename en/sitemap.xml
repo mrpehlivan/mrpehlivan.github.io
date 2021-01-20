@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://www.arifpehlivan.com/en/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://www.arifpehlivan.com/en/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority><xhtml:link
                         rel="alternate"
                         hreflang="tr"
                         href="http://www.arifpehlivan.com/"
@@ -11,7 +11,7 @@
                     hreflang="en"
                     href="http://www.arifpehlivan.com/en/"
                     /></url><url>
-            <loc>http://www.arifpehlivan.com/en/posts/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://www.arifpehlivan.com/en/posts/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority><xhtml:link
                         rel="alternate"
                         hreflang="tr"
                         href="http://www.arifpehlivan.com/posts/"
@@ -20,7 +20,7 @@
                     hreflang="en"
                     href="http://www.arifpehlivan.com/en/posts/"
                     /></url><url>
-            <loc>http://www.arifpehlivan.com/en/posts/empty/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.arifpehlivan.com/en/posts/empty/</loc><lastmod>2020-12-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>http://www.arifpehlivan.com/en/about/</loc><priority>0</priority><xhtml:link
                         rel="alternate"
                         hreflang="tr"

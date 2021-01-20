@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <script data-ad-client="ca-pub-1913957438563221" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <title>React.js ve Docker - Arif Pehlivan</title><meta name="Description" content=""><meta property="og:title" content="React.js ve Docker" />
+<meta property="og:description" content="Merhaba arkadaşlar bu yazımda bir react js uygulamasının nasıl docker ile çalışabilir hale getirilmesini inceleyeceğiz.
+İncelemeye başlamadan önce react ve docker hakkında bilgisi olmayan arkadaşlar aşağıdaki linklerden react.js ve docker hakkında detaylı bilgiye ulaşabilirler. Docker uygulamasının malesef türkçe dil desteğini bulamadım. O yüzden docker hakkında biraz konuşalım.
+React.js
+Docker
+Docker nedir? Docker geliştirdiğimiz uygulamalarımızı server bağımlılığı olmadan istediğimiz ortamda yada bilgisayarda çalıştırmamıza yarayan bir sistemdir.Dockerize edilmiş bir uygulamayı kendi local makinemizde çalıştırmak için dockerı bilgisayarımıza indirmeliyiz." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.arifpehlivan.com/posts/react-docker/" />
+<meta property="article:published_time" content="2021-01-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-20T00:00:00+00:00" /><meta property="og:site_name" content="Arif Pehlivan" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="React.js ve Docker"/>
+<meta name="twitter:description" content="Merhaba arkadaşlar bu yazımda bir react js uygulamasının nasıl docker ile çalışabilir hale getirilmesini inceleyeceğiz.
+İncelemeye başlamadan önce react ve docker hakkında bilgisi olmayan arkadaşlar aşağıdaki linklerden react.js ve docker hakkında detaylı bilgiye ulaşabilirler. Docker uygulamasının malesef türkçe dil desteğini bulamadım. O yüzden docker hakkında biraz konuşalım.
+React.js
+Docker
+Docker nedir? Docker geliştirdiğimiz uygulamalarımızı server bağımlılığı olmadan istediğimiz ortamda yada bilgisayarda çalıştırmamıza yarayan bir sistemdir.Dockerize edilmiş bir uygulamayı kendi local makinemizde çalıştırmak için dockerı bilgisayarımıza indirmeliyiz."/>
+<meta name="application-name" content="Arif Pehlivan">
+<meta name="apple-mobile-web-app-title" content="Arif Pehlivan"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="images/avatar.jpeg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.arifpehlivan.com/posts/react-docker/" /><link rel="prev" href="http://www.arifpehlivan.com/posts/adding-paypal-donate-button/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "React.js ve Docker",
+        "inLanguage": "tr",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/www.arifpehlivan.com\/posts\/react-docker\/"
+        },"genre": "posts","keywords": "javascript, react.js, docker","wordcount":  456 ,
+        "url": "http:\/\/www.arifpehlivan.com\/posts\/react-docker\/","datePublished": "2021-01-20T00:00:00+00:00","dateModified": "2021-01-20T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Arif Pehlivan"},"author": {
+                "@type": "Person",
+                "name": "Arif Pehlivan"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Arif Pehlivan">Arif Pehlivan</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> Hakkımda </a><a class="menu-item" href="/posts/"> Paylaşımlar </a><a class="menu-item" href="/tags/"> Etiketler </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="">Türkçe<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/react-docker/" selected>Türkçe</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Arif Pehlivan">Arif Pehlivan</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/about/" title="">Hakkımda</a><a class="menu-item" href="/posts/" title="">Paylaşımlar</a><a class="menu-item" href="/tags/" title="">Etiketler</a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="">Türkçe<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/react-docker/" selected>Türkçe</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title"></h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">React.js ve Docker</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Arif Pehlivan</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-20">2021-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#docker-nedir">Docker nedir?</a></li>
+    <li><a href="#docker-terimleri">Docker Terimleri</a></li>
+    <li><a href="#docker-desktopın-kurulması">Docker Desktop&rsquo;ın kurulması</a></li>
+    <li><a href="#docker-101in-öğrenilmesi">Docker 101&rsquo;in öğrenilmesi</a></li>
+    <li><a href="#react-uygulamamızın-dockerize-edilmesi">React Uygulamamızın dockerize edilmesi</a>
+      <ul>
+        <li><a href="#gereksinimler">Gereksinimler</a></li>
+        <li><a href="#dockerin-hubdan-gereksinimlerin-bulunması">Dockerin Hub&rsquo;dan gereksinimlerin bulunması</a></li>
+        <li><a href="#dockerfile-oluşturulması">DockerFile oluşturulması</a></li>
+        <li><a href="#node-js-versiyona-karar-verilmesi">Node js versiyona karar verilmesi</a></li>
+        <li><a href="#dockerfileın-derlenmesi-ve-çalıştırılması">Dockerfile&rsquo;ın derlenmesi ve çalıştırılması</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Merhaba arkadaşlar bu yazımda bir react js uygulamasının nasıl docker ile çalışabilir hale getirilmesini inceleyeceğiz.</p>
+<p>İncelemeye başlamadan önce react ve docker hakkında bilgisi olmayan arkadaşlar aşağıdaki linklerden react.js ve docker hakkında detaylı bilgiye ulaşabilirler. Docker uygulamasının malesef türkçe dil desteğini bulamadım. O yüzden docker hakkında biraz konuşalım.</p>
+<p><a href="https://tr.reactjs.org/" target="_blank" rel="noopener noreffer">React.js</a></p>
+<p><a href="https://www.docker.com/" target="_blank" rel="noopener noreffer">Docker</a></p>
+<h2 id="docker-nedir">Docker nedir?</h2>
+<p>Docker geliştirdiğimiz uygulamalarımızı server bağımlılığı olmadan istediğimiz ortamda yada bilgisayarda çalıştırmamıza yarayan bir sistemdir.Dockerize edilmiş bir uygulamayı kendi local makinemizde çalıştırmak için dockerı bilgisayarımıza indirmeliyiz.</p>
+<h2 id="docker-terimleri">Docker Terimleri</h2>
+<p>Bu başlıkda docker da kullanılan terimleri basit bir şekilde açıklayacağız. Tüm terimlerin ingilizce karşılıklarına <a href="https://docs.docker.com/glossary/" target="_blank" rel="noopener noreffer">buradan</a> erişebilirsiniz.</p>
+<p><strong>DockerFile :</strong> Bir uygulamanın docker ile çalışabilir hale getirilmesi için konfigürasyonların yapıldığı ve komutların tutulduğu text dosyasıdır.</p>
+<p><strong>build :</strong> Oluşturulmuş olan DockerFile ların docker sisteminde çalıştırılabilir bir image dönüştürülmesini sağlayan komuttur.</p>
+<p>Örnek docker build komutu.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker build -t uygulama_adı:versiyonunuz .
+</code></pre></div><p><strong>image :</strong> Docker ile çalışabilir hale getirilmiş uygulama, sistem vb. Sisteminizdeki docker imagelerini aşağıdaki komut ile listeleyebilirsiniz.</p>
+<p>Bu komut dan çıktı görmek istiyorsanız bilgisayarınızda dockerın çalıştığından emin olmalısınız.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker image ls
+</code></pre></div><p><strong>container:</strong> Docker imagelerinin çalıştırılması için gerekli olan birim. Docker imagelerinde run komutunu çalıştırdıkdan sonra otomatik olarak her image için bir container oluşturulur.
+Sisteminizdeki çalışan docker containerlarını aşağıdaki komut ile listeleyebilirsiniz.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker container ls
+</code></pre></div><p><strong>Dockerize :</strong> Bir uygulamanın docker imagine dönüştürülme sürecidir. Internette bu terim ile çok karşılaşabilirsiniz.</p>
+<h2 id="docker-desktopın-kurulması">Docker Desktop&rsquo;ın kurulması</h2>
+<p>Docker desktop uygulası local bilgisayarlarımızın dockerized edilmiş uygulamaların çalıştırılmasına yardım etmektedir. <a href="https://www.docker.com/get-started" target="_blank" rel="noopener noreffer">Buradan</a> indirebilirsiniz.</p>
+<h2 id="docker-101in-öğrenilmesi">Docker 101&rsquo;in öğrenilmesi</h2>
+<p>Docker hakkında bilgi sahibi değilseniz ve temel ingilizceniz varsa <a href="https://www.docker.com/101-tutorial" target="_blank" rel="noopener noreffer">buradaki</a> linkten docker playground uygulamasına gidip temel komutları öğrenebilirsiniz. Uygulama hem öğretirken hemde eğlendirmektedir. 😊</p>
+<h2 id="react-uygulamamızın-dockerize-edilmesi">React Uygulamamızın dockerize edilmesi</h2>
+<p>Bir uygulamanın docker üzerinde çalışmasını sağlamak için öncelikle gereksinimlerini iyi belirlememiz gerekmektedir.</p>
+<p>Bu yazıda biz sadece react js uygulamasının dockerize edilmesini işleyeceğimizden veritabanı vb gibi gereksinimlerimiz olmayacaktır.</p>
+<h3 id="gereksinimler">Gereksinimler</h3>
+<ol>
+<li>Node.js (Javascript uygulamamızın çalışması için)</li>
+</ol>
+<h3 id="dockerin-hubdan-gereksinimlerin-bulunması">Dockerin Hub&rsquo;dan gereksinimlerin bulunması</h3>
+<p><strong>Docker hub</strong>, docker imagelerinin public/private olarak tutulduğu sistemdir. <a href="https://hub.docker.com/_/node" target="_blank" rel="noopener noreffer">Buradan</a> docker hub daki node js versiyonlarına erişebilirsiniz.</p>
+<h3 id="dockerfile-oluşturulması">DockerFile oluşturulması</h3>
+<p>Gereksinimlerimizi belirledikden sonra uygulamamızda DockerFile&rsquo;imizi oluşturabiliriz.</p>
+<p>Projenizin ana dosyasında(main folder) <strong>Dockerfile</strong> adında bir dosya oluşturmalıyız.</p>
+<p>Eğer Visual Studio code kullanıyorsanız ücretsiz docker pluginini entegre edip kolaylıkla yanlış yazımları yada süresi geçmiş komutları görebilirsiniz.</p>
+<p>Kullandığım docker plugini <a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</a></p>
+<h3 id="node-js-versiyona-karar-verilmesi">Node js versiyona karar verilmesi</h3>
+<p>Uygulamamızın hangi node.js versiyon üzerinde çalıştığını ögrenmek için terminal üzerinden aşağıdaki komutu çalıştırabilirsiniz.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">node --version
+</code></pre></div><p>Ardından çalisan versiyonunuza uygun LTS(latest stable version) u bulup Dockerfile&rsquo;nızda ki imageinizin versiyonunu ayarlayabilirsiniz.
+Slim versiyon kullanırsanız docker imagenizin boyutu küçük olacaktır. Fakat içeriğinde bazı komutları bulamayabilirsiniz.</p>
+<script type="application/javascript" src="https://gist.github.com/mrpehlivan/e0a723f35368126a20a8af7ad1d54d0b.js"></script>
+
+<p>Node versiyonları ile alakalı daha çok bilgi almak için github da <a href="https://github.com/nodejs/docker-node#nodeversion" target="_blank" rel="noopener noreffer">bu sayfayı</a> ziyaret edebilirsiniz.</p>
+<h3 id="dockerfileın-derlenmesi-ve-çalıştırılması">Dockerfile&rsquo;ın derlenmesi ve çalıştırılması</h3>
+<p>Aşağıdaki komut ile docker file derleyebilirsiniz.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker build -t projeAdı:versiyon -f Dockerfile .
+</code></pre></div><p>Derleme işleminden sonra aşağıdaki komut ile uygulamanızı çalıştırabilirsiniz.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker run -it -p 3000:3000 projeAdı:versiyon
+</code></pre></div><p>Bu işlemden sonra localhost:3000 adresinde uygulamanızın çalıştığını kontrol edebilirsiniz.</p>
+<p>Kolay gelsin 🤞</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title=" Twitter" data-sharer="twitter" data-url="http://www.arifpehlivan.com/posts/react-docker/" data-title="React.js ve Docker" data-via="arifpehlivn" data-hashtags="javascript,react.js,docker"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title=" Facebook" data-sharer="facebook" data-url="http://www.arifpehlivan.com/posts/react-docker/" data-hashtag="javascript"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title=" Linkedin" data-sharer="linkedin" data-url="http://www.arifpehlivan.com/posts/react-docker/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title=" WhatsApp" data-sharer="whatsapp" data-url="http://www.arifpehlivan.com/posts/react-docker/" data-title="React.js ve Docker" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title=" Xing" data-sharer="xing" data-url="http://www.arifpehlivan.com/posts/react-docker/" data-title="React.js ve Docker"><i class="fab fa-xing fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/javascript/">javascript</a>,&nbsp;<a href="/tags/react.js/">react.js</a>,&nbsp;<a href="/tags/docker/">docker</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/adding-paypal-donate-button/" class="prev" rel="prev" title="Web sitenize paypal bağış butonu eklemek"><i class="fas fa-angle-left fa-fw"></i>Web sitenize paypal bağış butonu eklemek</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Arif Pehlivan</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-49179316-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-49179316-1" async></script></body>
+</html>

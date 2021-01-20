@@ -4,7 +4,66 @@
         <link>http://www.arifpehlivan.com/posts/</link>
         <description> | Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Wed, 20 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>React.js ve Docker</title>
+    <link>http://www.arifpehlivan.com/posts/react-docker/</link>
+    <pubDate>Wed, 20 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://www.arifpehlivan.com/posts/react-docker/</guid>
+    <description><![CDATA[<p>Merhaba arkadaşlar bu yazımda bir react js uygulamasının nasıl docker ile çalışabilir hale getirilmesini inceleyeceğiz.</p>
+<p>İncelemeye başlamadan önce react ve docker hakkında bilgisi olmayan arkadaşlar aşağıdaki linklerden react.js ve docker hakkında detaylı bilgiye ulaşabilirler. Docker uygulamasının malesef türkçe dil desteğini bulamadım. O yüzden docker hakkında biraz konuşalım.</p>
+<p><a href="https://tr.reactjs.org/" target="_blank" rel="noopener noreffer">React.js</a></p>
+<p><a href="https://www.docker.com/" target="_blank" rel="noopener noreffer">Docker</a></p>
+<h2 id="docker-nedir">Docker nedir?</h2>
+<p>Docker geliştirdiğimiz uygulamalarımızı server bağımlılığı olmadan istediğimiz ortamda yada bilgisayarda çalıştırmamıza yarayan bir sistemdir.Dockerize edilmiş bir uygulamayı kendi local makinemizde çalıştırmak için dockerı bilgisayarımıza indirmeliyiz.</p>
+<h2 id="docker-terimleri">Docker Terimleri</h2>
+<p>Bu başlıkda docker da kullanılan terimleri basit bir şekilde açıklayacağız. Tüm terimlerin ingilizce karşılıklarına <a href="https://docs.docker.com/glossary/" target="_blank" rel="noopener noreffer">buradan</a> erişebilirsiniz.</p>
+<p><strong>DockerFile :</strong> Bir uygulamanın docker ile çalışabilir hale getirilmesi için konfigürasyonların yapıldığı ve komutların tutulduğu text dosyasıdır.</p>
+<p><strong>build :</strong> Oluşturulmuş olan DockerFile ların docker sisteminde çalıştırılabilir bir image dönüştürülmesini sağlayan komuttur.</p>
+<p>Örnek docker build komutu.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker build -t uygulama_adı:versiyonunuz .
+</code></pre></div><p><strong>image :</strong> Docker ile çalışabilir hale getirilmiş uygulama, sistem vb. Sisteminizdeki docker imagelerini aşağıdaki komut ile listeleyebilirsiniz.</p>
+<p>Bu komut dan çıktı görmek istiyorsanız bilgisayarınızda dockerın çalıştığından emin olmalısınız.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker image ls
+</code></pre></div><p><strong>container:</strong> Docker imagelerinin çalıştırılması için gerekli olan birim. Docker imagelerinde run komutunu çalıştırdıkdan sonra otomatik olarak her image için bir container oluşturulur.
+Sisteminizdeki çalışan docker containerlarını aşağıdaki komut ile listeleyebilirsiniz.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker container ls
+</code></pre></div><p><strong>Dockerize :</strong> Bir uygulamanın docker imagine dönüştürülme sürecidir. Internette bu terim ile çok karşılaşabilirsiniz.</p>
+<h2 id="docker-desktopın-kurulması">Docker Desktop&rsquo;ın kurulması</h2>
+<p>Docker desktop uygulası local bilgisayarlarımızın dockerized edilmiş uygulamaların çalıştırılmasına yardım etmektedir. <a href="https://www.docker.com/get-started" target="_blank" rel="noopener noreffer">Buradan</a> indirebilirsiniz.</p>
+<h2 id="docker-101in-öğrenilmesi">Docker 101&rsquo;in öğrenilmesi</h2>
+<p>Docker hakkında bilgi sahibi değilseniz ve temel ingilizceniz varsa <a href="https://www.docker.com/101-tutorial" target="_blank" rel="noopener noreffer">buradaki</a> linkten docker playground uygulamasına gidip temel komutları öğrenebilirsiniz. Uygulama hem öğretirken hemde eğlendirmektedir. 😊</p>
+<h2 id="react-uygulamamızın-dockerize-edilmesi">React Uygulamamızın dockerize edilmesi</h2>
+<p>Bir uygulamanın docker üzerinde çalışmasını sağlamak için öncelikle gereksinimlerini iyi belirlememiz gerekmektedir.</p>
+<p>Bu yazıda biz sadece react js uygulamasının dockerize edilmesini işleyeceğimizden veritabanı vb gibi gereksinimlerimiz olmayacaktır.</p>
+<h3 id="gereksinimler">Gereksinimler</h3>
+<ol>
+<li>Node.js (Javascript uygulamamızın çalışması için)</li>
+</ol>
+<h3 id="dockerin-hubdan-gereksinimlerin-bulunması">Dockerin Hub&rsquo;dan gereksinimlerin bulunması</h3>
+<p><strong>Docker hub</strong>, docker imagelerinin public/private olarak tutulduğu sistemdir. <a href="https://hub.docker.com/_/node" target="_blank" rel="noopener noreffer">Buradan</a> docker hub daki node js versiyonlarına erişebilirsiniz.</p>
+<h3 id="dockerfile-oluşturulması">DockerFile oluşturulması</h3>
+<p>Gereksinimlerimizi belirledikden sonra uygulamamızda DockerFile&rsquo;imizi oluşturabiliriz.</p>
+<p>Projenizin ana dosyasında(main folder) <strong>Dockerfile</strong> adında bir dosya oluşturmalıyız.</p>
+<p>Eğer Visual Studio code kullanıyorsanız ücretsiz docker pluginini entegre edip kolaylıkla yanlış yazımları yada süresi geçmiş komutları görebilirsiniz.</p>
+<p>Kullandığım docker plugini <a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</a></p>
+<h3 id="node-js-versiyona-karar-verilmesi">Node js versiyona karar verilmesi</h3>
+<p>Uygulamamızın hangi node.js versiyon üzerinde çalıştığını ögrenmek için terminal üzerinden aşağıdaki komutu çalıştırabilirsiniz.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">node --version
+</code></pre></div><p>Ardından çalisan versiyonunuza uygun LTS(latest stable version) u bulup Dockerfile&rsquo;nızda ki imageinizin versiyonunu ayarlayabilirsiniz.
+Slim versiyon kullanırsanız docker imagenizin boyutu küçük olacaktır. Fakat içeriğinde bazı komutları bulamayabilirsiniz.</p>
+<script type="application/javascript" src="https://gist.github.com/mrpehlivan/e0a723f35368126a20a8af7ad1d54d0b.js"></script>
+
+<p>Node versiyonları ile alakalı daha çok bilgi almak için github da <a href="https://github.com/nodejs/docker-node#nodeversion" target="_blank" rel="noopener noreffer">bu sayfayı</a> ziyaret edebilirsiniz.</p>
+<h3 id="dockerfileın-derlenmesi-ve-çalıştırılması">Dockerfile&rsquo;ın derlenmesi ve çalıştırılması</h3>
+<p>Aşağıdaki komut ile docker file derleyebilirsiniz.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker build -t projeAdı:versiyon -f Dockerfile .
+</code></pre></div><p>Derleme işleminden sonra aşağıdaki komut ile uygulamanızı çalıştırabilirsiniz.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker run -it -p 3000:3000 projeAdı:versiyon
+</code></pre></div><p>Bu işlemden sonra localhost:3000 adresinde uygulamanızın çalıştığını kontrol edebilirsiniz.</p>
+<p>Kolay gelsin 🤞</p>
+]]></description>
+</item><item>
     <title>Web sitenize paypal bağış butonu eklemek</title>
     <link>http://www.arifpehlivan.com/posts/adding-paypal-donate-button/</link>
     <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</pubDate>

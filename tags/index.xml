@@ -4,7 +4,28 @@
         <link>http://www.arifpehlivan.com/tags/</link>
         <description>Tags - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Wed, 20 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>docker</title>
+    <link>http://www.arifpehlivan.com/tags/docker/</link>
+    <pubDate>Wed, 20 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://www.arifpehlivan.com/tags/docker/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>javascript</title>
+    <link>http://www.arifpehlivan.com/tags/javascript/</link>
+    <pubDate>Wed, 20 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://www.arifpehlivan.com/tags/javascript/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>react.js</title>
+    <link>http://www.arifpehlivan.com/tags/react.js/</link>
+    <pubDate>Wed, 20 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://www.arifpehlivan.com/tags/react.js/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>donate</title>
     <link>http://www.arifpehlivan.com/tags/donate/</link>
     <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</pubDate>
@@ -52,27 +73,6 @@
     <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
     <author></author>
     <guid>http://www.arifpehlivan.com/tags/spring/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>spring-boot</title>
-    <link>http://www.arifpehlivan.com/tags/spring-boot/</link>
-    <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>http://www.arifpehlivan.com/tags/spring-boot/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>spring-framework</title>
-    <link>http://www.arifpehlivan.com/tags/spring-framework/</link>
-    <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>http://www.arifpehlivan.com/tags/spring-framework/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>java8</title>
-    <link>http://www.arifpehlivan.com/tags/java8/</link>
-    <pubDate>Sun, 18 Feb 2018 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>http://www.arifpehlivan.com/tags/java8/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
