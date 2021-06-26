@@ -8,7 +8,7 @@
         <script data-ad-client="ca-pub-1913957438563221" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <title>Nedir bu Github Actions? - Arif Pehlivan</title><meta name="Description" content=""><meta property="og:title" content="Nedir bu Github Actions?" />
 <meta property="og:description" content="Merhabalar,
-Bu yazımızda Github&rsquo;ın bize sağlamış olduğu kolaylıklardan biri olan Github Actions&rsquo;ı öğreneceğiz.
+Bu yazımızda Github&rsquo;ın bize sağlamış olduğu kolaylıklardan biri olan Github Actions&rsquo;ı inceleyeceğiz.
 Bildiğiniz üzere, yazdığımız kodun uzak (remote) serverlarda çalışabilmesi için bir çok aşama vardır. Eskiden bu aşamalar manuel olarak yapılırken günümüzde artık CI/CD uygulamaları sayensinde otomatik olarak yapılmaktadır.
 Github&rsquo;da buna bağlı olarak kendi uygulaması olan Github Actions&rsquo;ı oluşturmuştur. Böylelikle Github da bulunan bir repositoryiniz için ekstradan başka uygulamalar indirmenize gerek kalmamıştır.
 Github Actions sayesinde uygulamalarınız için workflow oluşturabilir, bu workflowlar da istediğiniz taskları istediğiniz sıralamada çalıştırabilirsiniz." />
@@ -19,7 +19,7 @@ Github Actions sayesinde uygulamalarınız için workflow oluşturabilir, bu wor
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Nedir bu Github Actions?"/>
 <meta name="twitter:description" content="Merhabalar,
-Bu yazımızda Github&rsquo;ın bize sağlamış olduğu kolaylıklardan biri olan Github Actions&rsquo;ı öğreneceğiz.
+Bu yazımızda Github&rsquo;ın bize sağlamış olduğu kolaylıklardan biri olan Github Actions&rsquo;ı inceleyeceğiz.
 Bildiğiniz üzere, yazdığımız kodun uzak (remote) serverlarda çalışabilmesi için bir çok aşama vardır. Eskiden bu aşamalar manuel olarak yapılırken günümüzde artık CI/CD uygulamaları sayensinde otomatik olarak yapılmaktadır.
 Github&rsquo;da buna bağlı olarak kendi uygulaması olan Github Actions&rsquo;ı oluşturmuştur. Böylelikle Github da bulunan bir repositoryiniz için ekstradan başka uygulamalar indirmenize gerek kalmamıştır.
 Github Actions sayesinde uygulamalarınız için workflow oluşturabilir, bu workflowlar da istediğiniz taskları istediğiniz sıralamada çalıştırabilirsiniz."/>
@@ -33,7 +33,7 @@ Github Actions sayesinde uygulamalarınız için workflow oluşturabilir, bu wor
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.arifpehlivan.com\/posts\/play-with-github-actions\/"
-        },"genre": "posts","keywords": "github, git, workflow, ci, cl","wordcount":  411 ,
+        },"genre": "posts","keywords": "github, git, workflow, ci, cd","wordcount":  413 ,
         "url": "http:\/\/www.arifpehlivan.com\/posts\/play-with-github-actions\/","datePublished": "2021-06-25T00:00:00+00:00","dateModified": "2021-06-25T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Arif Pehlivan"},"author": {
@@ -109,12 +109,12 @@ Github Actions sayesinde uygulamalarınız için workflow oluşturabilir, bu wor
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>Merhabalar,</p>
-<p>Bu yazımızda Github&rsquo;ın bize sağlamış olduğu kolaylıklardan biri olan Github Actions&rsquo;ı öğreneceğiz.</p>
+<p>Bu yazımızda Github&rsquo;ın bize sağlamış olduğu kolaylıklardan biri olan Github Actions&rsquo;ı inceleyeceğiz.</p>
 <p>Bildiğiniz üzere, yazdığımız kodun uzak (remote) serverlarda çalışabilmesi için bir çok aşama vardır. Eskiden bu aşamalar manuel olarak yapılırken günümüzde artık CI/CD uygulamaları sayensinde otomatik olarak yapılmaktadır.</p>
 <p>Github&rsquo;da buna bağlı olarak kendi uygulaması olan Github Actions&rsquo;ı oluşturmuştur. Böylelikle Github da bulunan bir repositoryiniz için ekstradan başka uygulamalar indirmenize gerek kalmamıştır.</p>
 <p>Github Actions sayesinde uygulamalarınız için workflow oluşturabilir, bu workflowlar da istediğiniz taskları istediğiniz sıralamada çalıştırabilirsiniz. Basit bir örnek olarak; Github daki projenize bir pull request açtığınız zaman Github Actions sayesinde testlerinizi otomatik olarak çalıştırıp, build alıp, deployment yapabilirsiniz.</p>
 <h2 id="workflow">Workflow</h2>
-<p>Workflow yani GitHub Actions süreçlerinin tamamını kapsayan oluşum.Projemizin bağlı olduğu repository katmanında .github/workflow klasörü içerisinde bulunmalıdır. Sebebi ise github otomatik olarak <code>.github</code> klasörü altında bulunan <code>workflows</code> klasöründaki workflowlarını algılayarak çalıştırmaktadır. Örnek <code>.github/workflows/first-workflow-to-play.yml</code>&lsquo;ı <a href="https://github.com/mrpehlivan/PlayWithGithubActions" target="_blank" rel="noopener noreffer">projeden</a> inceleyebilirsiniz.</p>
+<p>Workflow yani GitHub Actions süreçlerinin tamamını kapsayan oluşum.Projemizin bağlı olduğu repository katmanında <code>.github/workflows</code> klasörü içerisinde bulunmalıdır. Sebebi ise github otomatik olarak <code>.github</code> klasörü altında bulunan <code>workflows</code> klasöründaki workflowlarını algılayarak çalıştırmaktadır. Örnek <code>.github/workflows/first-workflow-to-play.yml</code>&lsquo;ı <a href="https://github.com/mrpehlivan/PlayWithGithubActions" target="_blank" rel="noopener noreffer">projeden</a> inceleyebilirsiniz.</p>
 <h3 id="workflow-yapısı">Workflow yapısı</h3>
 <ol>
 <li>Jobs</li>
@@ -125,10 +125,10 @@ Github Actions sayesinde uygulamalarınız için workflow oluşturabilir, bu wor
 Her bir step tanımlanmış olduğu job içerisinde temelde paralel olarak çalıştırılır. Yani bir jobu tetiklediğinizde altında tanımlı steplerin hepsi çalışmaktadır.Fakat bunun sıralı olarak çalışmasını istiyorsanız onu bir sonraki yazıda inceleyeceğiz.</p>
 <p>Steplerin detayına indiğimiz zaman, stepler aksiyonlardan oluşmaktadır. Örnek olarak bir stepde X işlemini yaparken diğer stepde X&rsquo;e bağlı bir işlemide yapabilir yada Y işleminide yapabilirsiniz.</p>
 <h4 id="runners">Runners</h4>
-<p>Runnerlar GitHub Actions serveri içerisinde bulundan bir grup operasyona verilen isimdir. Kısaca yaptıkları işlem ilgili aksiyonu istenildiği gibi ilgili serverda çalıştırmak ve onun çalıçma sürecini log olarak kendisine ait bir yerde tutmaktır.</p>
+<p>Runnerlar GitHub Actions serveri içerisinde bulundan bir grup operasyona verilen isimdir. Kısaca yaptıkları işlem ilgili aksiyonu istenildiği gibi ilgili serverda çalıştırmak ve onun çalışma sürecini log olarak kendisine ait bir yerde tutmaktır.</p>
 <h2 id="örnek-proje">Örnek Proje</h2>
 <p>Gelin yazdıklarımızı somut örneklerle birleştirelim. Ben aşağıda bazı ekran görüntüleri paylaşarak sizlere nasıl workflow oluşturabilceğinizi göstereceğim.</p>
-<p>Örnek olarak gelin bir proje yapalım.Projemizin adi PlayWithGithubActions olsun.</p>
+<p>Örnek olarak gelin bir proje yapalım.Projemizin adı <code>PlayWithGithubActions</code> olsun.</p>
 <h3 id="proje-ve-git-dosyalarının-oluşturulması">Proje ve git dosyalarının oluşturulması</h3>
 <p>Proje ve git dosyalarının oluşturulması</p>
 <figure>
@@ -140,7 +140,7 @@ Her bir step tanımlanmış olduğu job içerisinde temelde paralel olarak çal�
     <img src="/images/ga1.jpeg" width="90%" height="90%"/> 
 </figure>
 
-<p>YML dosyasının oluşturulması. Windows bilgisayarlarınızla direk sağ click yeni dosyayı seçip uzantısına YML eklemeniz gerekmektedir.</p>
+<p>YML dosyasının oluşturulması. Windows bilgisayarlarınızla direk sağ tuşa tıklayarak yeni dosyayı seçip, uzantısına YML eklemeniz gerekmektedir.</p>
 <figure>
     <img src="/images/ga2.jpeg" width="90%" height="90%"/> 
 </figure>
@@ -156,8 +156,8 @@ Her bir step tanımlanmış olduğu job içerisinde temelde paralel olarak çal�
 </span><span class="w">      </span>- <span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">echo &#34;Merhaba Github actions&#34;</span><span class="w">
 </span><span class="w">
 </span></code></pre></div><p>Ardından aşağıdaki ekran görüntülerinde bulunan git komutları ile oluşturduğumuz yeni projemizi GitHub hesabımıza yükleyeceğiz.</p>
-<p>Github hesabımızda öncelikle PlayWithGithubActions adından yeni bir repository oluşturuyoruz. Repository oluşturduktan sonra lokalde bulunan repositorymiz için bazı konfigürasyonlar yapmamız gerekiyor.</p>
-<p>Konfigürasyon diyince hemen ürkmeyin 😄 sadece 1 komut ekleyeceğiz. O da remote bilgisi. Aşağıdaki komut örneği ile ben kendi projem için remote bilgisini ekledim. Bu bilgi githubda yeni oluşturduğunuz proje içerisinde belirtilmektedir.</p>
+<p>Github hesabımızda öncelikle <code>PlayWithGithubActions</code> adından yeni bir repository oluşturuyoruz. Repository oluşturduktan sonra lokalde bulunan repositorymiz için bazı konfigürasyonlar yapmamız gerekiyor.</p>
+<p>Konfigürasyon diyince hemen çekinmeyin 😄 sadece 1 komut ekleyeceğiz. O da remote bilgisi. Aşağıdaki komut örneği ile ben kendi projem için remote bilgisini ekledim. Bu bilgi Github da yeni oluşturduğunuz proje içerisinde belirtilmektedir.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">
 git remote add origin git@github.com:mrpehlivan/PlayWithGithubActions.git
 
@@ -182,13 +182,13 @@ git remote add origin git@github.com:mrpehlivan/PlayWithGithubActions.git
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title=" Twitter" data-sharer="twitter" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/" data-title="Nedir bu Github Actions?" data-via="arifpehlivn" data-hashtags="github,git,workflow,ci,cl"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title=" Facebook" data-sharer="facebook" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/" data-hashtag="github"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title=" Linkedin" data-sharer="linkedin" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title=" WhatsApp" data-sharer="whatsapp" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/" data-title="Nedir bu Github Actions?" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title=" Xing" data-sharer="xing" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/" data-title="Nedir bu Github Actions?"><i class="fab fa-xing fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title=" Twitter" data-sharer="twitter" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/" data-title="Nedir bu Github Actions?" data-via="arifpehlivn" data-hashtags="github,git,workflow,ci,cd"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title=" Facebook" data-sharer="facebook" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/" data-hashtag="github"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title=" Linkedin" data-sharer="linkedin" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title=" WhatsApp" data-sharer="whatsapp" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/" data-title="Nedir bu Github Actions?" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title=" Xing" data-sharer="xing" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/" data-title="Nedir bu Github Actions?"><i class="fab fa-xing fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/github/">github</a>,&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/workflow/">workflow</a>,&nbsp;<a href="/tags/ci/">ci</a>,&nbsp;<a href="/tags/cl/">cl</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/github/">github</a>,&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/workflow/">workflow</a>,&nbsp;<a href="/tags/ci/">ci</a>,&nbsp;<a href="/tags/cd/">cd</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
         </section>

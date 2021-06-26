@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>ci - tag - Arif Pehlivan</title>
-        <link>http://www.arifpehlivan.com/tags/ci/</link>
-        <description>ci - tag - Arif Pehlivan</description>
+        <title>cd - tag - Arif Pehlivan</title>
+        <link>http://www.arifpehlivan.com/tags/cd/</link>
+        <description>cd - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Fri, 25 Jun 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/ci/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Fri, 25 Jun 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/cd/" rel="self" type="application/rss+xml" /><item>
     <title>Nedir bu Github Actions?</title>
     <link>http://www.arifpehlivan.com/posts/play-with-github-actions/</link>
     <pubDate>Fri, 25 Jun 2021 00:00:00 &#43;0000</pubDate>
