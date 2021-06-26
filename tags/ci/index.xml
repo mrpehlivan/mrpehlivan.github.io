@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>ci - tag - Arif Pehlivan</title>
+        <link>http://www.arifpehlivan.com/tags/ci/</link>
+        <description>ci - tag - Arif Pehlivan</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Fri, 25 Jun 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/ci/" rel="self" type="application/rss+xml" /><item>
+    <title>Nedir bu Github Actions?</title>
+    <link>http://www.arifpehlivan.com/posts/play-with-github-actions/</link>
+    <pubDate>Fri, 25 Jun 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://www.arifpehlivan.com/posts/play-with-github-actions/</guid>
+    <description><![CDATA[<p>Merhabalar,</p>
+<p>Bu yazımızda Github&rsquo;ın bize sağlamış olduğu kolaylıklardan biri olan Github Actions&rsquo;ı öğreneceğiz.</p>
+<p>Bildiğiniz üzere, yazdığımız kodun uzak (remote) serverlarda çalışabilmesi için bir çok aşama vardır. Eskiden bu aşamalar manuel olarak yapılırken günümüzde artık CI/CD uygulamaları sayensinde otomatik olarak yapılmaktadır.</p>
+<p>Github&rsquo;da buna bağlı olarak kendi uygulaması olan Github Actions&rsquo;ı oluşturmuştur. Böylelikle Github da bulunan bir repositoryiniz için ekstradan başka uygulamalar indirmenize gerek kalmamıştır.</p>
+<p>Github Actions sayesinde uygulamalarınız için workflow oluşturabilir, bu workflowlar da istediğiniz taskları istediğiniz sıralamada çalıştırabilirsiniz. Basit bir örnek olarak; Github daki projenize bir pull request açtığınız zaman Github Actions sayesinde testlerinizi otomatik olarak çalıştırıp, build alıp, deployment yapabilirsiniz.</p>
+<h2 id="workflow">Workflow</h2>
+<p>Workflow yani GitHub Actions süreçlerinin tamamını kapsayan oluşum.Projemizin bağlı olduğu repository katmanında .github/workflow klasörü içerisinde bulunmalıdır. Sebebi ise github otomatik olarak <code>.github</code> klasörü altında bulunan <code>workflow</code> klasöründaki workflowlarını algılayarak çalıştırmaktadır. Örnek <code>.github/workflow/first-workflow-to-play.yml</code>&lsquo;ı <a href="https://github.com/mrpehlivan/PlayWithGithubActions" target="_blank" rel="noopener noreffer">projeden</a> inceleyebilirsiniz.</p>
+<h3 id="workflow-yapısı">Workflow yapısı</h3>
+<ol>
+<li>Jobs</li>
+<li>Runners</li>
+</ol>
+<h4 id="jobs">Jobs</h4>
+<p>Bir job workflow dosyası içerisinde tanımlanmış ve kendisine ait stepleri olan bir yapıdır.
+Her bir step tanımlanmış olduğu job içerisinde temelde paralel olarak çalıştırılır. Yani bir jobu tetiklediğinizde altında tanımlı steplerin hepsi çalışmaktadır.Fakat bunun sıralı olarak çalışmasını istiyorsanız onu bir sonraki yazıda inceleyeceğiz.</p>
+<p>Steplerin detayına indiğimiz zaman, stepler aksiyonlardan oluşmaktadır. Örnek olarak bir stepde X işlemini yaparken diğer stepde X&rsquo;e bağlı bir işlemide yapabilir yada Y işleminide yapabilirsiniz.</p>
+<h4 id="runners">Runners</h4>
+<p>Runnerlar GitHub Actions serveri içerisinde bulundan bir grup operasyona verilen isimdir. Kısaca yaptıkları işlem ilgili aksiyonu istenildiği gibi ilgili serverda çalıştırmak ve onun çalıçma sürecini log olarak kendisine ait bir yerde tutmaktır.</p>
+<h2 id="örnek-proje">Örnek Proje</h2>
+<p>Gelin yazdıklarımızı somut örneklerle birleştirelim. Ben aşağıda bazı ekran görüntüleri paylaşarak sizlere nasıl workflow oluşturabilceğinizi göstereceğim.</p>
+<p>Örnek olarak gelin bir proje yapalım.Projemizin adi PlayWithGithubActions olsun.</p>
+<h3 id="proje-ve-git-dosyalarının-oluşturulması">Proje ve git dosyalarının oluşturulması</h3>
+<p>Proje ve git dosyalarının oluşturulması</p>
+<figure>
+     
+</figure>
+
+<p>Projede <code>.github</code> klasörünün oluşturulması</p>
+<figure>
+     
+</figure>
+
+<p>YML dosyasının oluşturulması. Windows bilgisayarlarınızla direk sağ click yeni dosyayı seçip uzantısına YML eklemeniz gerekmektedir.</p>
+<figure>
+     
+</figure>
+
+<p>Aşağıdaki basit örneği YML dosyası içerisine kopyaladığınız zaman ilk GitHub Actions workflowumuzu oluşturmuş olacağız.</p>
+<div class="highlight"><pre class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">play-with-github-actions</span><span class="w">
+</span><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">push]</span><span class="w">
+</span><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">first-job</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">pwd</span><span class="w">
+</span><span class="w">      </span>- <span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">echo &#34;Merhaba Github actions&#34;</span><span class="w">
+</span><span class="w">
+</span></code></pre></div><p>Ardından aşağıdaki ekran görüntülerinde bulunan git komutları ile oluşturduğumuz yeni projemizi GitHub hesabımıza yükleyeceğiz.</p>
+<p>Github hesabımızda öncelikle PlayWithGithubActions adından yeni bir repository oluşturuyoruz. Repository oluşturduktan sonra lokalde bulunan repositorymiz için bazı konfigürasyonlar yapmamız gerekiyor.</p>
+<p>Konfigürasyon diyince hemen ürkmeyin 😄 sadece 1 komut ekleyeceğiz. O da remote bilgisi. Aşağıdaki komut örneği ile ben kendi projem için remote bilgisini ekledim. Bu bilgi githubda yeni oluşturduğunuz proje içerisinde belirtilmektedir.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">
+git remote add origin git@github.com:mrpehlivan/play-with-github-actions.git
+
+</code></pre></div><p>Remote&rsquo;u ayarladıktan sonra <code>git push</code> komutu ile kodumuzu gönderiyoruz. Ardından oluşturduğumuz GitHub repositorimize gidip actions kısmından workflowumuzu ve süreçlerini görebilirsiniz.</p>
+<figure>
+     
+</figure>
+
+<figure>
+     
+</figure>
+
+<p>Kolay Gelsin.. 🤞</p>
+]]></description>
+</item></channel>
+</rss>

@@ -4,7 +4,42 @@
         <link>http://www.arifpehlivan.com/tags/</link>
         <description>Tags - tag - Arif Pehlivan</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>m.arifpehlivan@gmail.com (Arif Pehlivan)</managingEditor>
-            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Wed, 20 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>m.arifpehlivan@gmail.com (Arif Pehlivan)</webMaster><lastBuildDate>Fri, 25 Jun 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://www.arifpehlivan.com/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>ci</title>
+    <link>http://www.arifpehlivan.com/tags/ci/</link>
+    <pubDate>Fri, 25 Jun 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://www.arifpehlivan.com/tags/ci/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>cl</title>
+    <link>http://www.arifpehlivan.com/tags/cl/</link>
+    <pubDate>Fri, 25 Jun 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://www.arifpehlivan.com/tags/cl/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>git</title>
+    <link>http://www.arifpehlivan.com/tags/git/</link>
+    <pubDate>Fri, 25 Jun 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://www.arifpehlivan.com/tags/git/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>github</title>
+    <link>http://www.arifpehlivan.com/tags/github/</link>
+    <pubDate>Fri, 25 Jun 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://www.arifpehlivan.com/tags/github/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>workflow</title>
+    <link>http://www.arifpehlivan.com/tags/workflow/</link>
+    <pubDate>Fri, 25 Jun 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>http://www.arifpehlivan.com/tags/workflow/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>docker</title>
     <link>http://www.arifpehlivan.com/tags/docker/</link>
     <pubDate>Wed, 20 Jan 2021 00:00:00 &#43;0000</pubDate>
@@ -38,41 +73,6 @@
     <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</pubDate>
     <author></author>
     <guid>http://www.arifpehlivan.com/tags/hugo/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>mark-down</title>
-    <link>http://www.arifpehlivan.com/tags/mark-down/</link>
-    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>http://www.arifpehlivan.com/tags/mark-down/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>paypal</title>
-    <link>http://www.arifpehlivan.com/tags/paypal/</link>
-    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>http://www.arifpehlivan.com/tags/paypal/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>website</title>
-    <link>http://www.arifpehlivan.com/tags/website/</link>
-    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>http://www.arifpehlivan.com/tags/website/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>java</title>
-    <link>http://www.arifpehlivan.com/tags/java/</link>
-    <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>http://www.arifpehlivan.com/tags/java/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>spring</title>
-    <link>http://www.arifpehlivan.com/tags/spring/</link>
-    <pubDate>Sat, 21 Apr 2018 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>http://www.arifpehlivan.com/tags/spring/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <script data-ad-client="ca-pub-1913957438563221" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <title>Nedir bu Github Actions? - Arif Pehlivan</title><meta name="Description" content=""><meta property="og:title" content="Nedir bu Github Actions?" />
+<meta property="og:description" content="Merhabalar,
+Bu yazımızda Github&rsquo;ın bize sağlamış olduğu kolaylıklardan biri olan Github Actions&rsquo;ı öğreneceğiz.
+Bildiğiniz üzere, yazdığımız kodun uzak (remote) serverlarda çalışabilmesi için bir çok aşama vardır. Eskiden bu aşamalar manuel olarak yapılırken günümüzde artık CI/CD uygulamaları sayensinde otomatik olarak yapılmaktadır.
+Github&rsquo;da buna bağlı olarak kendi uygulaması olan Github Actions&rsquo;ı oluşturmuştur. Böylelikle Github da bulunan bir repositoryiniz için ekstradan başka uygulamalar indirmenize gerek kalmamıştır.
+Github Actions sayesinde uygulamalarınız için workflow oluşturabilir, bu workflowlar da istediğiniz taskları istediğiniz sıralamada çalıştırabilirsiniz." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.arifpehlivan.com/posts/play-with-github-actions/" />
+<meta property="article:published_time" content="2021-06-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-06-25T00:00:00+00:00" /><meta property="og:site_name" content="Arif Pehlivan" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Nedir bu Github Actions?"/>
+<meta name="twitter:description" content="Merhabalar,
+Bu yazımızda Github&rsquo;ın bize sağlamış olduğu kolaylıklardan biri olan Github Actions&rsquo;ı öğreneceğiz.
+Bildiğiniz üzere, yazdığımız kodun uzak (remote) serverlarda çalışabilmesi için bir çok aşama vardır. Eskiden bu aşamalar manuel olarak yapılırken günümüzde artık CI/CD uygulamaları sayensinde otomatik olarak yapılmaktadır.
+Github&rsquo;da buna bağlı olarak kendi uygulaması olan Github Actions&rsquo;ı oluşturmuştur. Böylelikle Github da bulunan bir repositoryiniz için ekstradan başka uygulamalar indirmenize gerek kalmamıştır.
+Github Actions sayesinde uygulamalarınız için workflow oluşturabilir, bu workflowlar da istediğiniz taskları istediğiniz sıralamada çalıştırabilirsiniz."/>
+<meta name="application-name" content="Arif Pehlivan">
+<meta name="apple-mobile-web-app-title" content="Arif Pehlivan"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="images/avatar.jpeg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.arifpehlivan.com/posts/play-with-github-actions/" /><link rel="prev" href="http://www.arifpehlivan.com/posts/react-docker/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Nedir bu Github Actions?",
+        "inLanguage": "tr",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/www.arifpehlivan.com\/posts\/play-with-github-actions\/"
+        },"genre": "posts","keywords": "github, git, workflow, ci, cl","wordcount":  411 ,
+        "url": "http:\/\/www.arifpehlivan.com\/posts\/play-with-github-actions\/","datePublished": "2021-06-25T00:00:00+00:00","dateModified": "2021-06-25T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Arif Pehlivan"},"author": {
+                "@type": "Person",
+                "name": "Arif Pehlivan"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Arif Pehlivan">Arif Pehlivan</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> Hakkımda </a><a class="menu-item" href="/posts/"> Paylaşımlar </a><a class="menu-item" href="/tags/"> Etiketler </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="">Türkçe<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/play-with-github-actions/" selected>Türkçe</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Arif Pehlivan">Arif Pehlivan</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/about/" title="">Hakkımda</a><a class="menu-item" href="/posts/" title="">Paylaşımlar</a><a class="menu-item" href="/tags/" title="">Etiketler</a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="">Türkçe<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/play-with-github-actions/" selected>Türkçe</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title"></h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Nedir bu Github Actions?</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Arif Pehlivan</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-25">2021-06-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#workflow">Workflow</a>
+      <ul>
+        <li><a href="#workflow-yapısı">Workflow yapısı</a></li>
+      </ul>
+    </li>
+    <li><a href="#örnek-proje">Örnek Proje</a>
+      <ul>
+        <li><a href="#proje-ve-git-dosyalarının-oluşturulması">Proje ve git dosyalarının oluşturulması</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Merhabalar,</p>
+<p>Bu yazımızda Github&rsquo;ın bize sağlamış olduğu kolaylıklardan biri olan Github Actions&rsquo;ı öğreneceğiz.</p>
+<p>Bildiğiniz üzere, yazdığımız kodun uzak (remote) serverlarda çalışabilmesi için bir çok aşama vardır. Eskiden bu aşamalar manuel olarak yapılırken günümüzde artık CI/CD uygulamaları sayensinde otomatik olarak yapılmaktadır.</p>
+<p>Github&rsquo;da buna bağlı olarak kendi uygulaması olan Github Actions&rsquo;ı oluşturmuştur. Böylelikle Github da bulunan bir repositoryiniz için ekstradan başka uygulamalar indirmenize gerek kalmamıştır.</p>
+<p>Github Actions sayesinde uygulamalarınız için workflow oluşturabilir, bu workflowlar da istediğiniz taskları istediğiniz sıralamada çalıştırabilirsiniz. Basit bir örnek olarak; Github daki projenize bir pull request açtığınız zaman Github Actions sayesinde testlerinizi otomatik olarak çalıştırıp, build alıp, deployment yapabilirsiniz.</p>
+<h2 id="workflow">Workflow</h2>
+<p>Workflow yani GitHub Actions süreçlerinin tamamını kapsayan oluşum.Projemizin bağlı olduğu repository katmanında .github/workflow klasörü içerisinde bulunmalıdır. Sebebi ise github otomatik olarak <code>.github</code> klasörü altında bulunan <code>workflow</code> klasöründaki workflowlarını algılayarak çalıştırmaktadır. Örnek <code>.github/workflow/first-workflow-to-play.yml</code>&lsquo;ı <a href="https://github.com/mrpehlivan/PlayWithGithubActions" target="_blank" rel="noopener noreffer">projeden</a> inceleyebilirsiniz.</p>
+<h3 id="workflow-yapısı">Workflow yapısı</h3>
+<ol>
+<li>Jobs</li>
+<li>Runners</li>
+</ol>
+<h4 id="jobs">Jobs</h4>
+<p>Bir job workflow dosyası içerisinde tanımlanmış ve kendisine ait stepleri olan bir yapıdır.
+Her bir step tanımlanmış olduğu job içerisinde temelde paralel olarak çalıştırılır. Yani bir jobu tetiklediğinizde altında tanımlı steplerin hepsi çalışmaktadır.Fakat bunun sıralı olarak çalışmasını istiyorsanız onu bir sonraki yazıda inceleyeceğiz.</p>
+<p>Steplerin detayına indiğimiz zaman, stepler aksiyonlardan oluşmaktadır. Örnek olarak bir stepde X işlemini yaparken diğer stepde X&rsquo;e bağlı bir işlemide yapabilir yada Y işleminide yapabilirsiniz.</p>
+<h4 id="runners">Runners</h4>
+<p>Runnerlar GitHub Actions serveri içerisinde bulundan bir grup operasyona verilen isimdir. Kısaca yaptıkları işlem ilgili aksiyonu istenildiği gibi ilgili serverda çalıştırmak ve onun çalıçma sürecini log olarak kendisine ait bir yerde tutmaktır.</p>
+<h2 id="örnek-proje">Örnek Proje</h2>
+<p>Gelin yazdıklarımızı somut örneklerle birleştirelim. Ben aşağıda bazı ekran görüntüleri paylaşarak sizlere nasıl workflow oluşturabilceğinizi göstereceğim.</p>
+<p>Örnek olarak gelin bir proje yapalım.Projemizin adi PlayWithGithubActions olsun.</p>
+<h3 id="proje-ve-git-dosyalarının-oluşturulması">Proje ve git dosyalarının oluşturulması</h3>
+<p>Proje ve git dosyalarının oluşturulması</p>
+<figure>
+    <img src="/images/ga0.png" width="90%" height="90%"/> 
+</figure>
+
+<p>Projede <code>.github</code> klasörünün oluşturulması</p>
+<figure>
+    <img src="/images/ga1.png" width="90%" height="90%"/> 
+</figure>
+
+<p>YML dosyasının oluşturulması. Windows bilgisayarlarınızla direk sağ click yeni dosyayı seçip uzantısına YML eklemeniz gerekmektedir.</p>
+<figure>
+    <img src="/images/ga2.png" width="90%" height="90%"/> 
+</figure>
+
+<p>Aşağıdaki basit örneği YML dosyası içerisine kopyaladığınız zaman ilk GitHub Actions workflowumuzu oluşturmuş olacağız.</p>
+<div class="highlight"><pre class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">play-with-github-actions</span><span class="w">
+</span><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">push]</span><span class="w">
+</span><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">first-job</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">pwd</span><span class="w">
+</span><span class="w">      </span>- <span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">echo &#34;Merhaba Github actions&#34;</span><span class="w">
+</span><span class="w">
+</span></code></pre></div><p>Ardından aşağıdaki ekran görüntülerinde bulunan git komutları ile oluşturduğumuz yeni projemizi GitHub hesabımıza yükleyeceğiz.</p>
+<p>Github hesabımızda öncelikle PlayWithGithubActions adından yeni bir repository oluşturuyoruz. Repository oluşturduktan sonra lokalde bulunan repositorymiz için bazı konfigürasyonlar yapmamız gerekiyor.</p>
+<p>Konfigürasyon diyince hemen ürkmeyin 😄 sadece 1 komut ekleyeceğiz. O da remote bilgisi. Aşağıdaki komut örneği ile ben kendi projem için remote bilgisini ekledim. Bu bilgi githubda yeni oluşturduğunuz proje içerisinde belirtilmektedir.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">
+git remote add origin git@github.com:mrpehlivan/play-with-github-actions.git
+
+</code></pre></div><p>Remote&rsquo;u ayarladıktan sonra <code>git push</code> komutu ile kodumuzu gönderiyoruz. Ardından oluşturduğumuz GitHub repositorimize gidip actions kısmından workflowumuzu ve süreçlerini görebilirsiniz.</p>
+<figure>
+    <img src="/images/ga3.png" width="90%" height="90%"/> 
+</figure>
+
+<figure>
+    <img src="/images/ga4.png" width="90%" height="90%"/> 
+</figure>
+
+<p>Kolay Gelsin.. 🤞</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title=" Twitter" data-sharer="twitter" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/" data-title="Nedir bu Github Actions?" data-via="arifpehlivn" data-hashtags="github,git,workflow,ci,cl"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title=" Facebook" data-sharer="facebook" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/" data-hashtag="github"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title=" Linkedin" data-sharer="linkedin" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title=" WhatsApp" data-sharer="whatsapp" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/" data-title="Nedir bu Github Actions?" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title=" Xing" data-sharer="xing" data-url="http://www.arifpehlivan.com/posts/play-with-github-actions/" data-title="Nedir bu Github Actions?"><i class="fab fa-xing fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/github/">github</a>,&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/workflow/">workflow</a>,&nbsp;<a href="/tags/ci/">ci</a>,&nbsp;<a href="/tags/cl/">cl</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/react-docker/" class="prev" rel="prev" title="React.js ve Docker"><i class="fas fa-angle-left fa-fw"></i>React.js ve Docker</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Arif Pehlivan</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-49179316-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-49179316-1" async></script></body>
+</html>
