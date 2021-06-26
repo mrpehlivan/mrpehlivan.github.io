@@ -18,7 +18,7 @@
 <p>Github&rsquo;da buna bağlı olarak kendi uygulaması olan Github Actions&rsquo;ı oluşturmuştur. Böylelikle Github da bulunan bir repositoryiniz için ekstradan başka uygulamalar indirmenize gerek kalmamıştır.</p>
 <p>Github Actions sayesinde uygulamalarınız için workflow oluşturabilir, bu workflowlar da istediğiniz taskları istediğiniz sıralamada çalıştırabilirsiniz. Basit bir örnek olarak; Github daki projenize bir pull request açtığınız zaman Github Actions sayesinde testlerinizi otomatik olarak çalıştırıp, build alıp, deployment yapabilirsiniz.</p>
 <h2 id="workflow">Workflow</h2>
-<p>Workflow yani GitHub Actions süreçlerinin tamamını kapsayan oluşum.Projemizin bağlı olduğu repository katmanında .github/workflow klasörü içerisinde bulunmalıdır. Sebebi ise github otomatik olarak <code>.github</code> klasörü altında bulunan <code>workflow</code> klasöründaki workflowlarını algılayarak çalıştırmaktadır. Örnek <code>.github/workflow/first-workflow-to-play.yml</code>&lsquo;ı <a href="https://github.com/mrpehlivan/PlayWithGithubActions" target="_blank" rel="noopener noreffer">projeden</a> inceleyebilirsiniz.</p>
+<p>Workflow yani GitHub Actions süreçlerinin tamamını kapsayan oluşum.Projemizin bağlı olduğu repository katmanında .github/workflow klasörü içerisinde bulunmalıdır. Sebebi ise github otomatik olarak <code>.github</code> klasörü altında bulunan <code>workflows</code> klasöründaki workflowlarını algılayarak çalıştırmaktadır. Örnek <code>.github/workflows/first-workflow-to-play.yml</code>&lsquo;ı <a href="https://github.com/mrpehlivan/PlayWithGithubActions" target="_blank" rel="noopener noreffer">projeden</a> inceleyebilirsiniz.</p>
 <h3 id="workflow-yapısı">Workflow yapısı</h3>
 <ol>
 <li>Jobs</li>
@@ -63,7 +63,7 @@ Her bir step tanımlanmış olduğu job içerisinde temelde paralel olarak çal�
 <p>Github hesabımızda öncelikle PlayWithGithubActions adından yeni bir repository oluşturuyoruz. Repository oluşturduktan sonra lokalde bulunan repositorymiz için bazı konfigürasyonlar yapmamız gerekiyor.</p>
 <p>Konfigürasyon diyince hemen ürkmeyin 😄 sadece 1 komut ekleyeceğiz. O da remote bilgisi. Aşağıdaki komut örneği ile ben kendi projem için remote bilgisini ekledim. Bu bilgi githubda yeni oluşturduğunuz proje içerisinde belirtilmektedir.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">
-git remote add origin git@github.com:mrpehlivan/play-with-github-actions.git
+git remote add origin git@github.com:mrpehlivan/PlayWithGithubActions.git
 
 </code></pre></div><p>Remote&rsquo;u ayarladıktan sonra <code>git push</code> komutu ile kodumuzu gönderiyoruz. Ardından oluşturduğumuz GitHub repositorimize gidip actions kısmından workflowumuzu ve süreçlerini görebilirsiniz.</p>
 <figure>
